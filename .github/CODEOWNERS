@@ -1,0 +1,20 @@
+# CODEOWNERS — defines who reviews what.
+# Replace placeholder team names with real GitHub teams/users.
+
+# Standards and reference architectures: architecture team + cross-cutting review
+/standards/                    @your-org/ai-architecture
+/reference-architectures/      @your-org/ai-architecture
+/security/                     @your-org/cybersecurity-ai @your-org/ai-architecture
+
+# Governance processes
+/docs/                         @your-org/ai-architecture
+
+# ADRs
+/adr/                          @your-org/ai-architecture
+
+# Research
+/research/                     @your-org/ai-architecture
+
+# Patterns and blueprints
+/design-patterns/              @your-org/ai-architecture
+/blueprints/                   @your-org/ai-architecture @your-org/ml-platform
