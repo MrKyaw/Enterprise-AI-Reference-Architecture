@@ -25,11 +25,14 @@ Classify every tool/action by **side-effect class** and gate execution outside t
 - Approval state is stored in the **workflow system**, never in model context
 - The approval request shows: proposed action, evidence, blast radius, and expiry
 - Time-boxed approvals expire to "deny," never to "allow"
+- **Escalation policy:** unactioned approvals escalate on a schedule (peer → owner → break-glass), then expire; approval latency is a metric, and chronic latency means the threshold is wrong, not that people should approve faster
+- **Sandbox isolation:** reversible-write actions execute in a sandbox or dry-run mode first where the target system supports it (draft/preview/staged commit), so review sees the actual diff before it lands
 
 ## Consequences
 
 - ✅ Model manipulation cannot directly cause high-impact actions
 - ✅ Auditable decision trail with human accountability
+- ✅ Authorization boundaries for autonomous decisions are explicit and testable
 - ⚠️ Latency and toil if thresholds aren't tuned — review gate rates quarterly
 
 ## Known uses

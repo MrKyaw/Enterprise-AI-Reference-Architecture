@@ -9,6 +9,8 @@ Binding technology standards for AI/ML. "Approved" means: proven in our environm
 | [approved-technologies.md](approved-technologies.md) | Frameworks, platforms, data tooling — the master approved list | Proposed |
 | [model-provider-standards.md](model-provider-standards.md) | Hosted model providers: selection, contracts, data handling | Proposed |
 | [integration-patterns.md](integration-patterns.md) | How AI capabilities integrate with enterprise systems | Proposed |
+| [agent-protocols.md](agent-protocols.md) | Tool/context interoperability contracts for agents (typed contracts, registry, delegation) | Proposed |
+| [ai-assisted-development.md](ai-assisted-development.md) | Using AI coding assistants safely and effectively on our codebases | Proposed |
 
 ## How standards are set and changed
 

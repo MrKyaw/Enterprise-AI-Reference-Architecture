@@ -8,7 +8,9 @@ Reusable, cross-cutting implementation patterns that appear across multiple refe
 |---|---|---|
 | [llm-gateway.md](llm-gateway.md) | Centralize provider access, guardrails, auth, and cost attribution | Inference, Agentic |
 | [human-in-the-loop-approval.md](human-in-the-loop-approval.md) | Keep humans in control of side-effecting AI actions | Agentic |
-| [evaluation-in-ci.md](evaluation-in-ci.md) | Catch quality regressions before deployment, not after | RAG, Fine-tuning |
+| [evaluation-in-ci.md](evaluation-in-ci.md) | Catch quality regressions before deployment, not after | RAG, Fine-tuning, Data agent |
+| [architecture-as-code.md](architecture-as-code.md) | Make architecture versionable, reviewable, and executable | All |
+| [semantic-layer-grounding.md](semantic-layer-grounding.md) | Ground AI answers in governed business definitions, not raw tables | Data agent, Copilots |
 
 ## Adding a pattern
 

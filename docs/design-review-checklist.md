@@ -14,6 +14,8 @@
 - [ ] All frameworks, providers, and platforms are on the [approved list](../standards/approved-technologies.md)
 - [ ] New/unapproved technologies include a completed [evaluation](technology-evaluation-criteria.md) and a build-vs-buy note if applicable
 - [ ] Model provider data-handling terms reviewed per [model-provider-standards.md](../standards/model-provider-standards.md)
+- [ ] Agent tool integrations meet [agent-protocol standards](../standards/agent-protocols.md) (typed contracts, registry entry, side-effect class)
+- [ ] AI-assisted development review rules applied where used ([standard](../standards/ai-assisted-development.md))
 
 ## 3. Data
 
@@ -33,6 +35,7 @@
 
 ## 5. Reliability & operations
 
+- [ ] [NFRs](non-functional-requirements.md) stated with numbers (scalability, availability, resiliency, latency, observability, cost)
 - [ ] SLOs defined (availability, latency, quality) with monitoring in place
 - [ ] Degradation path defined (fallback model / non-AI path) for user-facing systems
 - [ ] Cost model estimated; budgets and alerting configured; per-project attribution enabled

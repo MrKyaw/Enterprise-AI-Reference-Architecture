@@ -11,6 +11,9 @@ Canonical, end-to-end reference architectures for each supported AI/ML workload 
 | RAG | [rag/README.md](rag/README.md) | Proposed |
 | Agentic | [agentic/README.md](agentic/README.md) | Proposed |
 | Fine-tuning | [fine-tuning/README.md](fine-tuning/README.md) | Proposed |
+| Data agent (NL query over governed data) | [data-agent/README.md](data-agent/README.md) | Proposed |
+| Enterprise copilots & embedded AI | [copilots/README.md](copilots/README.md) | Proposed |
+| Intelligent automation (workflow + RPA + AI) | [intelligent-automation/README.md](intelligent-automation/README.md) | Proposed |
 
 ## When central review is required
 

@@ -8,6 +8,7 @@ Security requirements owned by Cybersecurity and embedded into AI architecture a
 |---|---|
 | [ai-security-controls.md](ai-security-controls.md) | The control set every AI workload must satisfy |
 | [red-team-integration.md](red-team-integration.md) | How adversarial testing findings flow into architecture and standards |
+| [secure-sdlc.md](secure-sdlc.md) | Security checkpoints embedded in every phase of the AI delivery lifecycle |
 
 ## Principles
 

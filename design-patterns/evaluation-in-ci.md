@@ -20,6 +20,15 @@ Maintain versioned evaluation datasets alongside the system and run tiered evalu
 2. **Nightly (full)** — complete golden set plus adversarial/red-team prompts; trend dashboards
 3. **Pre-release** — held-out human review sample; comparison against current production baseline
 
+Metric selection is workload-specific. Beyond retrieval/faithfulness measures, AI systems with behavior to judge should track:
+
+- **Task success rate** — did the system complete what the user asked, end-to-end?
+- **Tool-call accuracy** — right tool, right arguments, no unauthorized attempts (pairs with the [tool registry](../standards/agent-protocols.md))
+- **Reasoning integrity** — conclusions supported by the retrieved/queried evidence; no fabricated citations or metrics
+- **Ambiguity handling** — correct "clarify" or "I don't know" rate instead of confident guessing
+
+Use an evaluation harness (open-source or hosted — see [approved technologies](../standards/approved-technologies.md)) so metrics are computed the same way locally and in CI.
+
 Every dataset entry carries: input, expected properties (not brittle exact strings), origin, and review date. Datasets are refreshed on a scheduled cadence and whenever production failures reveal gaps.
 
 ## Consequences

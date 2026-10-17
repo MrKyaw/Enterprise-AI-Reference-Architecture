@@ -53,6 +53,16 @@ Training and fine-tuned artifacts scanned (malware, secrets, provenance) before 
 
 Agentic and user-facing systems complete a red-team exercise per [red-team-integration.md](red-team-integration.md) before go-live, and after major capability changes.
 
+## AI-11 — Sandbox isolation & authorization boundaries
+
+- Agent and automation execution happens in an isolated environment (network segment or container boundary) with least-privilege access — blast radius of a manipulated agent is bounded by infrastructure, not by prompt text
+- Every autonomous decision path declares an explicit **authorization boundary**: the maximum authority a run can exercise without human approval
+- Irreversible/high-impact actions remain behind the AI-5 approval gate regardless of autonomy level
+
+## AI-12 — Secure SDLC integration
+
+Security checkpoints from [secure-sdlc.md](secure-sdlc.md) are phase gates in delivery: threat model at design, scanning in CI, red-team at test, control verification at deploy. Skipped gates block release — see [PoC-to-production Gate 2](../docs/poc-to-production.md).
+
 ## Mapping
 
 | Control | Training | Inference | RAG | Agentic | Fine-tuning |
@@ -67,3 +77,11 @@ Agentic and user-facing systems complete a red-team exercise per [red-team-integ
 | AI-8 Bounded autonomy | | | | ✅ | |
 | AI-9 Artifact scanning | ✅ | | | | ✅ |
 | AI-10 Red teaming | | ✅ | ✅ | ✅ | |
+| AI-11 Sandbox & authorization boundaries | ✅ | | | ✅ | ✅ |
+| AI-12 Secure SDLC gates | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+## Related processes
+
+- [Secure SDLC](secure-sdlc.md) — phase-by-phase security checkpoints
+- [Red-team integration](red-team-integration.md) — adversarial findings feed control updates
+- [Agent protocols](../standards/agent-protocols.md) — tool registry as the authorization boundary
