@@ -1,6 +1,6 @@
 # Enterprise AI Reference Architecture
 
-Central source of truth for **reference architectures, technology standards, design patterns, and platform strategy** for AI/ML workloads at Mobility Global.
+Central source of truth for **reference architectures, technology standards, design patterns, and platform strategy** for AI/ML workloads.
 
 This repository is how we scale architecture: instead of reviewing every initiative centrally, we publish standards, blueprints, and checklists that project architects and tech leads can apply independently.
 

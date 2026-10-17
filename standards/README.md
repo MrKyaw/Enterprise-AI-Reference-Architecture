@@ -1,6 +1,6 @@
 # Standards
 
-Binding technology standards for AI/ML at Mobility Global. "Approved" means: proven in our environment, supported centrally, and secure by default. Anything else needs an evaluation.
+Binding technology standards for AI/ML. "Approved" means: proven in our environment, supported centrally, and secure by default. Anything else needs an evaluation.
 
 ## Documents
 
