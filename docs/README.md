@@ -19,7 +19,9 @@ How architecture work happens: design reviews, technology evaluation, and build-
 | Collection | Purpose |
 |---|---|
 | [lifecycles/](../lifecycles/README.md) | End-to-end lifecycle phases, artifacts, and gates |
-| [design-patterns/](../design-patterns/README.md) | Pattern catalogs (software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain) |
-| [approaches/](../approaches/README.md) | Driven-development approaches and testing strategy |
+| [design-patterns/](../design-patterns/README.md) | Pattern catalogs (software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, UX, scaling, cost, domain) |
+| [approaches/](../approaches/README.md) | Driven-development approaches, delivery practices, and testing strategy |
+| [use-cases/](../use-cases/README.md) | End-to-end scenarios with problem statements and trade-offs |
+| [production-issues/](../production-issues/README.md) | Production failure modes with fixes, prevention, and future work |
 
 These processes exist so the architecture function can **scale itself**: published standards and checklists let engineering leads handle routine reviews; central architects focus on high-risk and novel designs.

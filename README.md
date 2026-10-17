@@ -27,9 +27,11 @@ A complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**:
 | Collection | Purpose |
 |---|---|
 | [`reference-architectures/`](reference-architectures/) | Canonical reference architectures per workload type (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation) |
-| [`lifecycles/`](lifecycles/) | 13 nested end-to-end lifecycles — SDLC, ML project, MLOps, GenAI/LLMOps, RAG, agent, data, prompt, evaluation, product, model risk, operations, technology |
-| [`design-patterns/`](design-patterns/) | 10 pattern catalogs — general architecture, data, ML engineering, MLOps/deployment, GenAI/prompting, RAG, agents, reliability, security, domain & business |
-| [`approaches/`](approaches/) | Driven-development approaches (TDD, BDD, DDD, data, evaluation, security, contract, outcome, evidence) and testing strategy |
+| [`lifecycles/`](lifecycles/) | 19 nested end-to-end lifecycles — SDLC, ML project, MLOps, GenAI/LLMOps, RAG, agent, data, prompt, evaluation, product, model risk, operations, technology, API, experimentation, FinOps, documentation, vendor, enablement |
+| [`design-patterns/`](design-patterns/) | 13 pattern catalogs — general architecture, data, ML engineering, MLOps/deployment, GenAI/prompting, RAG, agents, reliability, security, AI UX, distributed scaling, cost/FinOps, domain & business |
+| [`approaches/`](approaches/) | Driven-development approaches (TDD, BDD, DDD, data, evaluation, security, contract, outcome, evidence), delivery & practice approaches, and testing strategy |
+| [`use-cases/`](use-cases/) | 8 end-to-end scenarios with problem statements, pain points, workflows, tech stacks, trade-offs, metrics, and failure modes |
+| [`production-issues/`](production-issues/) | 79 real production failure modes across 6 categories with fixes, prevention, and future work |
 | [`standards/`](standards/) | Approved technologies, model providers, agent protocols, integration patterns, AI-assisted development |
 | [`blueprints/`](blueprints/) | Starter kits for independent, compliant adoption |
 | [`security/`](security/) | AI security controls (AI-1…AI-12), secure SDLC, red-team loop |
@@ -61,20 +63,25 @@ flowchart TB
     end
     subgraph Knowledge [Architecture Knowledge]
         RA[reference-architectures/<br/>8 workload types]
-        LC[lifecycles/<br/>13 end-to-end lifecycles]
-        PAT[design-patterns/<br/>10 pattern catalogs]
+        LC[lifecycles/<br/>19 end-to-end lifecycles]
+        PAT[design-patterns/<br/>13 pattern catalogs]
         APP[approaches/<br/>driven methods + testing]
+        UC[use-cases/<br/>8 scenarios]
         STD[standards/<br/>approved tech · protocols · integration]
         BP[blueprints/<br/>starter kits]
     end
     subgraph Assurance [Assurance]
         SEC[security/<br/>controls · SSDLC · red team]
         RES[research/<br/>briefs · prototypes]
+        PI[production-issues/<br/>79 failure modes]
     end
 
     RA --> PAT --> STD
     DOCS --> RA
     DOCS -->|feeds| ADR
+    UC -->|instantiates| RA
+    PI -->|hardens| RA
+    PI -.lessons.-> STD
     SEC -.controls.-> RA
     RES -.updates.-> STD
     BP -.embodies.-> RA
@@ -83,9 +90,11 @@ flowchart TB
 ```
 .
 ├── reference-architectures/   # Canonical designs per workload type (RA)
-├── lifecycles/                # SDLC, ML, MLOps, LLMOps, RAG, agent, data, prompt, eval...
-├── design-patterns/           # Pattern catalogs: software, data, ML, MLOps, GenAI, agents...
-├── approaches/                # Driven methods (TDD/BDD/DDD/eval) + testing strategy
+├── lifecycles/                # 19 lifecycles: SDLC, ML, MLOps, LLMOps, RAG, agent, data, prompt, eval...
+├── design-patterns/           # 13 pattern catalogs: software, data, ML, MLOps, GenAI, agents...
+├── approaches/                # Driven methods (TDD/BDD/DDD/eval) + delivery practices + testing
+├── use-cases/                 # End-to-end scenarios: problem, pain, workflow, stack, trade-offs
+├── production-issues/         # 79 production failure modes with fixes and future work
 ├── standards/                 # Approved technologies & binding standards
 ├── blueprints/                # Starter kits for independent adoption
 ├── security/                  # AI controls, secure SDLC, red-team loop
@@ -110,7 +119,9 @@ Every standard carries a status — `Proposed → Approved → Deprecated → Re
 
 | I want to… | Do this |
 |---|---|
-| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 13 nested lifecycles with phase/artifact matrices |
+| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 19 nested lifecycles with phase/artifact matrices |
+| Find a solution to a business problem | Browse [use-cases/](use-cases/) — problem statements, workflows, trade-offs |
+| Debug or harden a system | Check [production-issues/](production-issues/) before designing, and add to it after incidents |
 | Choose a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
 | Pick a development approach | See [driven development approaches](approaches/driven-development-approaches.md) and the [testing strategy](approaches/testing-strategy.md) |
 | Start a new AI initiative | Match a [reference architecture](reference-architectures/); self-certify or request [review](docs/architecture-review-process.md) |
@@ -141,6 +152,8 @@ Every standard carries a status — `Proposed → Approved → Deprecated → Re
 | [lifecycles/README.md](lifecycles/README.md) | All end-to-end lifecycles and how they nest |
 | [design-patterns/README.md](design-patterns/README.md) | Pattern catalog index across all categories |
 | [approaches/README.md](approaches/README.md) | Driven-development approaches and testing strategy |
+| [use-cases/README.md](use-cases/README.md) | End-to-end scenarios with workflows and trade-offs |
+| [production-issues/README.md](production-issues/README.md) | Production failure library with fixes and future work |
 | [adr/README.md](adr/README.md) | Architecture Decision Records |
 
 ## Contributing

@@ -7,6 +7,7 @@ Development and delivery **approaches** — the "X-driven" method families and t
 | Document | Covers |
 |---|---|
 | [driven-development-approaches.md](driven-development-approaches.md) | Test-, behavior-, domain-, data-, model-, evaluation-, security-, API/contract/spec-, outcome- and evidence-driven approaches |
+| [delivery-and-practice-approaches.md](delivery-and-practice-approaches.md) | Hypothesis-, risk-, design-thinking, Lean/Dual-track, DevOps/CD, trunk-based, GitOps, platform engineering, SRE/error budgets, chaos, data-centric, benchmark-, simulation-, ontology-driven, postmortem-driven, Six Sigma, agent-assisted |
 | [testing-strategy.md](testing-strategy.md) | Test types across the pyramid, AI-specific test layers, and the test strategy per workload |
 
 ## How to combine them

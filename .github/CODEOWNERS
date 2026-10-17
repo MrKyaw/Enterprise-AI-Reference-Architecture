@@ -20,3 +20,7 @@
 /lifecycles/                   @your-org/ai-architecture
 /approaches/                   @your-org/ai-architecture
 /blueprints/                   @your-org/ai-architecture @your-org/ml-platform
+
+# Use cases and production issues
+/use-cases/                    @your-org/ai-architecture @your-org/product
+/production-issues/            @your-org/ai-architecture @your-org/sre

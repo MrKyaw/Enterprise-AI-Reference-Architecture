@@ -19,6 +19,12 @@ End-to-end lifecycles that govern how AI/ML work is conceived, built, deployed, 
 | [model-risk-lifecycle.md](model-risk-lifecycle.md) | Intake → assess → approve → monitor → revalidate → retire | Governance / risk |
 | [operations-incident-lifecycle.md](operations-incident-lifecycle.md) | Monitor → detect → triage → mitigate → resolve → postmortem | Operations |
 | [technology-lifecycle.md](technology-lifecycle.md) | Horizon scan → trial → adopt → hold → deprecate → remove | Architecture |
+| [api-lifecycle.md](api-lifecycle.md) | Design → publish → version → observe → deprecate | Platform / API |
+| [experimentation-lifecycle.md](experimentation-lifecycle.md) | Hypothesis → design → run → analyze → decide; progressive feature release | Product / data |
+| [finops-cost-lifecycle.md](finops-cost-lifecycle.md) | Forecast → attribute → optimize → govern | Finance / platform |
+| [documentation-knowledge-lifecycle.md](documentation-knowledge-lifecycle.md) | Author → review → publish → maintain → retire | Architecture |
+| [vendor-third-party-lifecycle.md](vendor-third-party-lifecycle.md) | Assess → contract → integrate → manage → exit | Procurement / architecture |
+| [enablement-adoption-lifecycle.md](enablement-adoption-lifecycle.md) | Assess skills → build capability → enable → sustain | Leadership / enablement |
 
 ## How they relate
 
@@ -41,6 +47,12 @@ flowchart TB
     MLO --> E
     T[Technology lifecycle] -.adopt/retire.-> S
     T -.adopt/retire.-> M
+    V[Vendor lifecycle] -.supplies.-> MLO
+    F[FinOps lifecycle] -.governs cost of.-> GEN
+    EN[Enablement lifecycle] -.builds capability for.-> P
+    D2[Documentation lifecycle] -.records.-> S
+    A2[API lifecycle] -.contracts for.-> GEN
+    X[Experimentation lifecycle] -.validates.-> P
 ```
 
 ## Universal lifecycle rules
@@ -70,6 +82,12 @@ Every lifecycle in this directory obeys the same five rules:
 | Model risk | Intake request | Assessment | Revalidation schedule |
 | Operations | SLO + alerting | Runbook | Postmortem + action items |
 | Technology | Horizon-scan trigger | Prototype + brief | Standard status change |
+| API | Consumer need | Contract + tests | Deprecation/retirement record |
+| Experimentation | Hypothesis | Running experiment | Decision record |
+| FinOps | Cost model | Attribution dashboard | Optimization report |
+| Documentation | Documentation gap | Draft + review | Current, indexed doc |
+| Vendor | Capability gap | Security review + prototype | Contract + exit plan |
+| Enablement | Capability heat map | Training/blueprint adoption | Sustained adoption metrics |
 
 ## Governance tie-in
 

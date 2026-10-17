@@ -9,6 +9,24 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-17
+
+### Added
+
+**Lifecycles (6 more, now 19 total)** — `api-lifecycle`, `experimentation-lifecycle` (incl. progressive feature release), `finops-cost-lifecycle`, `documentation-knowledge-lifecycle`, `vendor-third-party-lifecycle`, `enablement-adoption-lifecycle`
+
+**Pattern catalogs (3 more, now 13 total)** — `ai-ux-and-interaction`, `distributed-scaling` (incl. multi-tenancy isolation), `cost-finops`
+
+**Approaches** — `delivery-and-practice-approaches`: hypothesis-driven, risk-first, design thinking, dual-track agile, DevOps/CD, trunk-based, GitOps, platform engineering, SRE/error budgets, chaos engineering, data-centric AI, benchmark-driven, simulation-driven, ontology-driven, postmortem-driven, Six Sigma/DMAIC, agent-assisted development
+
+**Use cases (`use-cases/`)** — 8 end-to-end scenarios, each with problem statement, pain points, users, workflow diagram, tech stack, trade-offs table, success metrics, failure modes, and future work:
+enterprise knowledge assistant · NL analytics data agent · agentic process automation · enterprise copilot rollout · domain model adaptation · real-time decision scoring · document intelligence pipeline · AI platform foundation
+
+**Production issues (`production-issues/`)** — 79 real failure modes across 6 categories with symptom, root cause, impact, fix, prevention, and future work, plus a five-cause cross-cutting analysis:
+quality & hallucination · retrieval & data · cost & latency · security & injection · agents & tools · platform, operations & lifecycle
+
+**Completeness updates** — README collection table, repository map, tree, workflows, documentation catalog; `docs/README.md` related collections; `CODEOWNERS`; `CONTRIBUTING.md` branch prefixes
+
 ## [0.3.0] - 2026-10-17
 
 ### Added

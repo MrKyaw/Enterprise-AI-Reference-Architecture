@@ -15,6 +15,9 @@ Reusable solutions for problems that recur across AI/ML systems. Patterns are **
 | Agents | [agent-patterns.md](agent-patterns.md) | Tool use, ReAct, plan-and-execute, reflection, memory taxonomy, supervisor, hierarchical, blackboard, swarm, handoff, termination, HITL, sandbox, registry |
 | Reliability & resilience | [reliability-resilience.md](reliability-resilience.md) | Circuit breaker, bulkhead, retry+backoff, timeout, fallback, load leveling, graceful degradation, idempotency, health checks, read-repair |
 | Security | [security-patterns.md](security-patterns.md) | Defense in depth, zero trust, least privilege, secret vaulting, prompt-injection defense, output filtering, egress allowlist, sandbox isolation, immutable audit |
+| AI UX & interaction | [ai-ux-and-interaction.md](ai-ux-and-interaction.md) | Citations, confidence surfacing, review-before-apply, undo, autonomy indicators, disambiguation, feedback capture, streaming, accessibility |
+| Distributed systems & scaling | [distributed-scaling.md](distributed-scaling.md) | Autoscaling signals, sharding, replication, multi-tenancy isolation, cell architecture, batching, coordination |
+| Cost & FinOps | [cost-finops.md](cost-finops.md) | Attribution tagging, budget alarms, caching, cascades, context minimization, loop ceilings, cost-quality frontier |
 | Domain & business | [domain-and-business.md](domain-and-business.md) | Bounded context, ubiquitous language, context mapping, anticorruption layer, event storming, domain storytelling, capability mapping, value-stream mapping, Wardley mapping |
 
 ## Expanded patterns (full treatment)
