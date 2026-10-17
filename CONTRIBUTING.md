@@ -35,7 +35,7 @@ Thanks for helping keep our AI architecture standards current and trustworthy.
 - ADRs: `NNNN-short-title.md`, zero-padded, never renumbered
 - Research briefs: `YYYY-MM-short-topic.md`
 - Prototypes: `prototype-<short-name>/` with its own `README.md`
-- Branch names: `docs/…`, `standard/…`, `ra/…`, `research/…` prefixes
+- Branch names: `docs/…`, `standard/…`, `ra/…`, `lifecycle/…`, `pattern/…`, `approach/…`, `research/…` prefixes
 
 ## Deprecation
 

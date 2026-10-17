@@ -14,4 +14,12 @@ How architecture work happens: design reviews, technology evaluation, and build-
 | [business-case-and-value.md](business-case-and-value.md) | Opportunity discovery, ROI cases, KPIs, and kill criteria |
 | [legacy-modernization.md](legacy-modernization.md) | Incremental modernization patterns for adding AI to existing systems |
 
+## Related collections
+
+| Collection | Purpose |
+|---|---|
+| [lifecycles/](../lifecycles/README.md) | End-to-end lifecycle phases, artifacts, and gates |
+| [design-patterns/](../design-patterns/README.md) | Pattern catalogs (software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain) |
+| [approaches/](../approaches/README.md) | Driven-development approaches and testing strategy |
+
 These processes exist so the architecture function can **scale itself**: published standards and checklists let engineering leads handle routine reviews; central architects focus on high-risk and novel designs.

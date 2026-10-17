@@ -9,6 +9,32 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-17
+
+### Added
+
+**Lifecycles (`lifecycles/`)** — 13 end-to-end lifecycles with phase/artifact/exit-gate tables, plus a phase/artifact completeness matrix and nesting diagram:
+- `software-development-lifecycle`, `ml-project-lifecycle`, `mlops-lifecycle`
+- `genai-llmops-lifecycle`, `rag-lifecycle`, `agent-lifecycle` (AgentOps, autonomy levels L0–L4)
+- `data-lifecycle`, `prompt-lifecycle`, `evaluation-lifecycle`
+- `product-lifecycle`, `model-risk-lifecycle`, `operations-incident-lifecycle`, `technology-lifecycle`
+
+**Design pattern catalogs (`design-patterns/`)** — 10 category catalogs with intent/applicability/pitfalls:
+- `general-architecture`, `data-architecture`, `ml-engineering`, `mlops-deployment`
+- `genai-prompting` (incl. guardrail sandwich, cascades, caches), `rag-patterns` (chunking/query/retrieval/generation/adaptive/evaluation)
+- `agent-patterns` (core loop, memory, multi-agent, safety/control, orchestration), `reliability-resilience`
+- `security-patterns` (incl. attack→pattern mapping), `domain-and-business` (DDD, discovery and business-analysis techniques)
+- Rebuilt `design-patterns/README.md` as a category index with a cross-cutting pattern map and a "you need → start with" selector
+
+**Approaches (`approaches/`)**:
+- `driven-development-approaches` — TDD, BDD, ATDD, DDD, data-, model-, evaluation-, prompt-, retrieval-, security-, API/contract/spec-, documentation-, outcome/value-driven, and evidence-driven architecture, each with its AI adaptation
+- `testing-strategy` — full test-type catalog, AI-specific test/evaluation layers, non-determinism handling, coverage by risk tier, per-workload emphasis, and where tests run
+
+**Cross-cutting**
+- Root README: "What's inside" collection table; repository map and directory tree updated for the new collections
+- `docs/README.md`: Related collections section
+- `CODEOWNERS`: ownership for `lifecycles/` and `approaches/`
+
 ## [0.2.0] - 2026-10-17
 
 ### Added

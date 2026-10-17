@@ -13,14 +13,29 @@ A complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**:
 
 ## Table of Contents
 
-- [Who this is for](#who-this-is-for)
-- [Quick start](#quick-start)
+- [What's inside](#whats-inside)
+- [Who this is for](#who-this-is-for)- [Quick start](#quick-start)
 - [Repository map](#repository-map)
 - [The standards lifecycle](#the-standards-lifecycle)
 - [Core workflows](#core-workflows)
 - [Documentation catalog](#documentation-catalog)
 - [Contributing](#contributing)
 - [License](#license)
+
+## What's inside
+
+| Collection | Purpose |
+|---|---|
+| [`reference-architectures/`](reference-architectures/) | Canonical reference architectures per workload type (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation) |
+| [`lifecycles/`](lifecycles/) | 13 nested end-to-end lifecycles — SDLC, ML project, MLOps, GenAI/LLMOps, RAG, agent, data, prompt, evaluation, product, model risk, operations, technology |
+| [`design-patterns/`](design-patterns/) | 10 pattern catalogs — general architecture, data, ML engineering, MLOps/deployment, GenAI/prompting, RAG, agents, reliability, security, domain & business |
+| [`approaches/`](approaches/) | Driven-development approaches (TDD, BDD, DDD, data, evaluation, security, contract, outcome, evidence) and testing strategy |
+| [`standards/`](standards/) | Approved technologies, model providers, agent protocols, integration patterns, AI-assisted development |
+| [`blueprints/`](blueprints/) | Starter kits for independent, compliant adoption |
+| [`security/`](security/) | AI security controls (AI-1…AI-12), secure SDLC, red-team loop |
+| [`research/`](research/) | Horizon-scanning briefs and time-boxed validation prototypes |
+| [`adr/`](adr/) | Numbered, immutable Architecture Decision Records |
+| [`docs/`](docs/) | Governance: review process, NFRs, PoC→production, lifecycle, value, modernization |
 
 ## Who this is for
 
@@ -46,7 +61,9 @@ flowchart TB
     end
     subgraph Knowledge [Architecture Knowledge]
         RA[reference-architectures/<br/>8 workload types]
-        PAT[design-patterns/<br/>reusable solutions]
+        LC[lifecycles/<br/>13 end-to-end lifecycles]
+        PAT[design-patterns/<br/>10 pattern catalogs]
+        APP[approaches/<br/>driven methods + testing]
         STD[standards/<br/>approved tech · protocols · integration]
         BP[blueprints/<br/>starter kits]
     end
@@ -66,7 +83,9 @@ flowchart TB
 ```
 .
 ├── reference-architectures/   # Canonical designs per workload type (RA)
-├── design-patterns/           # Reusable, cross-cutting patterns
+├── lifecycles/                # SDLC, ML, MLOps, LLMOps, RAG, agent, data, prompt, eval...
+├── design-patterns/           # Pattern catalogs: software, data, ML, MLOps, GenAI, agents...
+├── approaches/                # Driven methods (TDD/BDD/DDD/eval) + testing strategy
 ├── standards/                 # Approved technologies & binding standards
 ├── blueprints/                # Starter kits for independent adoption
 ├── security/                  # AI controls, secure SDLC, red-team loop
@@ -91,6 +110,9 @@ Every standard carries a status — `Proposed → Approved → Deprecated → Re
 
 | I want to… | Do this |
 |---|---|
+| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 13 nested lifecycles with phase/artifact matrices |
+| Choose a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
+| Pick a development approach | See [driven development approaches](approaches/driven-development-approaches.md) and the [testing strategy](approaches/testing-strategy.md) |
 | Start a new AI initiative | Match a [reference architecture](reference-architectures/); self-certify or request [review](docs/architecture-review-process.md) |
 | Use a technology that isn't approved | Run an [evaluation](docs/technology-evaluation-criteria.md); add an ADR |
 | Make a build-vs-buy call | Follow the [framework](docs/build-vs-buy-framework.md); record the outcome as an ADR |
@@ -116,6 +138,9 @@ Every standard carries a status — `Proposed → Approved → Deprecated → Re
 | [security/README.md](security/README.md) | Controls, SSDLC, red-team integration |
 | [standards/README.md](standards/README.md) | Approved technologies & binding standards |
 | [research/README.md](research/README.md) | Horizon scanning & validation prototypes |
+| [lifecycles/README.md](lifecycles/README.md) | All end-to-end lifecycles and how they nest |
+| [design-patterns/README.md](design-patterns/README.md) | Pattern catalog index across all categories |
+| [approaches/README.md](approaches/README.md) | Driven-development approaches and testing strategy |
 | [adr/README.md](adr/README.md) | Architecture Decision Records |
 
 ## Contributing
