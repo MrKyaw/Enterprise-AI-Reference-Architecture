@@ -1,0 +1,51 @@
+name: Standards / Reference architecture change
+description: Propose a change to a standard, reference architecture, pattern, or security control
+title: "[standard]: "
+labels: ["standard-change"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Standards and reference architecture changes require cross-cutting review
+        (see [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)).
+        For decisions, open an ADR instead — this form is for proposing the change itself.
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change type
+      options:
+        - Editorial / wording
+        - New design pattern
+        - Standard change (approved technologies, providers, protocols)
+        - Reference architecture change
+        - Security control change
+    validations:
+      required: true
+  - type: input
+    id: target-doc
+    attributes:
+      label: Target document
+      placeholder: standards/approved-technologies.md
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: What should change and why?
+      description: Include evidence — research brief, prototype results, or production experience.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which teams, systems, or blueprints are affected?
+    validations:
+      required: true
+  - type: checkboxes
+    id: review
+    attributes:
+      label: Review routing
+      options:
+        - label: This change involves security-relevant content and will be reviewed against security/ai-security-controls.md
+        - label: I have linked supporting evidence (research brief / prototype / production data)

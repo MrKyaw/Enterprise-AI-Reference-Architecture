@@ -1,0 +1,34 @@
+name: Documentation improvement
+description: Report an error, broken link, gap, or suggested improvement in the docs
+title: "[docs]: "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of issue
+      options:
+        - Error / inaccuracy
+        - Broken link
+        - Gap / missing guidance
+        - Unclear or confusing wording
+        - Suggested new example or diagram
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Document / section
+      placeholder: docs/design-review-checklist.md — section 4
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is wrong or what should be added?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix (optional)

@@ -1,0 +1,26 @@
+name: Architecture question
+description: Ask about applying a reference architecture, standard, or review process
+title: "[question]: "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Reference architecture (which one / how to conform)
+        - Design review process (tier, checklist)
+        - Approved technologies / evaluation
+        - Build vs buy
+        - Security controls / SSDLC
+        - Research / prototypes
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Include enough context (workload type, constraints) for a useful answer.
+    validations:
+      required: true
