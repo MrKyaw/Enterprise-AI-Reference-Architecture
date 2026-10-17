@@ -1,0 +1,11 @@
+# .gitignore
+# Local configuration
+.env
+.venv/
+*.tfstate*
+*.pyc
+__pycache__/
+.hcl
+
+# Secrets
+credentials/*

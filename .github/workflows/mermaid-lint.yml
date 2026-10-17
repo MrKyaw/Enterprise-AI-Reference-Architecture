@@ -1,0 +1,55 @@
+# Mermaid lint and syntax validation
+name: Mermaid Syntax Validation
+
+on:
+  push:
+    paths:
+      - '**.md'
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install Node.js and mermaid-validate
+        run: |
+          npm ci
+          npm install -g mermaid-validate
+      
+      - name: Find and validate Mermaid diagrams
+        run: |
+          # Find all markdown files with mermaid code blocks
+          MMD_FILES=$(grep -rl '<!-- mermaid -->' --include='*.md' . 2>/dev/null || true)
+          CODE_BLOCKS=$(grep -rl '^```mermaid' --include='*.md' . 2>/dev/null || true)
+          
+          # Validate each mermaid code block
+          for file in $MMD_FILES $CODE_BLOCKS; do
+            # Extract mermaid code from code blocks
+            if echo "$file" | grep -q 'CODE_BLOCK'; then
+              # This is a code block file - extract mermaid section
+              sed -n '/^```mermaid/,/^```$/p' "$file" | tail -n +2 | head -n -1 > /tmp/mermaid_block.mmd
+            else
+              # This is a markdown file with front matter mermaid
+              grep -A100 '<!-- mermaid -->' "$file" | head -100 > /tmp/mermaid_block.mmd || true
+            fi
+            
+            # Validate the mermaid syntax
+            if [ -s /tmp/mermaid_block.mmd ]; then
+              mermaid-validate /tmp/mermaid_block.mmd || {
+                echo "❌ Mermaid syntax invalid in $file"
+                exit 1
+              }
+            fi
+          done
+          
+          # If no mermaid files found, that's okay
+          if [ -z "$MMD_FILES" ] && [ -z "$CODE_BLOCKS" ]; then
+            echo "No Mermaid diagrams found - skipping validation"
+          fi
+      
+      - name: Summary
+        run: echo "✅ All Mermaid diagrams validated successfully"

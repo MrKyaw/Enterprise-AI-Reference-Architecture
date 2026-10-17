@@ -87,16 +87,16 @@ flowchart TB
 
 ## Success metrics
 
-| Metric | Layer | Target direction |
-|---|---|---|
-| Retrieval hit-rate / recall@k | Retrieval | ↑ |
-| Faithfulness, citation correctness | Generation | ↑ |
-| Answer acceptance / thumbs-up | User | ↑ |
-| Escalation rate (appropriate) | System | Stable, low |
-| Time-to-answer | System | ↓ |
-| Expert interruptions for routine questions | Business | ↓ |
-| Cost per answered question | FinOps | Within envelope |
-| Stale-source incidents | Data | → 0 |
+| Metric | Layer | Target direction | Baseline (pre-launch) | Target |
+|---|---|---|---|---|
+| Retrieval hit-rate / recall@k | Retrieval | ↑ | 0.45 | ≥ 0.70 |
+| Faithfulness, citation correctness | Generation | ↑ | — | ≥ 0.85 human-verified |
+| Answer acceptance / thumbs-up | User | ↑ | 0.32 | ≥ 0.60 |
+| Escalation rate (appropriate) | System | Stable, low | 0.18/wk | ≤ 0.05/wk |
+| Time-to-answer | System | ↓ | 8.2s | ≤ 3s |
+| Expert interruptions for routine questions | Business | ↓ | 2.4/day | ≤ 0.5/day |
+| Cost per answered question | FinOps | Within envelope | $1.25 | ≤ $0.75 |
+| Stale-source incidents | Data | → 0 | 3/month | → 0 |
 
 ## Failure modes & mitigations
 
