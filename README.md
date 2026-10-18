@@ -163,3 +163,62 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required re
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+## About this repository
+
+This repository is a complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**. It exists to solve the scaling problem: instead of central architecture reviewing every AI initiative, we publish standards, checklists, and blueprints that engineering teams can apply independently — while central architects focus on high-risk and novel designs.
+
+**Purpose:** Provide canonical reference architectures, technology standards, design patterns, and governance processes for AI/ML workloads (training, inference, RAG, agentic, fine-tuning, and more).
+
+**Scope:** Covers the full software development lifecycle — from discovery and design through deployment, operation, and retirement — with nested lifecycles for ML projects, MLOps, GenAI systems, RAG, agents, data pipelines, and more.
+
+**Key deliverables:**
+- 19 end-to-end lifecycles with phase/artifact/exit-gate matrices
+- 13 pattern catalogs across software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain & business
+- 8 end-to-end use cases with problem statements, workflows, tech stacks, and trade-offs
+- 79 real production failure modes with fixes and prevention rules
+- 8 driven-development approaches and a full testing strategy
+- 8 reference architectures for core AI workload types
+- 12 AI security controls with secure SDLC and red-team integration
+- Architecture Decision Records (ADRs) for immutable governance
+
+**Governance:** Status-driven (`Proposed → Approved → Deprecated → Removed`), cross-cutting review required for standards changes, deprecation retention of 12 months.
+
+**Related resources:**
+- [Documentation catalog](docs/README.md) — all governance processes
+- [Production issues library](production-issues/README.md) — failure modes with fixes
+- [Research briefs](research/README.md) — horizon scanning and validation prototypes
+- [Architecture Decision Records](adr/README.md) — immutable governance
+
+---
+
+### Recommended GitHub Topics
+
+To make this repository discoverable, add these topics via **Settings → Tag topics**:
+
+```
+ai-governance
+ai-architecture
+reference-architectures
+llm
+mlops
+rag
+agents
+ai-security
+code-of-conduct
+mit-license
+```
+
+These topics help surface the repository to practitioners searching for enterprise AI architecture guidance.
+
+---
+
+**Contributing**
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required reviewers, naming conventions, and the deprecation rule. Standards and reference architecture changes require cross-cutting review before adoption. Please also read our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+**License**
+
+MIT — see [LICENSE](LICENSE).
