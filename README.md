@@ -168,6 +168,12 @@ MIT — see [LICENSE](LICENSE).
 
 ## About this repository
 
+**Repository description:** Vendor-neutral enterprise AI/ML architecture and governance knowledge base: reference architectures, MLOps/LLMOps lifecycles, RAG and agent patterns, security controls, evaluation, FinOps, use cases, and production failure modes—from discovery to retirement.
+
+**Implementation status:** The reference architectures and standards are proposed guidance. The inference starter kit is an illustrative scaffold with incomplete integrations; the other starter kits are documented layouts. Adapt and validate these materials for your environment.
+
+The repository description and topic tags are also stored in [`.github/repository-metadata.json`](.github/repository-metadata.json) for local discovery and synchronization with GitHub.
+
 This repository is a complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**. It exists to solve the scaling problem: instead of central architecture reviewing every AI initiative, we publish standards, checklists, and blueprints that engineering teams can apply independently — while central architects focus on high-risk and novel designs.
 
 **Purpose:** Provide canonical reference architectures, technology standards, design patterns, and governance processes for AI/ML workloads (training, inference, RAG, agentic, fine-tuning, and more).
@@ -196,18 +202,25 @@ This repository is a complete, vendor-neutral **architecture knowledge base for 
 
 ### Recommended GitHub Topics
 
-To make this repository discoverable, add these topics via **Settings → Tag topics**:
+To make this repository discoverable, add these topics via **Settings → Tag topics** (or `gh repo edit --add-topic`):
 
 ```
-ai-governance
+enterprise-ai
 ai-architecture
-reference-architectures
-llm
+ai-governance
+reference-architecture
 mlops
+llmops
 rag
-agents
+agentic-ai
+llm
 ai-security
-code-of-conduct
+finops
+design-patterns
+architecture-decision-records
+responsible-ai
+inference
+human-in-the-loop
 mit-license
 ```
 
@@ -222,3 +235,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required re
 **License**
 
 MIT — see [LICENSE](LICENSE).
+⭐ Star this repo if you find it useful! ⭐
+
+Report Bug · Request Feature · Ask Question
