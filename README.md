@@ -302,3 +302,14 @@ This repository now covers all 22 critical AI/ML architecture domains:
 *Last updated: 2026-10-19**Generated from `main` branch. Last updated: 2026-10-19.*
 
 ---
+
+
+---
+
+⭐ Star this repo if you find it useful!
+
+[Report Bug](.github/ISSUE_TEMPLATE/bug_report.md) · 
+[Request Feature](.github/ISSUE_TEMPLATE/feature_request.md) · 
+[Ask Question](.github/ISSUE_TEMPLATE/question.md)
+
+*Generated from `main` branch. Last updated: 2026-10-19*
