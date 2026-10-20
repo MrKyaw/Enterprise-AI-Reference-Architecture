@@ -1,6 +1,6 @@
 # Use Case — Document Intelligence Pipeline
 
-**Status:** Proposed · **Primary RA:** [Inference](../reference-architectures/inference/README.md) + [Intelligent automation](../reference-architectures/intelligent-automation/README.md) · **Lifecycle:** [Data](../lifecycles/data-lifecycle.md), [RAG](../lifecycles/rag-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Inference](../reference-architectures/inference/README.md) + [Intelligent automation](../reference-architectures/intelligent-automation/README.md) · **Lifecycle:** [Data](../lifecycles/data-lifecycle.md), [RAG](../lifecycles/rag-lifecycle.md)
 
 ## Problem statement
 

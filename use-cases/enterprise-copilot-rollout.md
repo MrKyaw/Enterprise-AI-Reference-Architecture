@@ -1,6 +1,6 @@
 # Use Case — Enterprise Copilot Rollout
 
-**Status:** Proposed · **Primary RA:** [Copilots](../reference-architectures/copilots/README.md) · **Lifecycle:** [Product](../lifecycles/product-lifecycle.md), [Enablement](../lifecycles/enablement-adoption-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Copilots](../reference-architectures/copilots/README.md) · **Lifecycle:** [Product](../lifecycles/product-lifecycle.md), [Enablement](../lifecycles/enablement-adoption-lifecycle.md)
 
 ## Problem statement
 
@@ -43,7 +43,6 @@ flowchart LR
     OUT --> REV{User reviews}
     REV -->|accept draft| DRAFT[Insert as draft/edit]
     REV -->|accept write| WRITE[Commit action - audited, permission-checked]
-    REV -->|reject/edit| FB[Feedback signal]
     WRITE --> HOST[(Host application)]
     FB --> TEL[Adoption + quality telemetry]
     DRAFT --> TEL
@@ -74,7 +73,6 @@ flowchart LR
 | Vendor embedded AI vs own | Vendor feature | Own build on the platform | Use vendor where it's good; own the context/permission/telemetry layer |
 | Permissions | Broad copilot access | User-inherited permissions | Always user-inherited, never a superuser copilot |
 | Rollout | Company-wide toggle | Phased by unit/role | Phased with adoption data per cohort |
-| Measurement | License count | Task-level time/task quality | Task-level; license counts prove nothing |
 
 ## Success metrics
 

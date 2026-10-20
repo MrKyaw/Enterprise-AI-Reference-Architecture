@@ -1,6 +1,6 @@
 # Use Case — Natural-Language Analytics (Data Agent)
 
-**Status:** Proposed · **Primary RA:** [Data agent](../reference-architectures/data-agent/README.md) · **Lifecycle:** [Data](../lifecycles/data-lifecycle.md), [Evaluation](../lifecycles/evaluation-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Data agent](../reference-architectures/data-agent/README.md) · **Lifecycle:** [Data](../lifecycles/data-lifecycle.md), [Evaluation](../lifecycles/evaluation-lifecycle.md)
 
 ## Problem statement
 
@@ -94,7 +94,7 @@ flowchart TB
 | Failure | Mitigation |
 |---|---|
 | Confident wrong answer from misread question | Ambiguity detection + clarification + query validation |
-| Silent metric inconsistency | Semantic layer as the only source of definitions |
+| Silent metric inconsistency | Semantic layer is the only source of definitions |
 | Row-level security bypass | Identity propagation + policy injection + negative tests |
 | Runaway query cost | Cost ceilings, scan limits, query timeouts |
 | Undefined metric improvised | Explicit "not defined" path routed to governance |

@@ -1,6 +1,6 @@
 # Use Case — Domain Model Adaptation (Fine-tuning)
 
-**Status:** Proposed · **Primary RA:** [Fine-tuning](../reference-architectures/fine-tuning/README.md) · **Lifecycle:** [ML project](../lifecycles/ml-project-lifecycle.md), [Model risk](../lifecycles/model-risk-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Fine-tuning](../reference-architectures/fine-tuning/README.md) · **Lifecycle:** [ML project](../lifecycles/ml-project-lifecycle.md), [Model risk](../lifecycles/model-risk-lifecycle.md)
 
 ## Problem statement
 
@@ -16,7 +16,7 @@ A narrow, high-volume task uses specialized terminology, formats, or classificat
 | Output format violations | Downstream parsing failures |
 | Per-call cost at high volume | Budget pressure |
 | Latency above SLA with large models | Poor user experience |
-| Prompt changes regress other behaviors | Whack-a-mole maintenance |
+| Prompt changes regress other behaviors | Whack-a-meta maintenance |
 | Labeled data scattered and undocumented | Cannot train responsibly |
 | Fine-tuning treated as a silver bullet | Cost and maintenance with no measured gain |
 | Base model deprecation after adaptation | Emergency migration |
@@ -61,7 +61,7 @@ flowchart TB
 | Baseline first | Prompt + few-shot + RAG metrics | Required evidence before adapting |
 | Dataset | Versioned, documented, consent-tracked | Data cards; bias review |
 | Method | Parameter-efficient tuning → distillation for cost | Start cheap; measure |
-| Evaluation | Held-out + out-of-time + adversarial + subgroup | Same rigor as [ML lifecycle](../lifecycles/ml-project-lifecycle.md) |
+| Evaluation | Held-out + out-of-time + adversarial + subgroup | Same rigor as [ML project lifecycle](../lifecycles/ml-project-lifecycle.md) |
 | Registry | Immutable artifact + lineage + model card | [MLOps lifecycle](../lifecycles/mlops-lifecycle.md) |
 | Serving | [Inference RA](../reference-architectures/inference/README.md) with canary | Compare against incumbent |
 | Monitoring | Quality sampling, drift, cost, regression set | Retraining/deprecation triggers |

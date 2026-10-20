@@ -1,0 +1,22 @@
+{
+  "description": "Vendor-neutral enterprise AI/ML architecture and governance knowledge base: reference architectures, MLOps/LLMOps lifecycles, RAG and agent patterns, security controls, evaluation, FinOps, use cases, and production failure modes\u2014from discovery to retirement.",
+  "topics": [
+    "enterprise-ai",
+    "ai-architecture",
+    "ai-governance",
+    "reference-architecture",
+    "mlops",
+    "llmops",
+    "rag",
+    "agentic-ai",
+    "llm",
+    "ai-security",
+    "finops",
+    "design-patterns",
+    "architecture-decision-records",
+    "responsible-ai",
+    "inference",
+    "human-in-the-loop",
+    "mit-license"
+  ]
+}

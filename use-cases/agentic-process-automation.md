@@ -1,6 +1,6 @@
 # Use Case — Agentic Process Automation
 
-**Status:** Proposed · **Primary RA:** [Agentic](../reference-architectures/agentic/README.md) + [Intelligent automation](../reference-architectures/intelligent-automation/README.md) · **Lifecycle:** [Agent](../lifecycles/agent-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Agentic](../reference-architectures/agentic/README.md) + [Intelligent automation](../reference-architectures/intelligent-automation/README.md) · **Lifecycle:** [Agent](../lifecycles/agent-lifecycle.md)
 
 ## Problem statement
 
@@ -61,7 +61,7 @@ flowchart TB
 |---|---|---|
 | Orchestration | Durable workflow engine with retries, compensation, exception routing | The process is explicit, not model-driven |
 | Decision layer | Rules → ML → agent, cheapest reliable mechanism first | Rules handle the 80% |
-| Document/extraction | Document intelligence pipeline | See [document intelligence use case](document-intelligence-pipeline.md) |
+| Document/extraction | Document intelligence pipeline | See [document intelligence use case](../use-cases/document-intelligence-pipeline.md) |
 | Integrations | APIs first; UI automation only where none exist | Detect UI breakage |
 | Agent runtime | Bounded loop, typed tools, registry, sandbox | [Agent patterns](../design-patterns/agent-patterns.md) |
 | Approval | External workflow, expiry defaults to deny | [HITL pattern](../design-patterns/human-in-the-loop-approval.md) |
@@ -113,5 +113,5 @@ flowchart TB
 - Simulation environments for agent trajectories before production writes
 - Automatic process-discovery from event logs to find the next automation candidate
 - Self-healing integrations that detect and adapt to interface changes
-- Autonomy regression testing after any model or prompt change
+- Automatic autonomy increases that are explicit and reversible
 - Cooperative automation where humans and agents share a queue with priority learning

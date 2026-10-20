@@ -1,6 +1,6 @@
 # Use Case — AI Platform Foundation (Enablement Platform)
 
-**Status:** Proposed · **Primary RA:** [Inference](../reference-architectures/inference/README.md) · **Lifecycle:** [Technology](../lifecycles/technology-lifecycle.md), [FinOps](../lifecycles/finops-cost-lifecycle.md), [Enablement](../lifecycles/enablement-adoption-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Inference](../reference-architectures/inference/README.md) · **Lifecycle:** [Technology](../lifecycles/technology-lifecycle.md), [FinOps](../lifecycles/finops-cost-lifecycle.md), [Enablement](../lifecycles/enablement-adoption-lifecycle.md)
 
 ## Problem statement
 

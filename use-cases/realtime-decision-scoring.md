@@ -1,6 +1,6 @@
 # Use Case — Real-Time Decision Scoring
 
-**Status:** Proposed · **Primary RA:** [Inference](../reference-architectures/inference/README.md) · **Lifecycle:** [ML project](../lifecycles/ml-project-lifecycle.md), [MLOps](../lifecycles/mlops-lifecycle.md), [Operations](../lifecycles/operations-incident-lifecycle.md)
+**Status:** Shipped · **Primary RA:** [Inference](../reference-architectures/inference/README.md) · **Lifecycle:** [ML project](../lifecycles/ml-project-lifecycle.md), [MLOps](../lifecycles/mlops-lifecycle.md), [Operations](../lifecycles/operations-incident-lifecycle.md)
 
 ## Problem statement
 
@@ -73,7 +73,7 @@ flowchart LR
 | Features | Many, fresh | Few, cached | Freshness has a latency cost; measure marginal accuracy |
 | Threshold | Optimize accuracy | Optimize cost asymmetry | Use the business cost of false positives vs false negatives |
 | Fallback | Fail the request | Rules fallback | Degrade to rules; never a hard failure for critical decisions |
-| Auto-retrain | Manual only | Automatic with guardrails | Bounded automatic promotion with rollback for medium tier; manual for high |
+| Auto-retrain | Manual only | Automatic with guardrails | Bounded auto-promotion with rollback for medium tier; manual for high |
 | Explanation | Post-hoc only | Native/interpretable model | Regulated contexts may require native interpretability |
 
 ## Success metrics

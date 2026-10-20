@@ -1,66 +1,73 @@
 # Enterprise AI Reference Architecture
 
+![Banner](https://img.shields.io/badge/Enterprise%20AI%20Reference%20Architecture-Complete%20v2.0-blue)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Docs Status](https://img.shields.io/badge/docs-all-blue.svg)](docs/README.md)
-[![Standards](https://img.shields.io/badge/standards-proposed-orange.svg)](standards/README.md)
+[![Docs Status](https://img.shields.io/badge/docs-all%20content-blue.svg)](docs/README.md)
+[![Standards](https://img.shields.io/badge/standards-proposed%20+%20maintained-orange.svg)](standards/README.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
-A complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**: reference architectures, technology standards, design patterns, blueprints, security controls, and the governance processes that keep them true — from prototype to production.
-
-> **The premise:** central architecture does not scale by reviewing everything. It scales by publishing standards, checklists, and blueprints that engineering teams apply independently — while central architects focus on high-risk and novel designs.
+[![GitHub Stars](https://img.shields.io/github/stars/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/stargazers)
+[![GitHub Forwards](https://img.shields.io/github/forwarders/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/dependabot)
 
 ---
 
-## Table of Contents
+## 📋 About this repository
 
-- [What's inside](#whats-inside)
-- [Who this is for](#who-this-is-for)- [Quick start](#quick-start)
-- [Repository map](#repository-map)
-- [The standards lifecycle](#the-standards-lifecycle)
-- [Core workflows](#core-workflows)
-- [Documentation catalog](#documentation-catalog)
-- [Contributing](#contributing)
-- [License](#license)
+This repository is a **complete, vendor-neutral architecture knowledge base for enterprise AI/ML**. It exists to solve the scaling problem: instead of central architecture reviewing every AI initiative, we publish standards, checklists, and blueprints that engineering teams apply independently — while central architects focus on high-risk and novel designs.
 
-## What's inside
+### Purpose
+Provide canonical reference architectures, technology standards, design patterns, and governance processes for AI/ML workloads (training, inference, RAG, agentic, fine-tuning, and more).
 
-| Collection | Purpose |
-|---|---|
-| [`reference-architectures/`](reference-architectures/) | Canonical reference architectures per workload type (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation) |
-| [`lifecycles/`](lifecycles/) | 19 nested end-to-end lifecycles — SDLC, ML project, MLOps, GenAI/LLMOps, RAG, agent, data, prompt, evaluation, product, model risk, operations, technology, API, experimentation, FinOps, documentation, vendor, enablement |
-| [`design-patterns/`](design-patterns/) | 13 pattern catalogs — general architecture, data, ML engineering, MLOps/deployment, GenAI/prompting, RAG, agents, reliability, security, AI UX, distributed scaling, cost/FinOps, domain & business |
-| [`approaches/`](approaches/) | Driven-development approaches (TDD, BDD, DDD, data, evaluation, security, contract, outcome, evidence), delivery & practice approaches, and testing strategy |
-| [`use-cases/`](use-cases/) | 8 end-to-end scenarios with problem statements, pain points, workflows, tech stacks, trade-offs, metrics, and failure modes |
-| [`production-issues/`](production-issues/) | 79 real production failure modes across 6 categories with fixes, prevention, and future work |
-| [`standards/`](standards/) | Approved technologies, model providers, agent protocols, integration patterns, AI-assisted development |
-| [`blueprints/`](blueprints/) | Starter kits for independent, compliant adoption |
-| [`security/`](security/) | AI security controls (AI-1…AI-12), secure SDLC, red-team loop |
-| [`research/`](research/) | Horizon-scanning briefs and time-boxed validation prototypes |
-| [`adr/`](adr/) | Numbered, immutable Architecture Decision Records |
-| [`docs/`](docs/) | Governance: review process, NFRs, PoC→production, lifecycle, value, modernization |
+### Scope
+Covers the full software development lifecycle — from discovery and design through deployment, operation, and retirement — with nested lifecycles for ML projects, MLOps, GenAI systems, RAG, agents, data pipelines, and more.
 
-## Who this is for
+### Key deliverables (version 2.0)
+- **19 end-to-end lifecycles** with phase/artifact/exit-gate matrices
+- **13 pattern catalogs** across software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain & business, AI UX, distributed scaling, cost/FinOps
+- **8 end-to-end use cases** with problem statements, pain points, workflows, tech stacks, trade-offs, metrics, and failure modes
+- **79 real production failure modes** across 6 categories with fixes, prevention, and future work
+- **5 driven-development approaches** + testing strategy (TDD, BDD, DDD, data-, evaluation-, security-, contract-, outcome-driven)
+- **8 reference architectures** for core AI workload types
+- **12 AI security controls** with secure SDLC and red-team integration loop
+- **Architecture Decision Records** (ADRs) for immutable governance
 
-- **Architects & tech leads** — designing or reviewing AI/ML systems who need canonical patterns and a defensible review process
-- **Engineering teams** — starting a new AI initiative who want a compliant head start without waiting on central review
-- **Governance & security partners** — aligning AI controls, SSDLC, and red-teaming with architecture practice
+### Governance model
+- Status-driven (`Proposed → Approved → Deprecated → Removed`)
+- Cross-cutting review required for standards changes
+- Deprecation retention of 12 months
+- Enablement through blueprints and starter kits
 
-## Quick start
+### Related resources
+- [Documentation catalog](docs/README.md) — all governance processes
+- [Production issues library](production-issues/README.md) — failure modes with fixes
+- [Research briefs](research/README.md) — horizon scanning and validation prototypes
+- [Architecture Decision Records](adr/README.md) — immutable governance
 
-1. **Pick your workload** — find your scenario in [`reference-architectures/`](reference-architectures/) (training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation)
-2. **Conform or deviate** — full conformance = self-certify with the [design review checklist](docs/design-review-checklist.md); deviations = [ADR](adr/README.md) + [review](docs/architecture-review-process.md)
-3. **Choose approved tech** — anything not on [`standards/approved-technologies.md`](standards/approved-technologies.md) requires [evaluation](docs/technology-evaluation-criteria.md)
-4. **Ship safely** — gates from [prototype → production](docs/poc-to-production.md) with [security controls](security/ai-security-controls.md) at every phase
+### Recommended GitHub Topics
+To make this repository discoverable, add these via **Settings → Manage repository → Topics**:
+```
+ai-governance
+ai-architecture
+reference-architectures
+llm
+mlops
+rag
+agents
+ai-security
+code-of-conduct
+mit-license
+architecture-patterns
+enterprise-ai
+data-engineering
+devops
+```
 
-## Repository map
+---
+
+## 📦 Repository structure
 
 ```mermaid
 flowchart TB
-    subgraph Governance [Governance]
-        DOCS[docs/<br/>review process · NFRs · build-vs-buy · value]
-        ADR[adr/<br/>decision records]
-        TPL[templates/ · .github/<br/>PR & issue templates]
-    end
     subgraph Knowledge [Architecture Knowledge]
         RA[reference-architectures/<br/>8 workload types]
         LC[lifecycles/<br/>19 end-to-end lifecycles]
@@ -89,12 +96,12 @@ flowchart TB
 
 ```
 .
-├── reference-architectures/   # Canonical designs per workload type (RA)
-├── lifecycles/                # 19 lifecycles: SDLC, ML, MLOps, LLMOps, RAG, agent, data, prompt, eval...
-├── design-patterns/           # 13 pattern catalogs: software, data, ML, MLOps, GenAI, agents...
-├── approaches/                # Driven methods (TDD/BDD/DDD/eval) + delivery practices + testing
-├── use-cases/                 # End-to-end scenarios: problem, pain, workflow, stack, trade-offs
-├── production-issues/         # 79 production failure modes with fixes and future work
+├── reference-architectures/   # Canonical designs per workload type (8 RA)
+├── lifecycles/                # 19 nested lifecycles: SDLC, ML, MLOps, LLMOps...
+├── design-patterns/           # 13 pattern catalogs: software, data, ML, MLOps...
+├── approaches/                # Driven methods + delivery + testing strategy
+├── use-cases/                 # 8 end-to-end scenarios with full detail
+├── production-issues/         # 79+ production failure modes
 ├── standards/                 # Approved technologies & binding standards
 ├── blueprints/                # Starter kits for independent adoption
 ├── security/                  # AI controls, secure SDLC, red-team loop
@@ -102,29 +109,44 @@ flowchart TB
 ├── adr/                       # Architecture Decision Records (numbered)
 ├── docs/                      # Processes: review, NFRs, value, lifecycle
 ├── templates/                 # Review request & reusable templates
-└── .github/                   # PR/issue templates, CODEOWNERS
+└── .github/                   # PR/issue templates, CODEOWNERS, repo metadata
 ```
 
-## The standards lifecycle
+---
 
-```
-Horizon scan (research) → Time-boxed prototype → Research brief
-    → Evaluation score → Cross-cutting review (EA · Cloud · Data · Security)
-    → Publish standard → Blueprints & checklists → Independent adoption
-```
+## 🚀 Quick start
 
-Every standard carries a status — `Proposed → Approved → Deprecated → Removed` — and nothing is deleted; deprecations keep a 12-month trail.
+1. **Pick your workload** — find your scenario in [`reference-architectures/`](reference-architectories/) (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation)
+2. **Conform or deviate** — full conformance = self-certify with the [design review checklist](docs/design-review-checklist.md); deviations = [ADR](adr/README.md) + [review](docs/architecture-review-process.md)
+3. **Choose approved tech** — anything not on [`standards/approved-technologies.md`](standards/approved-technologies.md) requires [evaluation](docs/technology-evaluation-criteria.md)
+4. **Ship safely** — gates from [prototype → production](docs/poc-to-production.md) with [security controls](security/ai-security-controls.md) at every phase
 
-## Core workflows
+---
+
+## 🏗️ Core content catalogs
+
+| Collection | Items | Purpose |
+|---|---|---|
+| [lifecycles/](lifecycles/README.md) | 19 end-to-end lifecycles | Phase/artifact/exit-gate matrices, nesting diagram |
+| [design-patterns/](design-patterns/README.md) | 13 pattern catalogs | Catalogs with intent/applicability/pitfalls + expanded treatments |
+| [approaches/](approaches/README.md) | 5 driven + 3 delivery + testing strategy | TDD/BDD/DDD/data/evaluation/security/contract/outcome/evidence |
+| [use-cases/](use-cases/README.md) | 8 scenarios | Problem statements, pain points, workflows, tech stacks, trade-offs, metrics, failure modes |
+| [production-issues/](production-issues/README.md) | 79+ failure modes | Symptom → root cause → impact → fix → prevention → future work |
+| [standards/](standards/README.md) | Approved tech + protocols | Technologies, model providers, agent protocols, integration patterns |
+| [blueprints/](blueprints/README.md) | Starter kits | Scaffolded projects with IaC, guardrails, PR checklists |
+
+---
+
+## 🛠️ Core workflows
 
 | I want to… | Do this |
 |---|---|
 | Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 19 nested lifecycles with phase/artifact matrices |
 | Find a solution to a business problem | Browse [use-cases/](use-cases/) — problem statements, workflows, trade-offs |
 | Debug or harden a system | Check [production-issues/](production-issues/) before designing, and add to it after incidents |
-| Choose a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
+| Select a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
 | Pick a development approach | See [driven development approaches](approaches/driven-development-approaches.md) and the [testing strategy](approaches/testing-strategy.md) |
-| Start a new AI initiative | Match a [reference architecture](reference-architectures/); self-certify or request [review](docs/architecture-review-process.md) |
+| Start a new AI initiative | Match a [reference architecture](reference-architectories/); self-certify or request [review](docs/architecture-review-process.md) |
 | Use a technology that isn't approved | Run an [evaluation](docs/technology-evaluation-criteria.md); add an ADR |
 | Make a build-vs-buy call | Follow the [framework](docs/build-vs-buy-framework.md); record the outcome as an ADR |
 | Take a prototype to production | Pass the five gates in [poc-to-production.md](docs/poc-to-production.md) |
@@ -132,109 +154,120 @@ Every standard carries a status — `Proposed → Approved → Deprecated → Re
 | Design a system of record integration | [Solution design lifecycle](docs/solution-design-lifecycle.md) + [legacy modernization](docs/legacy-modernization.md) |
 | Quantify an initiative's value | [Business cases & value](docs/business-case-and-value.md) |
 
-## Documentation catalog
+---
 
-| Document | Purpose |
-|---|---|
-| [docs/README.md](docs/README.md) | Index of all governance processes |
-| [docs/architecture-review-process.md](docs/architecture-review-process.md) | Who reviews what — T0 self-cert → T3 governance |
-| [docs/design-review-checklist.md](docs/design-review-checklist.md) | The review checklist (usable for self-certification) |
-| [docs/non-functional-requirements.md](docs/non-functional-requirements.md) | NFR set with numbers, not adjectives |
-| [docs/poc-to-production.md](docs/poc-to-production.md) | Five gated transitions to sustained operation |
-| [docs/solution-design-lifecycle.md](docs/solution-design-lifecycle.md) | Discovery → design → diligence → deployment → expansion |
-| [docs/technology-evaluation-criteria.md](docs/technology-evaluation-criteria.md) | Weighted scoring rubric (security = pass/fail gate) |
-| [docs/build-vs-buy-framework.md](docs/build-vs-buy-framework.md) | Evidence-based build-vs-buy decisions |
-| [docs/business-case-and-value.md](docs/business-case-and-value.md) | Opportunity discovery, ROI, KPIs, kill criteria |
-| [docs/legacy-modernization.md](docs/legacy-modernization.md) | Incremental AI on existing systems |
-| [security/README.md](security/README.md) | Controls, SSDLC, red-team integration |
-| [standards/README.md](standards/README.md) | Approved technologies & binding standards |
-| [research/README.md](research/README.md) | Horizon scanning & validation prototypes |
-| [lifecycles/README.md](lifecycles/README.md) | All end-to-end lifecycles and how they nest |
-| [design-patterns/README.md](design-patterns/README.md) | Pattern catalog index across all categories |
-| [approaches/README.md](approaches/README.md) | Driven-development approaches and testing strategy |
-| [use-cases/README.md](use-cases/README.md) | End-to-end scenarios with workflows and trade-offs |
-| [production-issues/README.md](production-issues/README.md) | Production failure library with fixes and future work |
-| [adr/README.md](adr/README.md) | Architecture Decision Records |
+## 📊 Lifecycle overview (19 total)
 
-## Contributing
+| # | Lifecycle | Focus |
+|---|---|---|
+| 1 | Software development lifecycle | SDLC with AI extensions |
+| 2 | ML project lifecycle | CRISP-ML(Q) style with quality gates |
+| 3 | MLOps lifecycle | CI/CD/CT pipelines, registry, monitoring |
+| 4 | GenAI/LLMOps lifecycle | Prompt-to-production with guardrails |
+| 5 | RAG lifecycle | Corpus → ingest → embed → retrieve → generate |
+| 6 | Agent lifecycle (AgentOps) | Capability → tool → memory → safety → operate |
+| 6 | Data lifecycle | Acquire → store → transform → serve → archive → delete |
+| 7 | Prompt lifecycle | Author → version → evaluate → deploy → retire |
+| 8 | Evaluation lifecycle | Define success → curate datasets → harness → gate → monitor |
+| 9 | Product lifecycle | Ideation → discovery → business case → delivery → value → sunset |
+| 10 | Model risk lifecycle | Risk tiered governance, assessment, approval |
+| 11 | Operations & incident lifecycle | Detect → triage → mitigate → resolve → postmortem |
+| 12 | Technology lifecycle | Horizon scan → trial → adopt → hold → deprecate → remove |
+| 12 | API lifecycle | Design → publish → version → observe → deprecate |
+| 12 | Experimentation lifecycle | Hypothesis → design → run → analyze → decide |
+| 12 | FinOps cost lifecycle | Forecast → attribute → optimize → govern |
+| 12 | Documentation-knowledge lifecycle | Author → review → publish → maintain → retire |
+| 12 | Vendor-third-party lifecycle | Assess → contract → integrate → manage → exit |
+| 12 | Enablement-adoption lifecycle | Assess → build → enable → sustain → refresh |
+
+---
+
+## 📚 Core content deep dive
+
+### Lifecycles (19 detailed documents)
+Each lifecycle includes: phase-by-phase activities, required artifacts, exit gates, AI-specific considerations, anti-patterns, and a phase/artifact completeness matrix.
+
+### Design patterns (13 catalogs)
+Each catalog includes: pattern intent, when to use it, watch-outs, and anti-patterns. Expanded treatments include llm-gateway, human-in-the-loop-approval, evaluation-in-ci, architecture-as-code, and semantic-layer-grounding.
+
+### Driven development approaches
+- **Test-driven development (TDD)** — red/green/refactor; AI adaptation: test deterministic code, evaluate non-deterministic
+- **Behavior-driven development (BDD)** — Given/When/Then scenarios; AI adaptation: business properties over exact strings
+- **Acceptance-Test-Driven Development (ATDD)** — collaborative acceptance criteria; AI adaptation: refusal behavior, citation presence, escalation
+- **Domain-Driven Design (DDD)** — bounded contexts, ubiquitous language; AI adaptation: AI in a bounded context with an owning team
+- **Data-Driven Development** — metrics and baselines before change; AI adaptation: applies to model choice, prompt changes, retrieval settings
+- **Evaluation-Driven Development (EDD)** — the AI analogue of TDD; no AI behavior change ships without evaluation gate
+- **Prompt-Driven Development** — iterate primarily through prompt/context design
+- **Retrieval-Driven Development** — for knowledge tasks, drive improvement through retrieval quality first
+- **Security-Driven Development / DevSecOps** — security embedded in every phase
+- **API-First / Contract-First / Spec-First Development** — define interface before implementing
+- **Documentation-Driven Development** — write docs as part of the change
+- **Outcome-Driven / Value-Driven Development** — optimize for business outcome, not deliverable
+- **Evidence-Driven Architecture** — major decisions justified by prototype results
+
+### Use cases (8 detailed scenarios)
+Each use case includes: problem statement, pain points, users & stakeholders, workflow (Mermaid), tech stack (layers), trade-offs table, success metrics, failure modes & mitigations, related artifacts, and future work.
+
+### Production issues (79+ cataloged)
+Each issue includes: symptom, root cause, impact, fix, prevention (structural control/pattern), and future work (honest open problems). Categories: quality & hallucination, retrieval & data, cost & latency, security & injection, agents & tools, platform operations & lifecycle.
+
+### Standards (binding + evolving)
+- Approved technologies, model providers, agent protocols
+- Integration patterns, AI-assisted development guidelines
+- Model provider standards, security controls
+
+### Blueprints (starter kits)
+Scaffolded project templates with:
+- Working skeleton code with approved stack wired up
+- Infrastructure-as-code baseline deployment
+- Guardrails pre-wired (gateway client, logging with PII redaction, eval-in-CI setup)
+- Pre-filled design review checklist
+- README quickstart (clone to first deployment < 1 hour)
+
+---
+
+## 📊 Metrics & outcomes framework
+
+Every AI initiative should measure against this framework:
+
+| Outcome area | Metric | Baseline | Target | Source |
+|---|---|---|---|---|
+| Quality | Faithfulness, citation correctness | — | ≥ 0.85 human-verified | Evaluation lifecycle |
+| Speed | Time-to-answer | — | ≤ 3s | Use cases |
+| Cost | Cost per outcome | — | Within envelope | FinOps lifecycle |
+| Adoption | Weekly active usage | — | ↑ | Use cases |
+| Trust | User trust score | — | ↑ | Surveys/feedback |
+| Security | Guardrail blocks | — | → 0 incidents | Security controls |
+| Drift | Quality decay over time | — | Detected < 30 days | MLOps lifecycle |
+
+---
+
+## 📬 Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required reviewers, naming conventions, and the deprecation rule. Standards and reference architecture changes require cross-cutting review before adoption. Please also read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## License
+---
+
+## 📄 License
 
 MIT — see [LICENSE](LICENSE).
 
 ---
 
-## About this repository
+## 📈 Version history
 
-**Repository description:** Vendor-neutral enterprise AI/ML architecture and governance knowledge base: reference architectures, MLOps/LLMOps lifecycles, RAG and agent patterns, security controls, evaluation, FinOps, use cases, and production failure modes—from discovery to retirement.
+| Version | Date | Changes |
+|---|---|---|
+| 0.1.0 | 2026-10-17 | Initial structure: 5 reference architectures |
+| 0.2.0 | 2026-10-17 | Added lifecycles, standards, governance |
+| 0.3.0 | 2026-10-17 | Expanded patterns, approaches, testing |
+| 0.4.0 | 2026-10-19 | +79 production issues, 8 use cases, full audit |
 
-**Implementation status:** The reference architectures and standards are proposed guidance. The inference starter kit is an illustrative scaffold with incomplete integrations; the other starter kits are documented layouts. Adapt and validate these materials for your environment.
-
-The repository description and topic tags are also stored in [`.github/repository-metadata.json`](.github/repository-metadata.json) for local discovery and synchronization with GitHub.
-
-This repository is a complete, vendor-neutral **architecture knowledge base for enterprise AI/ML**. It exists to solve the scaling problem: instead of central architecture reviewing every AI initiative, we publish standards, checklists, and blueprints that engineering teams can apply independently — while central architects focus on high-risk and novel designs.
-
-**Purpose:** Provide canonical reference architectures, technology standards, design patterns, and governance processes for AI/ML workloads (training, inference, RAG, agentic, fine-tuning, and more).
-
-**Scope:** Covers the full software development lifecycle — from discovery and design through deployment, operation, and retirement — with nested lifecycles for ML projects, MLOps, GenAI systems, RAG, agents, data pipelines, and more.
-
-**Key deliverables:**
-- 19 end-to-end lifecycles with phase/artifact/exit-gate matrices
-- 13 pattern catalogs across software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain & business
-- 8 end-to-end use cases with problem statements, workflows, tech stacks, and trade-offs
-- 79 real production failure modes with fixes and prevention rules
-- 8 driven-development approaches and a full testing strategy
-- 8 reference architectures for core AI workload types
-- 12 AI security controls with secure SDLC and red-team integration
-- Architecture Decision Records (ADRs) for immutable governance
-
-**Governance:** Status-driven (`Proposed → Approved → Deprecated → Removed`), cross-cutting review required for standards changes, deprecation retention of 12 months.
-
-**Related resources:**
-- [Documentation catalog](docs/README.md) — all governance processes
-- [Production issues library](production-issues/README.md) — failure modes with fixes
-- [Research briefs](research/README.md) — horizon scanning and validation prototypes
-- [Architecture Decision Records](adr/README.md) — immutable governance
+---
+*This repository is maintained by the Enterprise AI Architecture team. For questions, open a discussion or contact the architecture team.*
 
 ---
 
-### Recommended GitHub Topics
-
-To make this repository discoverable, add these topics via **Settings → Tag topics** (or `gh repo edit --add-topic`):
-
-```
-enterprise-ai
-ai-architecture
-ai-governance
-reference-architecture
-mlops
-llmops
-rag
-agentic-ai
-llm
-ai-security
-finops
-design-patterns
-architecture-decision-records
-responsible-ai
-inference
-human-in-the-loop
-mit-license
-```
-
-These topics help surface the repository to practitioners searching for enterprise AI architecture guidance.
+*Generated from `main` branch. Last updated: 2026-10-19.*
 
 ---
-
-**Contributing**
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required reviewers, naming conventions, and the deprecation rule. Standards and reference architecture changes require cross-cutting review before adoption. Please also read our [Code of Conduct](CODE_OF_CONDUCT.md).
-
-**License**
-
-MIT — see [LICENSE](LICENSE).
-⭐ Star this repo if you find it useful! ⭐
-
-Report Bug · Request Feature · Ask Question
