@@ -116,7 +116,7 @@ flowchart TB
 
 ## 🚀 Quick start
 
-1. **Pick your workload** — find your scenario in [`reference-architectures/`](reference-architectories/) (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation)
+1. **Pick your workload** — find your scenario in [`reference-architectures/`](reference-architectures/) (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation)
 2. **Conform or deviate** — full conformance = self-certify with the [design review checklist](docs/design-review-checklist.md); deviations = [ADR](adr/README.md) + [review](docs/architecture-review-process.md)
 3. **Choose approved tech** — anything not on [`standards/approved-technologies.md`](standards/approved-technologies.md) requires [evaluation](docs/technology-evaluation-criteria.md)
 4. **Ship safely** — gates from [prototype → production](docs/poc-to-production.md) with [security controls](security/ai-security-controls.md) at every phase
@@ -146,7 +146,7 @@ flowchart TB
 | Debug or harden a system | Check [production-issues/](production-issues/) before designing, and add to it after incidents |
 | Select a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
 | Pick a development approach | See [driven development approaches](approaches/driven-development-approaches.md) and the [testing strategy](approaches/testing-strategy.md) |
-| Start a new AI initiative | Match a [reference architecture](reference-architectories/); self-certify or request [review](docs/architecture-review-process.md) |
+| Start a new AI initiative | Match a [reference architecture](reference-architectures/); self-certify or request [review](docs/architecture-review-process.md) |
 | Use a technology that isn't approved | Run an [evaluation](docs/technology-evaluation-criteria.md); add an ADR |
 | Make a build-vs-buy call | Follow the [framework](docs/build-vs-buy-framework.md); record the outcome as an ADR |
 | Take a prototype to production | Pass the five gates in [poc-to-production.md](docs/poc-to-production.md) |
@@ -268,6 +268,37 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Generated from `main` branch. Last updated: 2026-10-19.*
+
+
+## 📚 Domain coverage (22 / 22)
+
+This repository now covers all 22 critical AI/ML architecture domains:
+
+| Domain | Status | Reference |
+|---|---|---|
+| Software | ✅ Covered | SDLC + software design patterns |
+| Algorithms | ✅ Covered | ML engineering patterns |
+| Integration | ✅ Covered | Integration patterns + API lifecycle |
+| Statistics | ✅ Covered | Embedded in ML/project lifecycles |
+| Machine Learning | ✅ Covered | ML project lifecycle + MLOps |
+| DevOps | ✅ Covered | MLOps CI/CD pipelines + blueprints |
+| Data Engineering | ✅ Covered | Data lifecycle (ingest → serve → archive) |
+| Data Science | ✅ Covered | ML project lifecycle + domain model adaptation |
+| ML Operations | ✅ Covered | Dedicated MLOps lifecycle |
+| LLM | ✅ Covered | Inference reference architecture |
+| GenAI | ✅ Covered | GenAI/LLMOps lifecycle |
+| LLMOps | ✅ Covered | Dedicated lifecycle |
+| Agentic AI/Multi-Agents | ✅ Covered | Agent lifecycle + agentic process automation |
+| Observability | ✅ Covered | Stage-decomposed tracing + multiple lifecycles |
+| Evals | ✅ Covered | Evaluation lifecycle + evaluation-in-CI pattern |
+| Edge AI | ✅ Covered | Edge AI lifecycle + quantization patterns |
+| Quantum Computing | ✅ Covered | Quantum computing lifecycle + quantum patterns |
+| Cyber Security | ✅ Covered | AI security controls + secure SDLC |
+| LLM Inference | ✅ Covered | Inference RA + inference-starter-kit |
+| Agent Factory | ✅ Covered | Agent factory lifecycle + standardized scaffolds |
+| Physical AI | ✅ Covered | Physical AI lifecycle + sim-to-real transfer |
+| Embodied AI | ✅ Covered | Embodied AI lifecycle + sensorimotor learning |
+
+*Last updated: 2026-10-19**Generated from `main` branch. Last updated: 2026-10-19.*
 
 ---

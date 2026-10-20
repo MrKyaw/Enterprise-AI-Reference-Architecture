@@ -298,7 +298,7 @@ If your needs change, you can migrate between blueprints by:
 
 1. **Importing data** from the old blueprint's data store
 2. **Re-running the evaluation harness** to compare quality
-3. **Updating the tech stack** via the [tech migration guide](../standards/tech-migration.md) (work in progress)
+3. **Updating the tech stack** via the migration practices described in [CONTRIBUTING.md](../CONTRIBUTING.md)
 4. **Updating ADRs** to reflect the new architecture decision
 
 ---
