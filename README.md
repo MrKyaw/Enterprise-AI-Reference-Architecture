@@ -306,6 +306,26 @@ This repository now covers all 22 critical AI/ML architecture domains:
 
 ---
 
+---
+
+## 📚 Architect Career Competency Framework & Resources
+
+A comprehensive reference for architects at every level — covering all 12 architect roles, core knowledge, hands-on proficiency, AI specialization, architecture artifacts, seniority expectations, and curated learning resources (books, YouTube, courses, tools).
+
+👉 **[View Full Resources →](resources/README.md)**
+
+Includes:
+- 🎯 **12 Architect Roles** with essential knowledge & hands-on skills
+- 🧠 **Core Knowledge** across 6 domains (system design, software engineering, cloud, data, security, business)
+- 💻 **Hands-On Proficiency** expectations with evidence
+- 🤖 **AI/ML Specialization** (12 domains: classical ML, deep learning, foundation models, RAG, agentic AI, MLOps, etc.)
+- 📋 **Architecture Artifacts** (ADRs, C4 diagrams, threat models, NFRs, etc.)
+- 📈 **Seniority Expectations** (Senior Engineer → Chief/Distinguished Architect)
+- 📚 **Learning Resources** — 50+ books, 20+ YouTube channels, 10+ courses, 30+ tools
+- 🛠️ **Tools & Technologies** by domain
+
+---
+
 ⭐ Star this repo if you find it useful!
 
 [Report Bug](.github/ISSUE_TEMPLATE/bug_report.md) · 
