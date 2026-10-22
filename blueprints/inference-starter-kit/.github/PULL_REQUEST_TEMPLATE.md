@@ -1,109 +1,25 @@
-# inference-starter-kit
+## What changed
 
-> Scaffolded inference deployment with AI gateway, guardrails, and eval-in-CI.
+<!-- One concern per PR. State the change type: src / infra / guardrails / eval / docs. -->
 
-## Quickstart
+## Evidence
 
-```bash
-git clone https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture.git
-cd Enterprise-AI-Reference-Architecture/blueprints/inference-starter-kit
-terraform init
-terraform apply
-cd src
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
+- [ ] `PYTHONPATH=src pytest -q` passes
+- [ ] Evaluation harness run (link results) — required for any behavior change
+- [ ] `terraform plan` output reviewed (for infra changes)
+- [ ] No secrets, keys, or real PII added
 
-## Directory Structure
+## Production readiness
 
-```
-inference-starter-kit/
-├── infra/          # Terraform baseline deployment
-│   ├── main.tf
-│   ├── vpc.tf
-│   ├── gateway.tf
-│   └── outputs.tf
-├── src/            # Sample FastAPI service
-│   ├── __init__.py
-│   ├── main.py
-│   ├── guardrails.py
-│   └── requirements.txt
-├── .github/
-│   └── PULL_REQUEST_TEMPLATE.md
-├── .env.example
-├── README.md
-└── .gitignore
-```
+- [ ] All model traffic goes through the AI gateway
+- [ ] Input screening, PII redaction, and tenant scoping verified
+- [ ] Dashboards and alerts updated
+- [ ] Rollback and kill switch tested
+- [ ] Owner and cost budget recorded in the workload registry
+- [ ] Design review checklist completed or deviations recorded as an ADR
 
-## Architecture
+## Reviewer routing
 
-This blueprint implements the [inference reference architecture](../reference-architectures/inference/README.md):
-
-- AI Gateway with egress allowlists
-- Guardrails for input/output filtering
-- Least-privilege credentials via vault
-- Observability with correlation IDs
-- Canary deployment via feature flags
-
-## Cost Estimate
-
-| Component | Monthly (~1M requests) |
-|---|---|
-| Gateway overhead | $150 |
-| Model inference (mix of cheap/strong) | $800 |
-| Guardrails processing | $50 |
-| **Total** | **~$1,000** |
-
-## Security
-
-- All model traffic transits the AI gateway (control AI-1)
-- No provider keys in application code
-- PII redaction before prompt assembly
-- See [ai-security-controls.md](../security/ai-security-controls.md)
-
-## Evaluation
-
-Eval-in-CI configured with [evaluation-in-ci pattern](../design-patterns/evaluation-in-ci.md):
-
-```bash
-pytest tests/ -k "inference"
-```
-
-## Quickstart Script
-
-```bash
-./scripts/quickstart.sh
-```
-
-## Troubleshooting
-
-Common issues:
-- ` gateway unreachable` — check VPC endpoint and security groups
-- `guardrails blocking` — review PII patterns in `guardrails.py`
-- `authentication failed` — verify `.env.example` variables
-```
-
-Now create the other files for the inference starter kit.</think>
-<tool_call>
-<function=write>
-<parameter=content>
-# .github/PULL_REQUEST_TEMPLATE.md
-## Pull request checklist
-
-- [ ] One concern per PR; title states the change type (infra / src / guardrails / eval)
-- [ ] Blueprint changes linked from blueprints/README.md
-- [ ] Naming conventions followed (kebab-case; env vars UPPERCASE)
-- [ ] Blueprint satisfies applicable items in [design-review-checklist.md](../docs/design-review-checklist.md); remaining items filled
-- [ ] Evaluation in CI configured with explicit thresholds
-
-## Reviewer routing (see CONTRIBUTING.md for required reviewers)
-
-- [ ] Infrastructure changes — 1 infrastructure reviewer
-- [ ] Code/guardrails changes — 1 engineering reviewer + 1 security reviewer
-- [ ] New blueprint — blueprint maintainer + 1 architecture team reviewer
-
-## Evidence (required for blueprint changes)
-
-- [ ] Terraform plan output linked
-- [ ] Evaluation harness results linked
-- [ ] No secrets in .env or code
+- [ ] 1 engineering reviewer
+- [ ] 1 security reviewer (guardrails, tools, permissions, or egress changes)
+- [ ] 1 architecture reviewer (new kit or reference-architecture deviation)

@@ -1,26 +1,54 @@
-# src/main.py
-"""FastAPI inference service with gateway client and guardrails."""
-from fastapi import FastAPI, HTTPException
-from .guardrails import sanitize_input, sanitize_output
+"""Inference Starter Kit — FastAPI entry point (scaffold)."""
+from __future__ import annotations
 
-app = FastAPI(title="Inference Starter Kit", description="Sample inference service")
+import os
+import uuid
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
+
+from guardrails import redact, screen_input
+from pipeline import PipelineInput, run_pipeline
+
+KIT = "inference-starter-kit"
+app = FastAPI(title="Inference Starter Kit", version="0.1.0")
+
+
+class RunRequest(BaseModel):
+    input: str = Field(min_length=1, max_length=8000)
+    tenant_id: str = Field(default="demo", max_length=64)
+
+
+class RunResponse(BaseModel):
+    output: str
+    citations: list[str] = Field(default_factory=list)
+    request_id: str
+    status: str
+
 
 @app.get("/health")
-async def health():
-    return {"status": "ok"}
+def health() -> dict[str, str]:
+    return {"status": "ok", "kit": KIT}
 
-@app.post("/query")
-async def query(request: dict):
-    """Process a query through the gateway with guardrails."""
-    user_input = request.get("message", "")
-    
-    # Sanitize input
-    safe_input = sanitize_input(user_input)
-    
-    # TODO: route through AI gateway
-    # response = await gateway_client.send(safe_input)
-    
-    # For now, return sanitized input
-    sanitized_output = sanitize_output(safe_input)
-    
-    return {"response": sanitized_output, "source": "starter-kit"}
+
+@app.post("/v1/run", response_model=RunResponse)
+def run(request: RunRequest) -> RunResponse:
+    verdict = screen_input(request.input)
+    if not verdict.allowed:
+        raise HTTPException(status_code=400, detail=verdict.reason)
+
+    result = run_pipeline(
+        PipelineInput(text=redact(request.input), tenant_id=request.tenant_id)
+    )
+    return RunResponse(
+        output=result.output,
+        citations=result.citations,
+        request_id=result.request_id or str(uuid.uuid4()),
+        status=result.status,
+    )
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", "8080")))

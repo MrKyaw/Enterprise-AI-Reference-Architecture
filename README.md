@@ -22,7 +22,7 @@ Provide canonical reference architectures, technology standards, design patterns
 Covers the full software development lifecycle — from discovery and design through deployment, operation, and retirement — with nested lifecycles for ML projects, MLOps, GenAI systems, RAG, agents, data pipelines, and more.
 
 ### Key deliverables (version 2.0)
-- **19 end-to-end lifecycles** with phase/artifact/exit-gate matrices
+- **24 end-to-end lifecycles** with phase/artifact/exit-gate matrices
 - **13 pattern catalogs** across software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain & business, AI UX, distributed scaling, cost/FinOps
 - **8 end-to-end use cases** with problem statements, pain points, workflows, tech stacks, trade-offs, metrics, and failure modes
 - **79 real production failure modes** across 6 categories with fixes, prevention, and future work
@@ -71,7 +71,7 @@ devops
 flowchart TB
     subgraph Knowledge [Architecture Knowledge]
         RA[reference-architectures/<br/>8 workload types]
-        LC[lifecycles/<br/>19 end-to-end lifecycles]
+        LC[lifecycles/<br/>24 end-to-end lifecycles]
         PAT[design-patterns/<br/>13 pattern catalogs]
         APP[approaches/<br/>driven methods + testing]
         UC[use-cases/<br/>8 scenarios]
@@ -98,7 +98,7 @@ flowchart TB
 ```
 .
 ├── reference-architectures/   # Canonical designs per workload type (8 RA)
-├── lifecycles/                # 19 nested lifecycles: SDLC, ML, MLOps, LLMOps...
+├── lifecycles/                # 24 nested lifecycles: SDLC, ML, MLOps, LLMOps...
 ├── design-patterns/           # 13 pattern catalogs: software, data, ML, MLOps...
 ├── approaches/                # Driven methods + delivery + testing strategy
 ├── use-cases/                 # 8 end-to-end scenarios with full detail
@@ -128,7 +128,7 @@ flowchart TB
 
 | Collection | Items | Purpose |
 |---|---|---|
-| [lifecycles/](lifecycles/README.md) | 19 end-to-end lifecycles | Phase/artifact/exit-gate matrices, nesting diagram |
+| [lifecycles/](lifecycles/README.md) | 24 end-to-end lifecycles | Phase/artifact/exit-gate matrices, nesting diagram |
 | [design-patterns/](design-patterns/README.md) | 13 pattern catalogs | Catalogs with intent/applicability/pitfalls + expanded treatments |
 | [approaches/](approaches/README.md) | 5 driven + 3 delivery + testing strategy | TDD/BDD/DDD/data/evaluation/security/contract/outcome/evidence |
 | [use-cases/](use-cases/README.md) | 8 scenarios | Problem statements, pain points, workflows, tech stacks, trade-offs, metrics, failure modes |
@@ -142,7 +142,7 @@ flowchart TB
 
 | I want to… | Do this |
 |---|---|
-| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 19 nested lifecycles with phase/artifact matrices |
+| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 24 nested lifecycles with phase/artifact matrices |
 | Find a solution to a business problem | Browse [use-cases/](use-cases/) — problem statements, workflows, trade-offs |
 | Debug or harden a system | Check [production-issues/](production-issues/) before designing, and add to it after incidents |
 | Select a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
@@ -157,7 +157,7 @@ flowchart TB
 
 ---
 
-## 📊 Lifecycle overview (19 total)
+## 📊 Lifecycle overview (24 total)
 
 | # | Lifecycle | Focus |
 |---|---|---|
@@ -167,25 +167,32 @@ flowchart TB
 | 4 | GenAI/LLMOps lifecycle | Prompt-to-production with guardrails |
 | 5 | RAG lifecycle | Corpus → ingest → embed → retrieve → generate |
 | 6 | Agent lifecycle (AgentOps) | Capability → tool → memory → safety → operate |
-| 6 | Data lifecycle | Acquire → store → transform → serve → archive → delete |
-| 7 | Prompt lifecycle | Author → version → evaluate → deploy → retire |
-| 8 | Evaluation lifecycle | Define success → curate datasets → harness → gate → monitor |
-| 9 | Product lifecycle | Ideation → discovery → business case → delivery → value → sunset |
-| 10 | Model risk lifecycle | Risk tiered governance, assessment, approval |
-| 11 | Operations & incident lifecycle | Detect → triage → mitigate → resolve → postmortem |
-| 12 | Technology lifecycle | Horizon scan → trial → adopt → hold → deprecate → remove |
-| 12 | API lifecycle | Design → publish → version → observe → deprecate |
-| 12 | Experimentation lifecycle | Hypothesis → design → run → analyze → decide |
-| 12 | FinOps cost lifecycle | Forecast → attribute → optimize → govern |
-| 12 | Documentation-knowledge lifecycle | Author → review → publish → maintain → retire |
-| 12 | Vendor-third-party lifecycle | Assess → contract → integrate → manage → exit |
-| 12 | Enablement-adoption lifecycle | Assess → build → enable → sustain → refresh |
+| 7 | Data lifecycle | Acquire → store → transform → serve → archive → delete |
+| 8 | Prompt lifecycle | Author → version → evaluate → deploy → retire |
+| 9 | Evaluation lifecycle | Define success → curate datasets → harness → gate → monitor |
+| 10 | Product lifecycle | Ideation → discovery → business case → delivery → value → sunset |
+| 11 | Model risk lifecycle | Risk tiered governance, assessment, approval |
+| 12 | Operations & incident lifecycle | Detect → triage → mitigate → resolve → postmortem |
+| 13 | Technology lifecycle | Horizon scan → trial → adopt → hold → deprecate → remove |
+| 14 | API lifecycle | Design → publish → version → observe → deprecate |
+| 15 | Experimentation lifecycle | Hypothesis → design → run → analyze → decide |
+| 16 | FinOps cost lifecycle | Forecast → attribute → optimize → govern |
+| 17 | Documentation-knowledge lifecycle | Author → review → publish → maintain → retire |
+| 18 | Vendor-third-party lifecycle | Assess → contract → integrate → manage → exit |
+| 19 | Enablement-adoption lifecycle | Assess → build → enable → sustain → refresh |
+| 20 | Edge AI lifecycle | Train → compress → convert → deploy → fleet monitor |
+| 21 | Quantum computing lifecycle | Screen → simulate → benchmark → hybrid integrate |
+| 22 | Agent factory lifecycle | Incubate → certify → deploy → monitor → retire |
+| 23 | Physical AI lifecycle | Simulate → validate → deploy → monitor → decommission |
+| 24 | Embodied AI lifecycle | Design → train → operate → monitor → retire |
+
+> The [solution design lifecycle](docs/solution-design-lifecycle.md) spans discovery, solutioning, and delivery; it is maintained in `docs/` and is not counted among the 24 lifecycle files in `lifecycles/`.
 
 ---
 
 ## 📚 Core content deep dive
 
-### Lifecycles (19 detailed documents)
+### Lifecycles (24 detailed documents)
 Each lifecycle includes: phase-by-phase activities, required artifacts, exit gates, AI-specific considerations, anti-patterns, and a phase/artifact completeness matrix.
 
 ### Design patterns (13 catalogs)
@@ -284,37 +291,32 @@ MIT — see [LICENSE](LICENSE).
 
 This repository now covers all 22 critical AI/ML architecture domains:
 
-| Domain | Status | Reference |
+| Domain | Status | Primary references |
 |---|---|---|
-| Software | ✅ Covered | SDLC + software design patterns |
-| Algorithms | ✅ Covered | ML engineering patterns |
-| Integration | ✅ Covered | Integration patterns + API lifecycle |
-| Statistics | ✅ Covered | Embedded in ML/project lifecycles |
-| Machine Learning | ✅ Covered | ML project lifecycle + MLOps |
-| DevOps | ✅ Covered | MLOps CI/CD pipelines + blueprints |
-| Data Engineering | ✅ Covered | Data lifecycle (ingest → serve → archive) |
-| Data Science | ✅ Covered | ML project lifecycle + domain model adaptation |
-| ML Operations | ✅ Covered | Dedicated MLOps lifecycle |
-| LLM | ✅ Covered | Inference reference architecture |
-| GenAI | ✅ Covered | GenAI/LLMOps lifecycle |
-| LLMOps | ✅ Covered | Dedicated lifecycle |
-| Agentic AI/Multi-Agents | ✅ Covered | Agent lifecycle + agentic process automation |
-| Observability | ✅ Covered | Stage-decomposed tracing + multiple lifecycles |
-| Evals | ✅ Covered | Evaluation lifecycle + evaluation-in-CI pattern |
-| Edge AI | ✅ Covered | Edge AI lifecycle + quantization patterns |
-| Quantum Computing | ✅ Covered | Quantum computing lifecycle + quantum patterns |
-| Cyber Security | ✅ Covered | AI security controls + secure SDLC |
-| LLM Inference | ✅ Covered | Inference RA + inference-starter-kit |
-| Agent Factory | ✅ Covered | Agent factory lifecycle + standardized scaffolds |
-| Physical AI | ✅ Covered | Physical AI lifecycle + sim-to-real transfer |
-| Embodied AI | ✅ Covered | Embodied AI lifecycle + sensorimotor learning |
+| Software | ✅ Covered | SDLC lifecycle · [inference kit](blueprints/inference-starter-kit/README.md) · [evaluation kit](blueprints/evaluation-starter-kit/README.md) |
+| Algorithms | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · ML engineering patterns |
+| Integration | ✅ Covered | [Integration kit](blueprints/integration-starter-kit/README.md) · API lifecycle |
+| Statistics | ✅ Covered | [Evaluation kit](blueprints/evaluation-starter-kit/README.md) · ML project lifecycle |
+| Machine Learning | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · ML project lifecycle · MLOps |
+| DevOps | ✅ Covered | CI/CD in every kit · [observability kit](blueprints/observability-starter-kit/README.md) |
+| Data Engineering | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [data-agent kit](blueprints/data-agent-starter-kit/README.md) · Data lifecycle |
+| Data Science | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · [fine-tuning kit](blueprints/fine-tuning-starter-kit/README.md) |
+| ML Operations | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · MLOps lifecycle |
+| LLM | ✅ Covered | [Inference kit](blueprints/inference-starter-kit/README.md) · Inference RA |
+| GenAI | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [copilot kit](blueprints/copilot-starter-kit/README.md) · GenAI/LLMOps lifecycle |
+| LLMOps | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [evaluation kit](blueprints/evaluation-starter-kit/README.md) |
+| Agentic AI/Multi-Agents | ✅ Covered | [Agent kit](blueprints/agent-starter-kit/README.md) · [intelligent automation kit](blueprints/intelligent-automation-starter-kit/README.md) |
+| Observability | ✅ Covered | [Observability kit](blueprints/observability-starter-kit/README.md) · operations lifecycle |
+| Evals | ✅ Covered | [Evaluation kit](blueprints/evaluation-starter-kit/README.md) · evaluation lifecycle |
+| Edge AI | ✅ Covered | [Edge AI kit](blueprints/edge-ai-starter-kit/README.md) · [Edge AI lifecycle](lifecycles/edge-ai-lifecycle.md) |
+| Quantum Computing | ✅ Covered | [Quantum kit](blueprints/quantum-starter-kit/README.md) · [Quantum lifecycle](lifecycles/quantum-computing-lifecycle.md) |
+| Cyber Security | ✅ Covered | [AI security kit](blueprints/ai-security-starter-kit/README.md) · security controls · secure SDLC |
+| LLM Inference | ✅ Covered | [Inference kit](blueprints/inference-starter-kit/README.md) · Inference RA |
+| Agent Factory | ✅ Covered | [Agent factory kit](blueprints/agent-factory-starter-kit/README.md) · [factory lifecycle](lifecycles/agent-factory-lifecycle.md) |
+| Physical AI | ✅ Covered | [Physical AI kit](blueprints/physical-ai-starter-kit/README.md) · [Physical AI lifecycle](lifecycles/physical-ai-lifecycle.md) |
+| Embodied AI | ✅ Covered | [Embodied AI kit](blueprints/embodied-ai-starter-kit/README.md) · [Embodied AI lifecycle](lifecycles/embodied-ai-lifecycle.md) |
 
-*Last updated: 2026-10-19**Generated from `main` branch. Last updated: 2026-10-19.*
-
----
-
-
----
+*Last updated: 2026-10-21 · Generated from `main` branch.*
 
 ---
 
@@ -341,12 +343,10 @@ A single, link-rich hub for architects at every level — the full competency fr
 - 🧰 **60+ tools** by domain (IaC, observability, vector DBs, model serving, evals, AI gateways)
 - 🧪 **14 hands-on labs**, plus **12 role-based learning paths** and a **90-day plan**
 
+*Last updated: 2026-10-21 · Generated from `main` branch.*
+
 ---
 
 ⭐ Star this repo if you find it useful!
 
-[Report Bug](.github/ISSUE_TEMPLATE/bug_report.yml) · 
-[Request Feature](.github/ISSUE_TEMPLATE/feature_request.yml) · 
-[Ask Question](.github/ISSUE_TEMPLATE/question.yml)
-
-*Generated from `main` branch. Last updated: 2026-10-19*
+Report Bug · Request Feature · Ask Question

@@ -29,35 +29,35 @@ Every generated service returns `status: "scaffold"` until the pipeline is imple
 
 ### Core reference architectures (8)
 
-| Kit | Reference architecture | Focus | Stack highlights |
-|---|---|---|---|
-| [`inference-starter-kit`](inference-starter-kit/README.md) | [Inference](../reference-architectures/inference/README.md) | Gateway-mediated model serving | FastAPI, gateway, Terraform |
-| [`rag-starter-kit`](rag-starter-kit/README.md) | [RAG](../reference-architectures/rag/README.md) | Retrieval, reranking, citations, ACLs | Hybrid index, reranker, eval gate |
-| [`agent-starter-kit`](agent-starter-kit/README.md) | [Agentic](../reference-architectures/agentic/README.md) | Tool use, approval gates, trajectory audit | Typed tool registry, HITL, kill switch |
-| [`data-agent-starter-kit`](data-agent-starter-kit/README.md) | [Data agent](../reference-architectures/data-agent/README.md) | NL analytics on a governed semantic layer | Semantic layer, policy injection, query limits |
-| [`copilot-starter-kit`](copilot-starter-kit/README.md) | [Copilots](../reference-architectures/copilots/README.md) | In-app assistance, record context, audited writes | Host extension, context assembly, telemetry |
-| [`fine-tuning-starter-kit`](fine-tuning-starter-kit/README.md) | [Fine-tuning](../reference-architectures/fine-tuning/README.md) | Baseline-first adaptation, LoRA/QLoRA | Dataset curation, registry, model card |
-| [`training-starter-kit`](training-starter-kit/README.md) | [Training](../reference-architectures/training/README.md) | Reproducible training and registration | Versioned data, experiment tracking, lineage |
-| [`intelligent-automation-starter-kit`](intelligent-automation-starter-kit/README.md) | [Intelligent automation](../reference-architectures/intelligent-automation/README.md) | Rules → ML → agent, human exceptions | Durable workflow, compensation, approval |
+| Kit | Status | Reference architecture | Focus | Stack highlights |
+|---|---|---|---|---|
+| [`inference-starter-kit`](inference-starter-kit/README.md) | ✅ Scaffolded | [Inference](../reference-architectures/inference/README.md) | Gateway-mediated model serving | FastAPI, gateway, Terraform |
+| [`rag-starter-kit`](rag-starter-kit/README.md) | ✅ Scaffolded | [RAG](../reference-architectures/rag/README.md) | Retrieval, reranking, citations, ACLs | Hybrid index, reranker, eval gate |
+| [`agent-starter-kit`](agent-starter-kit/README.md) | ✅ Scaffolded | [Agentic](../reference-architectures/agentic/README.md) | Tool use, approval gates, trajectory audit | Typed tool registry, HITL, kill switch |
+| [`data-agent-starter-kit`](data-agent-starter-kit/README.md) | ✅ Scaffolded | [Data agent](../reference-architectures/data-agent/README.md) | NL analytics on a governed semantic layer | Semantic layer, policy injection, query limits |
+| [`copilot-starter-kit`](copilot-starter-kit/README.md) | ✅ Scaffolded | [Copilots](../reference-architectures/copilots/README.md) | In-app assistance, record context, audited writes | Host extension, context assembly, telemetry |
+| [`fine-tuning-starter-kit`](fine-tuning-starter-kit/README.md) | ✅ Scaffolded | [Fine-tuning](../reference-architectures/fine-tuning/README.md) | Baseline-first adaptation, LoRA/QLoRA | Dataset curation, registry, model card |
+| [`training-starter-kit`](training-starter-kit/README.md) | ✅ Scaffolded | [Training](../reference-architectures/training/README.md) | Reproducible training and registration | Versioned data, experiment tracking, lineage |
+| [`intelligent-automation-starter-kit`](intelligent-automation-starter-kit/README.md) | ✅ Scaffolded | [Intelligent automation](../reference-architectures/intelligent-automation/README.md) | Rules → ML → agent, human exceptions | Durable workflow, compensation, approval |
 
 ### Specialized domains (5)
 
-| Kit | Lifecycle | Focus | Stack highlights |
-|---|---|---|---|
-| [`edge-ai-starter-kit`](edge-ai-starter-kit/README.md) | [Edge AI](../lifecycles/edge-ai-lifecycle.md) | On-device inference, OTA, fleet monitoring | Quantization, target runtime, signed updates |
-| [`physical-ai-starter-kit`](physical-ai-starter-kit/README.md) | [Physical AI](../lifecycles/physical-ai-lifecycle.md) | Sim-to-real, test bed, safety envelope | Domain randomization, independent e-stop |
-| [`embodied-ai-starter-kit`](embodied-ai-starter-kit/README.md) | [Embodied AI](../lifecycles/embodied-ai-lifecycle.md) | Perception → world model → policy | Curriculum learning, skill registry |
-| [`quantum-starter-kit`](quantum-starter-kit/README.md) | [Quantum computing](../lifecycles/quantum-computing-lifecycle.md) | Hybrid classical-quantum experiments | Suitability gate, simulator-first, budget caps |
-| [`agent-factory-starter-kit`](agent-factory-starter-kit/README.md) | [Agent factory](../lifecycles/agent-factory-lifecycle.md) | Mass-producing governed agents | Scaffold generation, certification, registry |
+| Kit | Status | Lifecycle | Focus | Stack highlights |
+|---|---|---|---|---|
+| [`edge-ai-starter-kit`](edge-ai-starter-kit/README.md) | ✅ Scaffolded | [Edge AI](../lifecycles/edge-ai-lifecycle.md) | On-device inference, OTA, fleet monitoring | Quantization, target runtime, signed updates |
+| [`physical-ai-starter-kit`](physical-ai-starter-kit/README.md) | ✅ Scaffolded | [Physical AI](../lifecycles/physical-ai-lifecycle.md) | Sim-to-real, test bed, safety envelope | Domain randomization, independent e-stop |
+| [`embodied-ai-starter-kit`](embodied-ai-starter-kit/README.md) | ✅ Scaffolded | [Embodied AI](../lifecycles/embodied-ai-lifecycle.md) | Perception → world model → policy | Curriculum learning, skill registry |
+| [`quantum-starter-kit`](quantum-starter-kit/README.md) | ✅ Scaffolded | [Quantum computing](../lifecycles/quantum-computing-lifecycle.md) | Hybrid classical-quantum experiments | Suitability gate, simulator-first, budget caps |
+| [`agent-factory-starter-kit`](agent-factory-starter-kit/README.md) | ✅ Scaffolded | [Agent factory](../lifecycles/agent-factory-lifecycle.md) | Mass-producing governed agents | Scaffold generation, certification, registry |
 
 ### Cross-cutting (4)
 
-| Kit | Lifecycle | Focus | Stack highlights |
-|---|---|---|---|
-| [`evaluation-starter-kit`](evaluation-starter-kit/README.md) | [Evaluation](../lifecycles/evaluation-lifecycle.md) | Golden/adversarial sets, judge calibration, CI gate | Deterministic scorers first, per-slice reporting |
-| [`observability-starter-kit`](observability-starter-kit/README.md) | [Operations & incident](../lifecycles/operations-incident-lifecycle.md) | Traces, token/cost metrics, quality sampling, SLOs | OpenTelemetry, collector, burn-rate alerts |
-| [`ai-security-starter-kit`](ai-security-starter-kit/README.md) | [Model risk](../lifecycles/model-risk-lifecycle.md) | Gateway, guardrails, egress allowlist, red team | Fail-closed, tenant scoping, adversarial suite |
-| [`integration-starter-kit`](integration-starter-kit/README.md) | [API](../lifecycles/api-lifecycle.md) | Contracts, schema registry, DLQ, replay | OpenAPI/AsyncAPI, idempotency, trace propagation |
+| Kit | Status | Lifecycle | Focus | Stack highlights |
+|---|---|---|---|---|
+| [`evaluation-starter-kit`](evaluation-starter-kit/README.md) | ✅ Scaffolded | [Evaluation](../lifecycles/evaluation-lifecycle.md) | Golden/adversarial sets, judge calibration, CI gate | Deterministic scorers first, per-slice reporting |
+| [`observability-starter-kit`](observability-starter-kit/README.md) | ✅ Scaffolded | [Operations & incident](../lifecycles/operations-incident-lifecycle.md) | Traces, token/cost metrics, quality sampling, SLOs | OpenTelemetry, collector, burn-rate alerts |
+| [`ai-security-starter-kit`](ai-security-starter-kit/README.md) | ✅ Scaffolded | [Model risk](../lifecycles/model-risk-lifecycle.md) | Gateway, guardrails, egress allowlist, red team | Fail-closed, tenant scoping, adversarial suite |
+| [`integration-starter-kit`](integration-starter-kit/README.md) | ✅ Scaffolded | [API](../lifecycles/api-lifecycle.md) | Contracts, schema registry, DLQ, replay | OpenAPI/AsyncAPI, idempotency, trace propagation |
 
 ---
 

@@ -83,7 +83,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Inference reference architecture (quantum-accelerated subset)](../reference-architectures/inference/README.md) · [Quantum‑ready design patterns](../design-patterns/general-architecture.md) · [Classical‑quantum integration guide](../standards/integration-patterns.md) (work in progress)
+[Inference reference architecture (quantum-accelerated subset)](../reference-architectures/inference/README.md) · [Quantum‑ready design patterns](../design-patterns/general-architecture.md) · [Classical‑quantum integration patterns](../standards/integration-patterns.md)
 
 ## Quantum computing suitability screen
 

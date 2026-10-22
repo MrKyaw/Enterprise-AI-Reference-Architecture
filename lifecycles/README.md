@@ -4,6 +4,8 @@ End-to-end lifecycles that govern how AI/ML work is conceived, built, deployed, 
 
 ## Index
 
+> The [solution design lifecycle](../docs/solution-design-lifecycle.md) is maintained in `docs/` because it spans discovery, solutioning, and delivery. It is part of the lifecycle family but is not counted among the 24 lifecycle files in this folder.
+
 | Lifecycle | Covers | Owner |
 |---|---|---|
 | [software-development-lifecycle.md](software-development-lifecycle.md) | Requirements → design → build → test → release → operate | Engineering |
@@ -25,6 +27,23 @@ End-to-end lifecycles that govern how AI/ML work is conceived, built, deployed, 
 | [documentation-knowledge-lifecycle.md](documentation-knowledge-lifecycle.md) | Author → review → publish → maintain → retire | Architecture |
 | [vendor-third-party-lifecycle.md](vendor-third-party-lifecycle.md) | Assess → contract → integrate → manage → exit | Procurement / architecture |
 | [enablement-adoption-lifecycle.md](enablement-adoption-lifecycle.md) | Assess skills → build capability → enable → sustain | Leadership / enablement |
+| [edge-ai-lifecycle.md](edge-ai-lifecycle.md) | Train → compress → convert → deploy → fleet monitor → retire | Embedded / AI |
+| [quantum-computing-lifecycle.md](quantum-computing-lifecycle.md) | Screen → simulate → benchmark → hybrid integrate → evaluate | Research / architecture |
+| [agent-factory-lifecycle.md](agent-factory-lifecycle.md) | Incubate → certify → deploy → monitor → retire agents at scale | AI platform |
+| [physical-ai-lifecycle.md](physical-ai-lifecycle.md) | Simulate → validate on test bed → deploy → monitor → decommission | Robotics / AI |
+| [embodied-ai-lifecycle.md](embodied-ai-lifecycle.md) | Design → train sensorimotor skills → operate → monitor → retire | Research / robotics |
+
+### Specialized tracks and starter kits
+
+| Lifecycle | Starter kit | Domain focus |
+|---|---|---|
+| [edge-ai-lifecycle.md](edge-ai-lifecycle.md) | [edge-ai-starter-kit](../blueprints/edge-ai-starter-kit/README.md) | On-device inference, quantization, OTA, fleet telemetry |
+| [quantum-computing-lifecycle.md](quantum-computing-lifecycle.md) | [quantum-starter-kit](../blueprints/quantum-starter-kit/README.md) | Hybrid classical-quantum experiments |
+| [agent-factory-lifecycle.md](agent-factory-lifecycle.md) | [agent-factory-starter-kit](../blueprints/agent-factory-starter-kit/README.md) | Factory scaffold, certification, registry, retirement |
+| [physical-ai-lifecycle.md](physical-ai-lifecycle.md) | [physical-ai-starter-kit](../blueprints/physical-ai-starter-kit/README.md) | Sim-to-real transfer and safety envelopes |
+| [embodied-ai-lifecycle.md](embodied-ai-lifecycle.md) | [embodied-ai-starter-kit](../blueprints/embodied-ai-starter-kit/README.md) | Sensorimotor learning and world models |
+
+Lifecycles without a dedicated kit are instantiated through the closest core kit — for example, the [evaluation kit](../blueprints/evaluation-starter-kit/README.md), [observability kit](../blueprints/observability-starter-kit/README.md), and [AI security kit](../blueprints/ai-security-starter-kit/README.md) are cross-cutting and apply to every workload.
 
 ## How they relate
 
@@ -45,6 +64,8 @@ flowchart TB
     A --> E
     PR --> E
     MLO --> E
+    SP[Specialized lifecycles<br/>edge · quantum · agent factory · physical · embodied]
+    SP -.specializes.-> P
     T[Technology lifecycle] -.adopt/retire.-> S
     T -.adopt/retire.-> M
     V[Vendor lifecycle] -.supplies.-> MLO

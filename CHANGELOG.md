@@ -29,6 +29,10 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 - README blueprint section now lists all 17 kits and their groups
 - Resources section in README expanded with counts and direct link to the hub
+- All 17 starter kits now share the same layout: FastAPI service, pipeline stub, guardrails, smoke tests, Terraform baseline, non-root Dockerfile, and PR checklist
+- Lifecycle count corrected to **24** across the README (the previous table showed 19 with duplicate numbering and omitted the 5 specialized lifecycles)
+- Lifecycles index now lists all 24 lifecycle files and maps the 5 specialized ones to their starter kits; the solution design lifecycle remains in `docs/`
+- Blueprint catalog now shows an explicit status per kit (all ✅ Scaffolded)
 
 ## [0.4.0] - 2026-10-17
 

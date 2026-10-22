@@ -23,5 +23,10 @@ How architecture work happens: design reviews, technology evaluation, and build-
 | [approaches/](../approaches/README.md) | Driven-development approaches, delivery practices, and testing strategy |
 | [use-cases/](../use-cases/README.md) | End-to-end scenarios with problem statements and trade-offs |
 | [production-issues/](../production-issues/README.md) | Production failure modes with fixes, prevention, and future work |
+| [reference-architectures/](../reference-architectures/README.md) | Canonical designs for each AI workload type |
+| [blueprints/](../blueprints/README.md) | 17 runnable starter kits with IaC, guardrails, tests, and checklists |
+| [standards/](../standards/README.md) | Approved technologies, protocols, and integration standards |
+| [security/](../security/README.md) | AI security controls, secure SDLC, and red-team loop |
+| [resources/](../resources/README.md) | Architect competency framework and curated learning resources |
 
 These processes exist so the architecture function can **scale itself**: published standards and checklists let engineering leads handle routine reviews; central architects focus on high-risk and novel designs.

@@ -1,11 +1,9 @@
-# .gitignore
-# Local configuration
-.env
 .venv/
-*.tfstate*
-*.pyc
 __pycache__/
-.hcl
-
-# Secrets
-credentials/*
+*.pyc
+.env
+.pytest_cache/
+infra/.terraform/
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/*.tfplan
