@@ -86,7 +86,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Inference reference architecture](../reference-architectures/inference/README.md) · [Quantization pattern](../design-patterns/quantization.md) · [Model conversion pipeline](../design-patterns/model-conversion.md) · [Blueprints](../blueprints/README.md)
+[Inference reference architecture](../reference-architectures/inference/README.md) · [Quantization pattern](../design-patterns/ml-engineering.md) · [Model conversion pipeline](../design-patterns/mlops-deployment.md) · [Blueprints](../blueprints/README.md)
 
 ## Edge AI model conversion checklist
 

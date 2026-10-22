@@ -1,0 +1,50 @@
+name: Bug report
+description: Report an error, broken link, or incorrect content in the repository
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Broken link or anchor
+        - Incorrect or outdated content
+        - Broken diagram / Mermaid rendering
+        - Code or blueprint does not run
+        - Typo or formatting issue
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: File / section
+      placeholder: lifecycles/rag-lifecycle.md — Phase 3
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce (optional)
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See error
+  - type: input
+    id: version
+    attributes:
+      label: Commit / version (optional)
+      placeholder: main @ 762ca30

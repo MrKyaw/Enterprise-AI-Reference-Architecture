@@ -16,8 +16,8 @@ Ready-to-scaffold project templates that let engineering teams start a compliant
 ## Philosophy: "The compliant path must be the fast path"
 
 Central architecture should not be a bottleneck. Blueprints make the compliant path the **fast path** by providing:
-- Pre-approved technology stacks from [`standards/approved-technologies.md`](standards/approved-technologies.md)
-- Pre-configured guardrails from [`security/ai-security-controls.md`](security/ai-security-controls.md)
+- Pre-approved technology stacks from [`standards/approved-technologies.md`](../standards/approved-technologies.md)
+- Pre-configured guardrails from [`security/ai-security-controls.md`](../security/ai-security-controls.md)
 - Pre-configured evaluation harnesses from [`evaluation-in-ci](../design-patterns/evaluation-in-ci.md)`
 - Pre-configured guardrail sandwich from [`genai-prompting](../design-patterns/genai-prompting.md)`
 
@@ -317,7 +317,7 @@ As your team matures, you may want to move from a blueprint to a fully custom bu
 
 ## Code of Conduct
 
-All blueprint contributors and users are expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md). Violations should be reported via the GitHub Security Advisory channel.
+All blueprint contributors and users are expected to follow the [Code of Conduct](../CODE_OF_CONDUCT.md). Violations should be reported via the GitHub Security Advisory channel.
 
 ---
 *Blueprint version: 2.0.0 — Last updated: 2026-10-19*

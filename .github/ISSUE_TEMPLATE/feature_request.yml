@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest a new reference architecture, lifecycle, pattern, use case, or resource
+title: "[feat]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Reference architecture
+        - Lifecycle
+        - Design pattern
+        - Use case
+        - Production issue
+        - Blueprint / starter kit
+        - Standards or security control
+        - Resources / learning path
+        - Tooling / CI
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the gap or need — not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed addition
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or references (optional)
+      description: Links to production evidence, papers, standards, or prior art.

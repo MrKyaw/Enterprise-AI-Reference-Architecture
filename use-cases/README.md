@@ -20,14 +20,14 @@ Every use case contains: problem statement · pain points · users & stakeholder
 
 | If the need is… | Prefer |
 |---|---|
-| Answer questions from documents | [Knowledge assistant](use-cases/enterprise-knowledge-assistant.md) |
-| Answer questions from structured data/metrics | [Data agent](use-cases/nl-analytics-data-agent.md) |
-| Both | Data agent for metrics; [RAG](use-cases/enterprise-knowledge-assistant.md) for narrative docs — one interface, two governed sources |
-| Assist inside an existing app | [Copilot](use-cases/enterprise-copilot-rollout.md) |
-| Take actions across systems | [Agentic process automation](use-cases/agentic-process-automation.md) + [human approval](../design-patterns/human-in-the-loop-approval.md) |
-| Improve a specific narrow task | [Domain adaptation](use-cases/domain-model-adaptation.md) or a focused prompt/retrieval solution first |
-| Predict a number/class at scale | [Real-time decision scoring](use-cases/realtime-decision-scoring.md) |
-| Extract structure from documents | [Document intelligence](use-cases/document-intelligence-pipeline.md) |
+| Answer questions from documents | [Knowledge assistant](enterprise-knowledge-assistant.md) |
+| Answer questions from structured data/metrics | [Data agent](nl-analytics-data-agent.md) |
+| Both | Data agent for metrics; [RAG](enterprise-knowledge-assistant.md) for narrative docs — one interface, two governed sources |
+| Assist inside an existing app | [Copilot](enterprise-copilot-rollout.md) |
+| Take actions across systems | [Agentic process automation](agentic-process-automation.md) + [human approval](../design-patterns/human-in-the-loop-approval.md) |
+| Improve a specific narrow task | [Domain adaptation](domain-model-adaptation.md) or a focused prompt/retrieval solution first |
+| Predict a number/class at scale | [Real-time decision scoring](realtime-decision-scoring.md) |
+| Extract structure from documents | [Document intelligence](document-intelligence-pipeline.md) |
 
 ---
 

@@ -89,7 +89,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Physical AI lifecycle](../lifecycles/physical-ai-lifecycle.md) · [Simulation‑to‑real transfer patterns](../design-patterns/sim-to-real.md) · [Safety envelope design](../design-patterns/safety-envelope.md) · [Agent patterns](../design-patterns/agent-patterns.md) · [Artifact registry](../standards/artifact-registry.md)
+[Physical AI lifecycle](../lifecycles/physical-ai-lifecycle.md) · [Simulation‑to‑real transfer patterns](../design-patterns/ml-engineering.md) · [Safety envelope design](../design-patterns/reliability-resilience.md) · [Agent patterns](../design-patterns/agent-patterns.md) · [Artifact registry](../standards/README.md)
 
 ## Embodied AI checklist
 

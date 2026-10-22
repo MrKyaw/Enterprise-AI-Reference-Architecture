@@ -86,7 +86,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Intelligent automation reference architecture](../reference-architectures/intelligent-automation/README.md) · [Simulation‑to‑real transfer patterns](../design-patterns/sim-to-real.md) · [Safety envelope design](../design-patterns/safety-envelope.md) · [Agent lifecycle](../lifecycles/agent-lifecycle.md)
+[Intelligent automation reference architecture](../reference-architectures/intelligent-automation/README.md) · [Simulation‑to‑real transfer patterns](../design-patterns/ml-engineering.md) · [Safety envelope design](../design-patterns/reliability-resilience.md) · [Agent lifecycle](../lifecycles/agent-lifecycle.md)
 
 ## Physical AI checklist
 

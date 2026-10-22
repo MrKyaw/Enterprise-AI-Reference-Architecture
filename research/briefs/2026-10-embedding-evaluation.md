@@ -80,7 +80,7 @@ Should we switch the embedding model used in our RAG pipelines from the current 
 
 ## Related
 
-- [RAG lifecycle](../lifecycles/rag-lifecycle.md)
-- [Evaluation lifecycle](../lifecycles/evaluation-lifecycle.md)
-- [RAG patterns](../design-patterns/rag-patterns.md) — especially the embedding model selection guidance
-- [Production issues — retrieval and data](../production-issues/retrieval-and-data.md) — Q-01, Q-03, R-01, R-05
+- [RAG lifecycle](../../lifecycles/rag-lifecycle.md)
+- [Evaluation lifecycle](../../lifecycles/evaluation-lifecycle.md)
+- [RAG patterns](../../design-patterns/rag-patterns.md) — especially the embedding model selection guidance
+- [Production issues — retrieval and data](../../production-issues/retrieval-and-data.md) — Q-01, Q-03, R-01, R-05

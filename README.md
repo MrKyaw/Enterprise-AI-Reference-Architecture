@@ -310,26 +310,33 @@ This repository now covers all 22 critical AI/ML architecture domains:
 
 ## 📚 Architect Career Competency Framework & Resources
 
-A comprehensive reference for architects at every level — covering all 12 architect roles, core knowledge, hands-on proficiency, AI specialization, architecture artifacts, seniority expectations, and curated learning resources (books, YouTube, courses, tools).
+A single, link-rich hub for architects at every level — the full competency framework **plus** every resource needed to close each gap.
 
-👉 **[View Full Resources →](resources/README.md)**
+👉 **[View the Complete Resource Hub →](resources/README.md)**
 
-Includes:
-- 🎯 **12 Architect Roles** with essential knowledge & hands-on skills
-- 🧠 **Core Knowledge** across 6 domains (system design, software engineering, cloud, data, security, business)
-- 💻 **Hands-On Proficiency** expectations with evidence
-- 🤖 **AI/ML Specialization** (12 domains: classical ML, deep learning, foundation models, RAG, agentic AI, MLOps, etc.)
-- 📋 **Architecture Artifacts** (ADRs, C4 diagrams, threat models, NFRs, etc.)
-- 📈 **Seniority Expectations** (Senior Engineer → Chief/Distinguished Architect)
-- 📚 **Learning Resources** — 50+ books, 20+ YouTube channels, 10+ courses, 30+ tools
-- 🛠️ **Tools & Technologies** by domain
+**Framework**
+- 🎯 **12 architect roles** with essential knowledge & hands-on skills
+- 🧠 **6 core knowledge domains** — system design, software engineering, cloud/ops, data/integration, security, business/leadership
+- 💻 **11 hands-on capabilities** with expected evidence and a practice lab for each
+- 🤖 **12 AI specialization domains** — classical ML, deep learning, foundation models, self-supervised, multimodal, RAG, agentic AI, evaluation, security, MLOps/LLMOps, economics, governance
+- 📋 **7 architecture artifacts** with templates and tooling (ADR, C4, sequence, threat model, NFR, benchmark, roadmap)
+- 📈 **6 seniority levels** from Senior Engineer to Chief/Distinguished Architect
+
+**Resources (all in one place)**
+- 📚 **40+ books**, 25+ YouTube channels, 15+ course platforms
+- 🎓 **Certifications** mapped per role (AWS, Azure, GCP, CKA, CISSP, TOGAF, Databricks…)
+- 📄 **Official docs & standards** (CNCF, OWASP, NIST AI RMF, ISO 42001, TOGAF, C4, arc42)
+- 📑 **14 foundational papers** (Transformers, LoRA/QLoRA, RAG, ReAct, DPO, CLIP, JEPA, MCP)
+- 🎙️ **Newsletters, podcasts, communities**
+- 🧰 **60+ tools** by domain (IaC, observability, vector DBs, model serving, evals, AI gateways)
+- 🧪 **14 hands-on labs**, plus **12 role-based learning paths** and a **90-day plan**
 
 ---
 
 ⭐ Star this repo if you find it useful!
 
-[Report Bug](.github/ISSUE_TEMPLATE/bug_report.md) · 
-[Request Feature](.github/ISSUE_TEMPLATE/feature_request.md) · 
-[Ask Question](.github/ISSUE_TEMPLATE/question.md)
+[Report Bug](.github/ISSUE_TEMPLATE/bug_report.yml) · 
+[Request Feature](.github/ISSUE_TEMPLATE/feature_request.yml) · 
+[Ask Question](.github/ISSUE_TEMPLATE/question.yml)
 
 *Generated from `main` branch. Last updated: 2026-10-19*

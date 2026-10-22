@@ -85,7 +85,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Agent lifecycle](../lifecycles/agent-lifecycle.md) · [Agent patterns](../design-patterns/agent-patterns.md) · [Human-in-the-loop approval](../design-patterns/human-in-the-loop-approval.md) · [Artifact registry](../standards/artifact-registry.md)
+[Agent lifecycle](../lifecycles/agent-lifecycle.md) · [Agent patterns](../design-patterns/agent-patterns.md) · [Human-in-the-loop approval](../design-patterns/human-in-the-loop-approval.md) · [Artifact registry](../standards/README.md)
 
 ## Agent factory checklist
 

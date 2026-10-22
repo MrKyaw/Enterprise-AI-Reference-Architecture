@@ -37,7 +37,7 @@ inference-starter-kit/
 
 ## Architecture
 
-This blueprint implements the [inference reference architecture](../reference-architectures/inference/README.md):
+This blueprint implements the [inference reference architecture](../../reference-architectures/inference/README.md):
 
 - AI Gateway with egress allowlists
 - Guardrails for input/output filtering
@@ -59,11 +59,11 @@ This blueprint implements the [inference reference architecture](../reference-ar
 - All model traffic transits the AI gateway (control AI-1)
 - No provider keys in application code
 - PII redaction before prompt assembly
-- See [ai-security-controls.md](../security/ai-security-controls.md)
+- See [ai-security-controls.md](../../security/ai-security-controls.md)
 
 ## Evaluation
 
-Eval-in-CI configured with [evaluation-in-ci pattern](../design-patterns/evaluation-in-ci.md):
+Eval-in-CI configured with [evaluation-in-ci pattern](../../design-patterns/evaluation-in-ci.md):
 
 ```bash
 pytest tests/ -k "inference"
