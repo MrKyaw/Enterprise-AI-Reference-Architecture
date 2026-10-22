@@ -63,3 +63,7 @@ At every phase, maintain two views of the same design:
 - **Engineering view:** components, contracts, NFRs, runbooks
 
 If a design only exists in one view, it isn't finished. Executive-ready communication and whiteboard-level technical depth are the same skill applied to different audiences.
+
+## Leadership during the lifecycle
+
+Use the [practical architecture leadership guide](practical-architecture-leadership.md) for customer conversations, decision rights, hands-on validation, and post-launch accountability. Its eight customer stages refine the phases above; they do not introduce a separate approval process. Capture the baseline, assumptions, commitments, release evidence, and outcome review in the [engagement worksheet](../templates/architecture-leadership-engagement.md).

@@ -153,6 +153,7 @@ flowchart TB
 | Take a prototype to production | Pass the five gates in [poc-to-production.md](docs/poc-to-production.md) |
 | Evaluate a new/emerging technology | [Research process](research/README.md) → brief → standards update |
 | Design a system of record integration | [Solution design lifecycle](docs/solution-design-lifecycle.md) + [legacy modernization](docs/legacy-modernization.md) |
+| Lead a customer-facing architecture engagement | [Practical leadership guide](docs/practical-architecture-leadership.md) + [engagement worksheet](templates/architecture-leadership-engagement.md) |
 | Quantify an initiative's value | [Business cases & value](docs/business-case-and-value.md) |
 
 ---

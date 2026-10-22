@@ -12,6 +12,7 @@ How architecture work happens: design reviews, technology evaluation, and build-
 | [poc-to-production.md](poc-to-production.md) | The gated path from prototype to a supported production system |
 | [solution-design-lifecycle.md](solution-design-lifecycle.md) | Discovery → design → diligence → deployment → expansion, with required artifacts |
 | [business-case-and-value.md](business-case-and-value.md) | Opportunity discovery, ROI cases, KPIs, and kill criteria |
+| [practical-architecture-leadership.md](practical-architecture-leadership.md) | Customer discovery, hands-on validation, leadership behaviors, delivery ownership, and outcome evidence |
 | [legacy-modernization.md](legacy-modernization.md) | Incremental modernization patterns for adding AI to existing systems |
 
 ## Related collections

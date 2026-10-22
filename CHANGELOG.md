@@ -11,6 +11,9 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ### Added
 
+- Practical architecture leadership guide with 16 Amazon principles mapped to working behaviors and evidence, ten complementary leadership approaches, eight customer stages, an illustrative retail integration, customer relationship habits, and authentic interview guidance.
+- Reusable architecture leadership engagement worksheet for baselines, decision rights, experiments, delivery readiness, and business outcome reviews; linked from governance, lifecycle, resource, and root navigation.
+
 - **Architect resource hub** (`resources/README.md`) — full competency framework with embedded diagrams, 12 role paths, 40+ books, 25+ YouTube channels, certifications, official docs/standards, 14 foundational papers, newsletters/podcasts/communities, 60+ tools, 14 labs, and 90-day plans
 - **16 new starter kits**, bringing the total to 17:
   - Reference architectures: `rag`, `agent`, `data-agent`, `copilot`, `fine-tuning`, `training`, `intelligent-automation`

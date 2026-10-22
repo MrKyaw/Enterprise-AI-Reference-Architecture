@@ -139,6 +139,8 @@ Threat modeling, least privilege, identity management, encryption, privacy, comp
 ### Business and leadership
 Requirements discovery, stakeholder communication, architecture decision records, technical roadmaps, cost-benefit analysis, mentoring, delivery governance.
 
+- [Practical architecture leadership](../docs/practical-architecture-leadership.md) — 16 principles applied to delivery, customer lifecycle, hands-on evidence, and authentic leadership stories
+- [Engagement worksheet](../templates/architecture-leadership-engagement.md) — owners, baseline, experiments, decisions, readiness, and outcome review
 - [ADR GitHub org](https://adr.github.io) · [MADR templates](https://github.com/adr/madr)
 - [arc42](https://arc42.org) — architecture communication template
 - [TOGAF](https://www.opengroup.org/togaf) · [ArchiMate](https://www.opengroup.org/archimate)
