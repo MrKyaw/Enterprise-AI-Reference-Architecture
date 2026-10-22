@@ -9,6 +9,27 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ## [Unreleased]
 
+### Added
+
+- **Architect resource hub** (`resources/README.md`) — full competency framework with embedded diagrams, 12 role paths, 40+ books, 25+ YouTube channels, certifications, official docs/standards, 14 foundational papers, newsletters/podcasts/communities, 60+ tools, 14 labs, and 90-day plans
+- **16 new starter kits**, bringing the total to 17:
+  - Reference architectures: `rag`, `agent`, `data-agent`, `copilot`, `fine-tuning`, `training`, `intelligent-automation`
+  - Specialized domains: `edge-ai`, `physical-ai`, `embodied-ai`, `quantum`, `agent-factory`
+  - Cross-cutting: `evaluation`, `observability`, `ai-security`, `integration`
+  - Each kit ships a working FastAPI skeleton, pipeline stub, guardrails, smoke tests, Terraform baseline, non-root Dockerfile, and production checklist
+- **5 new lifecycle domains** — Edge AI, Quantum Computing, Agent Factory, Physical AI, Embodied AI (all 22 target domains now covered)
+- **Issue templates** — `bug_report.yml`, `feature_request.yml`
+
+### Fixed
+
+- Broken internal links across use-case index, research briefs, blueprint catalog, starter kit, and new lifecycle references
+- Blueprint catalog now reflects what actually exists (previously claimed unbuilt kits as scaffolded)
+
+### Changed
+
+- README blueprint section now lists all 17 kits and their groups
+- Resources section in README expanded with counts and direct link to the hub
+
 ## [0.4.0] - 2026-10-17
 
 ### Added

@@ -28,6 +28,7 @@ Covers the full software development lifecycle — from discovery and design thr
 - **79 real production failure modes** across 6 categories with fixes, prevention, and future work
 - **5 driven-development approaches** + testing strategy (TDD, BDD, DDD, data-, evaluation-, security-, contract-, outcome-driven)
 - **8 reference architectures** for core AI workload types
+- **17 production starter kits** — 8 reference-architecture kits, 5 specialized domains, 4 cross-cutting
 - **12 AI security controls** with secure SDLC and red-team integration loop
 - **Architecture Decision Records** (ADRs) for immutable governance
 
@@ -216,13 +217,22 @@ Each issue includes: symptom, root cause, impact, fix, prevention (structural co
 - Integration patterns, AI-assisted development guidelines
 - Model provider standards, security controls
 
-### Blueprints (starter kits)
-Scaffolded project templates with:
-- Working skeleton code with approved stack wired up
-- Infrastructure-as-code baseline deployment
-- Guardrails pre-wired (gateway client, logging with PII redaction, eval-in-CI setup)
-- Pre-filled design review checklist
-- README quickstart (clone to first deployment < 1 hour)
+### Blueprints (17 starter kits)
+Runnable scaffolds — not just documents. Each kit ships:
+- Working FastAPI skeleton with `/health`, `/v1/run`, typed models, input screening, and PII redaction
+- Pipeline stub with the exact steps to implement for that workload
+- Smoke tests wired for CI (`PYTHONPATH=src pytest -q`)
+- Terraform baseline: encrypted, versioned artifact bucket, KMS key, log group (`terraform validate` passes)
+- Non-root container image and `.env.example` configuration contract
+- Pre-filled production checklist in `.github/PULL_REQUEST_TEMPLATE.md`
+
+| Group | Kits |
+|---|---|
+| **Reference architectures (8)** | inference · rag · agent · data-agent · copilot · fine-tuning · training · intelligent-automation |
+| **Specialized domains (5)** | edge-ai · physical-ai · embodied-ai · quantum · agent-factory |
+| **Cross-cutting (4)** | evaluation · observability · ai-security · integration |
+
+See the [blueprints catalog](blueprints/README.md) for the full matrix, quality gates, and quickstart.
 
 ---
 

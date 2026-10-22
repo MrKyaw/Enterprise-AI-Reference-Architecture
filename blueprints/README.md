@@ -1,323 +1,178 @@
 # Blueprints & Starter Kits
 
-**Status:** Developer Preview · **Last reviewed:** 2026-10-19
+**Status:** 17 kits scaffolded · **Last reviewed:** 2026-10-21
 
-Ready-to-scaffold project templates that let engineering teams start a compliant AI workload **without central involvement**, per the matching reference architecture.
+Runnable project templates that let a team start a compliant AI workload **without central involvement**. Each kit is a working skeleton — not a document — with the approved stack, guardrails, infrastructure baseline, evaluation hook, and production checklist pre-wired.
 
-## Philosophy
+> **Principle: the compliant path must be the fast path.** Central architecture should review novel and high-risk designs, not re-review the same scaffold for the twentieth time.
 
-**Blueprints are not just documentation — they are runnable scaffolds.** Each blueprint provides:
-- **Scaffolded project structure** — working skeleton code with the approved stack wired up
-- **Infrastructure-as-code** — baseline deployment for the reference architecture's component view
-- **Guardrails pre-wired** — gateway client, logging with PII redaction, eval-in-CI setup
-- **Checklist** — the [design review checklist](../docs/design-review-checklist.md) pre-filled where the blueprint already satisfies the item; the team fills the rest
-- **README quickstart** — from clone to first working deployment in under an hour
+---
 
-## Philosophy: "The compliant path must be the fast path"
+## What every kit gives you
 
-Central architecture should not be a bottleneck. Blueprints make the compliant path the **fast path** by providing:
-- Pre-approved technology stacks from [`standards/approved-technologies.md`](../standards/approved-technologies.md)
-- Pre-configured guardrails from [`security/ai-security-controls.md`](../security/ai-security-controls.md)
-- Pre-configured evaluation harnesses from [`evaluation-in-ci](../design-patterns/evaluation-in-ci.md)`
-- Pre-configured guardrail sandwich from [`genai-prompting](../design-patterns/genai-prompting.md)`
+| Included | Detail |
+|---|---|
+| **Working service** | FastAPI app with `/health` and `/v1/run`, typed request/response models, local input screening, and PII redaction |
+| **Pipeline stub** | `src/pipeline.py` with the exact steps to implement for that workload, so the design is visible in code |
+| **Smoke tests** | `pytest` suite wired for CI — health, scaffold response, validation, injection rejection |
+| **Infrastructure baseline** | Terraform: encrypted artifact bucket with versioning + lifecycle, KMS key, CloudWatch log group |
+| **Container** | Non-root `Dockerfile`, Python 3.12 slim |
+| **Configuration contract** | `.env.example` listing every variable the service expects |
+| **Production checklist** | `.github/PULL_REQUEST_TEMPLATE.md` covering security, evaluation, rollout, and ownership |
+| **Evidence links** | Each README maps to its reference architecture, lifecycles, patterns, and controls |
 
-## Available Blueprints
+Every generated service returns `status: "scaffold"` until the pipeline is implemented. That is deliberate: you cannot accidentally ship a stub as production behavior.
 
-| Blueprint | Target RA | Status | Tech Stack |
+---
+
+## Catalog
+
+### Core reference architectures (8)
+
+| Kit | Reference architecture | Focus | Stack highlights |
 |---|---|---|---|
-| `inference-starter-kit` | [Inference](../reference-architectures/inference/README.md) | ✅ Scaffolded | FastAPI + Terraform + gateway |
-| `rag-starter-kit` | [RAG](../reference-architectures/rag/README.md) | ✅ Scaffolded | LangChain + Pinecone/Weaviate + evaluation |
-| `agent-starter-kit` | [Agentic](../reference-architectures/agentic/README.md) | ⚠️ In progress | AutoGen + tool registry + sandbox |
-| `data-agent-starter-kit` | [Data agent](../reference-architectures/data-agent/README.md) | ⚠️ In progress | Semantic layer + query synthesis |
-| `copilot-starter-kit` | [Copilots](../reference-architectures/copilots/README.md) | ⚠️ In progress | Host-embedded extension + context assembly |
+| [`inference-starter-kit`](inference-starter-kit/README.md) | [Inference](../reference-architectures/inference/README.md) | Gateway-mediated model serving | FastAPI, gateway, Terraform |
+| [`rag-starter-kit`](rag-starter-kit/README.md) | [RAG](../reference-architectures/rag/README.md) | Retrieval, reranking, citations, ACLs | Hybrid index, reranker, eval gate |
+| [`agent-starter-kit`](agent-starter-kit/README.md) | [Agentic](../reference-architectures/agentic/README.md) | Tool use, approval gates, trajectory audit | Typed tool registry, HITL, kill switch |
+| [`data-agent-starter-kit`](data-agent-starter-kit/README.md) | [Data agent](../reference-architectures/data-agent/README.md) | NL analytics on a governed semantic layer | Semantic layer, policy injection, query limits |
+| [`copilot-starter-kit`](copilot-starter-kit/README.md) | [Copilots](../reference-architectures/copilots/README.md) | In-app assistance, record context, audited writes | Host extension, context assembly, telemetry |
+| [`fine-tuning-starter-kit`](fine-tuning-starter-kit/README.md) | [Fine-tuning](../reference-architectures/fine-tuning/README.md) | Baseline-first adaptation, LoRA/QLoRA | Dataset curation, registry, model card |
+| [`training-starter-kit`](training-starter-kit/README.md) | [Training](../reference-architectures/training/README.md) | Reproducible training and registration | Versioned data, experiment tracking, lineage |
+| [`intelligent-automation-starter-kit`](intelligent-automation-starter-kit/README.md) | [Intelligent automation](../reference-architectures/intelligent-automation/README.md) | Rules → ML → agent, human exceptions | Durable workflow, compensation, approval |
 
-## Blueprint: inference-starter-kit
+### Specialized domains (5)
 
-### Quickstart
+| Kit | Lifecycle | Focus | Stack highlights |
+|---|---|---|---|
+| [`edge-ai-starter-kit`](edge-ai-starter-kit/README.md) | [Edge AI](../lifecycles/edge-ai-lifecycle.md) | On-device inference, OTA, fleet monitoring | Quantization, target runtime, signed updates |
+| [`physical-ai-starter-kit`](physical-ai-starter-kit/README.md) | [Physical AI](../lifecycles/physical-ai-lifecycle.md) | Sim-to-real, test bed, safety envelope | Domain randomization, independent e-stop |
+| [`embodied-ai-starter-kit`](embodied-ai-starter-kit/README.md) | [Embodied AI](../lifecycles/embodied-ai-lifecycle.md) | Perception → world model → policy | Curriculum learning, skill registry |
+| [`quantum-starter-kit`](quantum-starter-kit/README.md) | [Quantum computing](../lifecycles/quantum-computing-lifecycle.md) | Hybrid classical-quantum experiments | Suitability gate, simulator-first, budget caps |
+| [`agent-factory-starter-kit`](agent-factory-starter-kit/README.md) | [Agent factory](../lifecycles/agent-factory-lifecycle.md) | Mass-producing governed agents | Scaffold generation, certification, registry |
+
+### Cross-cutting (4)
+
+| Kit | Lifecycle | Focus | Stack highlights |
+|---|---|---|---|
+| [`evaluation-starter-kit`](evaluation-starter-kit/README.md) | [Evaluation](../lifecycles/evaluation-lifecycle.md) | Golden/adversarial sets, judge calibration, CI gate | Deterministic scorers first, per-slice reporting |
+| [`observability-starter-kit`](observability-starter-kit/README.md) | [Operations & incident](../lifecycles/operations-incident-lifecycle.md) | Traces, token/cost metrics, quality sampling, SLOs | OpenTelemetry, collector, burn-rate alerts |
+| [`ai-security-starter-kit`](ai-security-starter-kit/README.md) | [Model risk](../lifecycles/model-risk-lifecycle.md) | Gateway, guardrails, egress allowlist, red team | Fail-closed, tenant scoping, adversarial suite |
+| [`integration-starter-kit`](integration-starter-kit/README.md) | [API](../lifecycles/api-lifecycle.md) | Contracts, schema registry, DLQ, replay | OpenAPI/AsyncAPI, idempotency, trace propagation |
+
+---
+
+## Coverage by area
+
+| Area | Covered by |
+|---|---|
+| Software / service delivery | `inference`, `evaluation`, `integration` |
+| Algorithms / statistics / ML / data science | `training`, `fine-tuning`, `evaluation` |
+| Integration | `integration`, `data-agent`, `intelligent-automation` |
+| DevOps / platform | every kit (`Dockerfile`, Terraform, CI tests) |
+| Data engineering | `rag` (ingestion), `data-agent`, `integration` |
+| MLOps / LLMOps | `training`, `fine-tuning`, `evaluation`, `observability` |
+| LLM / LLM inference | `inference`, `rag` |
+| GenAI / RAG | `rag`, `agent`, `copilot` |
+| Agentic AI / multi-agent | `agent`, `agent-factory`, `intelligent-automation` |
+| Observability | `observability` (plus baseline in every kit) |
+| Evals | `evaluation` (plus gate in every kit) |
+| Edge AI | `edge-ai` |
+| Quantum computing | `quantum` |
+| Cyber security | `ai-security` (plus controls in every kit) |
+| Agent factory | `agent-factory` |
+| Physical AI | `physical-ai` |
+| Embodied AI | `embodied-ai` |
+
+---
+
+## Quickstart (any kit)
 
 ```bash
 git clone https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture.git
-cd Enterprise-AI-Reference-Architecture/blueprints/inference-starter-kit
-terraform init
-terraform apply
-cd src
+cd Enterprise-AI-Reference-Architecture/blueprints/<kit-name>
+
+cp .env.example .env
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn main:app --reload
+PYTHONPATH=src uvicorn main:app --reload --port 8080
+
+# verify
+curl -s localhost:8080/health
+PYTHONPATH=src pytest -q
 ```
 
-### Directory Structure
-
-```
-inference-starter-kit/
-├── infra/              # Terraform baseline deployment
-│   ├── main.tf         # Provider + workspace config
-│   ├── vpc.tf          # Network with gateway endpoint
-│   ├── gateway.tf      # AI gateway deployment (private ALB)
-│   └── outputs.tf      # Connection details
-├── src/                # Sample FastAPI service
-│   ├── __init__.py
-│   ├── main.py         # Main app with gateway client + guardrails
-│   ├── guardrails.py   # Input/output filtering
-│   └── requirements.txt
-├── .github/            # PR template auto-filling checklist
-│   └── PULL_REQUEST_TEMPLATE.md
-├── .env.example        # Placeholder variables (never commit)
-├── README.md           # Quickstart guide
-└── .gitignore
-```
-
-### Architecture
-
-This blueprint implements the [inference reference architecture](../reference-architectures/inference/README.md):
-
-```mermaid
-flowchart TB
-    subgraph Client [Client Apps]
-        U[User / Front-end]
-    end
-    subgraph Gateway [AI Gateway]
-        GW[Auth + Rate Limits]
-        GR[Guardrails (input/output)]
-        RW[Router + Routing]
-    end
-    subgraph infra [Deployed Infrastructure]
-        direction TB
-        VPC[VPC / Network]
-        GW_endp[AI Gateway Endpoint]
-        M[Model Provider]
-        FW[Firewall / DLP]
-    end
-    U -->|HTTPS| GW_endp
-    GW_endp --> GR
-    GR --> RW
-    RW --> M
-    M -->|response| GR
-    GR --> GW_endp
-    GW_endp -->|decision| VPC
-```
-
-### Tech Stack (layers, not products)
-
-| Layer | Choice | Notes |
-|---|---|---|
-| Ingestion | N/A (gateway-mediated) | No direct provider SDK in application code |
-| Serving | AI Gateway + model provider | Gateway mediates all traffic |
-| Safety | Guardrails service | Fail-closed; input/output filtering |
-| Delivery | FastAPI + uvicorn | Standard Python web framework |
-| Observability | Correlation IDs + stage-decomposed tracing | Every request traced through gateway |
-| Cost | Per-request tagging + budget alarms | Attribution via gateway |
-
-### Security
-
-- All model traffic transits the AI gateway (control AI-1)
-- No provider keys in application code
-- PII redaction before prompt assembly
-- See [ai-security-controls.md](../security/ai-security-controls.md)
-
-### Evaluation
-
-Eval-in-CI configured with [evaluation-in-CI pattern](../design-patterns/evaluation-in-ci.md):
+Supporting infrastructure:
 
 ```bash
-pytest tests/ -k "inference"
+cd infra
+terraform init
+terraform plan
 ```
 
-### Cost Estimate
+---
 
-| Component | Monthly (~1M requests) |
+## Blueprint quality gates
+
+A kit is only accepted when all of these pass:
+
+| Gate | Requirement |
 |---|---|
-| Gateway overhead | $150 |
-| Model inference (mix of cheap/strong) | $800 |
-| Guardrails processing | $50 |
-| **Total** | **~$1,000** |
-
-### Troubleshooting
-
-Common issues:
-- `gateway unreachable` — check VPC endpoint and security groups
-- `guardrails blocking` — review PII patterns in `guardrails.py`
-- `authentication failed` — verify `.env.example` variables
-
-### Pull Request Checklist
-
-- [ ] One concern per PR; title states the change type (infra / src / guardrails / eval)
-- [ ] Blueprint changes linked from blueprints/README.md
-- [ ] Naming conventions followed (kebab-case; env vars UPPERCASE)
-- [ ] Blueprint satisfies applicable items in [design-review-checklist.md](../docs/design-review-checklist.md); remaining items filled
-- [ ] Evaluation in CI configured with explicit thresholds
-
-## Reviewer routing (see CONTRIBUTING.md for required reviewers)
-
-- [ ] Infrastructure changes — 1 infrastructure reviewer
-- [ ] Code/guardrails changes — 1 engineering reviewer + 1 security reviewer
-- [ ] New blueprint — blueprint maintainer + 1 architecture team reviewer
-
-## Evidence (required for blueprint changes)
-
-- [ ] Terraform plan output linked
-- [ ] Evaluation harness results linked
-- [ ] No secrets in .env or code
+| **Runs** | `PYTHONPATH=src pytest -q` passes from a clean checkout |
+| **Valid IaC** | `terraform validate` passes |
+| **No secrets** | No keys or real credentials in code or `.env.example` |
+| **Gateway-only model access** | No provider SDK keys in application code (AI kits) |
+| **Guardrails visible** | Input screening, redaction, and tenant scoping present |
+| **Evaluation hook** | A documented path to run evals in CI with explicit thresholds |
+| **Observability** | Correlation ID and stage-level tracing documented |
+| **Ownership** | Status, owner, last-reviewed date, and cost note present |
+| **Standards mapped** | Links to the reference architecture, lifecycles, and controls |
 
 ---
 
-## Adding a new blueprint
+## Using a kit
 
-1. Copy the appropriate scaffold template into `blueprints/{workload}-starter-kit/`
-2. Fill in the `README.md` with project-specific quickstart steps
-3. Replace placeholder infrastructure with your platform's IaC
-4. Ensure the embedded checklist in `.github/PULL_REQUEST_TEMPLATE.md` reflects the applicable [design review checklist](../docs/design-review-checklist.md)
-5. Open a PR — the blueprint maintainer owns the template, but teams own their scaffolded project after generation
+1. **Pick the closest kit** from the catalog — do not start from a blank repository.
+2. **Read its architecture diagram** and confirm the shape matches your problem.
+3. **Replace `src/pipeline.py`** with the real pipeline, keeping the request/response contract.
+4. **Wire the evaluation harness** and set thresholds before the first deploy.
+5. **Fill the PR checklist**; record any deviation as an [ADR](../adr/README.md).
+6. **Register the workload** (owner, cost budget, on-call) before production traffic.
 
-## Blueprint design principles
+## Adding or changing a kit
 
-- **Opinionated but extensible** — pre-approved stack, but customization points exist
-- **Guardrails by default** — removing guardrails requires explicit approval
-- **IaC first** — all infrastructure is code; no click-ops in production
-- **Team-owned after generation** — blueprint maintainers own the template; teams own their scaffolded project
-- **Standards-aligned** — when a standard changes, the blueprint changes in the same PR
-
----
-
-## Blueprint Roadmap
-
-| Blueprint | Target RA | ETA |
-|---|---|---|
-| inference-starter-kit | [Inference](../reference-architectures/inference/README.md) | ✅ Complete |
-| rag-starter-kit | [RAG](../reference-architectures/rag/README.md) | Q1 2027 |
-| agent-starter-kit | [Agentic](../reference-architectures/agentic/README.md) | Q2 2027 |
-| data-agent-starter-kit | [Data agent](../reference-architectures/data-agent/README.md) | Q2 2027 |
-| copilot-starter-kit | [Copilots](../reference-architectures/copilots/README.md) | Q3 2027 |
-
-## Blueprint examples (diagrams)
-
-### inference-starter-kit architecture diagram
-
-```mermaid
-flowchart TB
-    subgraph Client [Client Apps]
-        U[User / Front-end]
-    end
-    subgraph Gateway [AI Gateway (managed)]
-        GW[Auth + Rate Limits]
-        GR[Guardrails (input/output)]
-        RW[Router + Routing]
-    end
-    subgraph infra [Deployed Infrastructure]
-        direction TB
-        VPC[VPC / Network]
-        GW_endp[AI Gateway Endpoint (private ALB)]
-        M[Model Provider (e.g., OpenAI, Anthropic, Cohere)]
-        FW[Firewall / DLP]
-    end
-    U -->|HTTPS| GW_endp
-    GW_endp --> GR
-    GR --> RW
-    RW --> M
-    M -->|token-cost| GR
-    GR --> GW_endp
-    GW_endp -->|decision| VPC
-```
-
-### RAG starter kit architecture diagram
-
-```mermaid
-flowchart TB
-    subgraph Ingest [Scheduled Ingest]
-        S[(Sources: docs, wiki, tickets)] --> EX[Extract & clean]
-        EX --> CH[Chunk per content type]
-        CH --> MD[Attach metadata: source, date, ACL tags]
-        MD --> EM[Embed (versioned model)]
-        EM --> IX[(Hybrid index: vector + keyword)]
-    end
-    subgraph Serve [Query pipeline - per request]
-        U[User question] --> QP[Query rewrite + filters]
-        QP --> RT[Hybrid retrieval + ACL filter]
-        IX --> RT
-        RT --> RR[Rerank top-k]
-        RR --> AS[Prompt assembly with citations]
-        AS --> MDL[Model via gateway + guardrails]
-        MDL --> ANS[Answer with citations]
-    end
-```
-
-### Agent starter kit architecture diagram
-
-```mermaid
-flowchart LR
-    subgraph Agent [Agent Runtime]
-        A[Agent Loop]
-        A --> T[Tool Registry]
-        T -->|authorize| C[Tool Calls]
-        C --> E[Execute (API / DB / UI)]
-        E -->|result| A
-    end
-    subgraph Controls [Safety Controls]
-        SC[Side-effect classification]
-        AK[Authorization Boundary]
-        KS[Kill Switch]
-    end
-    A -->|classify| SC
-    A -->|boundary check| AK
-    A -->|exceeds limits| KS
-    subgraph Memory [Memory Layer]
-        M[Turn-scoped / Session-scoped]
-    end
-    A --> M
-```
+1. One concern per PR; state the change type (src / infra / guardrails / eval / docs).
+2. Update the kit README **and** this catalog in the same PR.
+3. If a standard changes, update every affected kit in the same PR.
+4. New kits must pass the quality gates above and include a working smoke test.
+5. Reviewer routing: 1 engineering reviewer; +1 security reviewer for guardrail,
+   tool, permission, or egress changes; +1 architecture reviewer for new kits.
 
 ---
 
-## Blueprint Quality Gates
+## Roadmap
 
-Every blueprint must pass these gates before acceptance:
-
-| Gate | Requirement | Artifact |
-|---|---|---|
-| **Security** | All model traffic via gateway; no provider keys in code | `security/ai-security-controls.md` mapping |
-| **Evaluation** | Eval-in-CI passes with thresholds | [evaluation-in-CI](../design-patterns/evaluation-in-ci.md) |
-| **Observability** | Correlation IDs, cost attribution, quality sampling | Trace configuration |
-| **Compliance** | Status, owner, last-reviewed date set | Metadata in blueprint README |
-| **Standards** | Uses only approved technologies | [`standards/approved-technologies.md`](../standards/approved-technologies.md) |
-
----
-
-## Community blueprints (external, not maintained)
-
-| Name | Description | Link |
-|---|---|---|
-| `community/rag-experiment` | Community experiment with LlamaIndex + Pinecone | (external) |
-| `community/agent-demo` | Demo of AutoGen agent workflow | (external) |
-
-*External blueprints are not maintained by the architecture team. Use at your own risk and evaluate against [standards](../standards/approved-technologies.md).*
+| Item | Status |
+|---|---|
+| Core reference-architecture kits (8) | ✅ Complete |
+| Specialized domain kits (5) | ✅ Complete |
+| Cross-cutting kits (4) | ✅ Complete |
+| Shared Terraform modules (network, gateway, observability) | Planned |
+| Generated kits from the agent factory | Planned |
+| Automated conformance checks (policy-as-code) | Planned |
+| Kit upgrade tooling when standards change | Planned |
 
 ---
 
-## migrating between blueprints
+## Related
 
-If your needs change, you can migrate between blueprints by:
-
-1. **Importing data** from the old blueprint's data store
-2. **Re-running the evaluation harness** to compare quality
-3. **Updating the tech stack** via the migration practices described in [CONTRIBUTING.md](../CONTRIBUTING.md)
-4. **Updating ADRs** to reflect the new architecture decision
-
----
-
-## migrating from a blueprint to a custom build
-
-As your team matures, you may want to move from a blueprint to a fully custom build. The transition path is:
-
-1. **Fork the blueprint** and remove opinionated components
-2. **Replace IaC** with your platform's native tools
-3. **Migrate guardrails** to your existing security pipeline
-4. **Update evaluation harness** to your custom metrics
-5. **Document the migration** as an [ADR](../adr/README.md) for future reference
+- [Reference architectures](../reference-architectures/README.md)
+- [Lifecycles](../lifecycles/README.md)
+- [Design patterns](../design-patterns/README.md)
+- [Production issues](../production-issues/README.md)
+- [AI security controls](../security/ai-security-controls.md)
+- [Design review checklist](../docs/design-review-checklist.md)
+- [Architect career resources](../resources/README.md)
 
 ---
 
-## Code of Conduct
-
-All blueprint contributors and users are expected to follow the [Code of Conduct](../CODE_OF_CONDUCT.md). Violations should be reported via the GitHub Security Advisory channel.
-
----
-*Blueprint version: 2.0.0 — Last updated: 2026-10-19*
+*Blueprint catalog version 2.0.0 · Last updated: 2026-10-21*
