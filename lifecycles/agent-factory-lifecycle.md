@@ -34,7 +34,32 @@ Moving from hand-crafted, one-off agents to a scalable, governed factory that ca
 
 ```mermaid
 flowchart TB
-    subgraph Incubate [Agent incubation phase]\n    IA[Idea / use case]\n    IA --> GO[Gate: problem fits agentic pattern]\n    GO -->|pass| DC[Dataset + success criteria]\n    DC --> MT[Model/template selection]\n    MT --> CW[Craft: agent skeleton using factory scaffold]\n    CW --> EV[Evaluation harness + golden set]\n    EV -->|pass| REG[(Artifact registry: agent + config)]\n    EV -->|fail| IT[Iterate: data, method, scaffold]\n    end\n    subgraph Certify [Agent certification phase]\n    REG --> CL[Compliance + security review]\n    CL --> AP[Approval process (risk-tiered)]\n    AP -->|pass| PT[Production‑ready agent]\n    AP -->|fail| RE[Reject + document decision]\n    end\n    subgraph Deploy [Agent deployment phase]\n    PT --> FS[Feature flag / rollout]\n    FS --> MON[Monitoring: latency, quality, cost, safety]\n    MON -->|drift/violation| RT[Retraining or retirement]\n    MON -->|stable| KEEP[Keep in production]\n    end\n    RT --> REG\n    KEEP --> AUD[Audit log + version bump]\n    AUD --> RET[Retire old version]\n```
+    subgraph Incubate [Agent incubation phase]
+    IA[Idea / use case]
+    IA --> GO[Gate: problem fits agentic pattern]
+    GO -->|pass| DC[Dataset + success criteria]
+    DC --> MT[Model/template selection]
+    MT --> CW[Craft: agent skeleton using factory scaffold]
+    CW --> EV[Evaluation harness + golden set]
+    EV -->|pass| REG["(Artifact registry: agent + config)"]
+    EV -->|fail| IT[Iterate: data, method, scaffold]
+    end
+    subgraph Certify [Agent certification phase]
+    REG --> CL[Compliance + security review]
+    CL --> AP["Approval process (risk-tiered)"]
+    AP -->|pass| PT[Production‑ready agent]
+    AP -->|fail| RE[Reject + document decision]
+    end
+    subgraph Deploy [Agent deployment phase]
+    PT --> FS[Feature flag / rollout]
+    FS --> MON[Monitoring: latency, quality, cost, safety]
+    MON -->|drift/violation| RT[Retraining or retirement]
+    MON -->|stable| KEEP[Keep in production]
+    end
+    RT --> REG
+    KEEP --> AUD[Audit log + version bump]
+    AUD --> RET[Retire old version]
+```
 
 **Human decision points:** gate approval; risk-tiered authorization; retirement triggers; canary rollout acceptance.
 

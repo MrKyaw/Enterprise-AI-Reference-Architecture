@@ -1,6 +1,6 @@
 # Reference Architectures
 
-Canonical, end-to-end reference architectures for each supported AI/ML workload type. Each one defines the approved components, integration patterns, security controls, and operational expectations for that workload.
+Proposed end-to-end reference designs for eight AI/ML workload types. They describe candidate components, integration patterns, security controls, and operational expectations. An adopting organization must validate the design and record its own approvals; these documents do not certify a running system.
 
 ## Workload types
 

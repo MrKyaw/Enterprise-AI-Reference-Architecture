@@ -34,7 +34,31 @@ Bridging the gap between AI systems that reason in simulation and their deployme
 
 ```mermaid
 flowchart TB
-    subgraph Simulate [Simulation design & training phase]\n    SD[System definition: dynamics, actuators, sensors]\n    SD --> MT[Model training in simulation]\n    MT --> SV[Simulation validation]\n    SV -->|pass| QS[Quantify sim-to-real gap]\n    SV -->|fail| IT[Iterate: model or simulation]\n    MT --> REG[(Model registry)]\n    end\n    subgraph Validate [Physical validation phase]\n    QS --> PT[Physical test bed: reduced‑scale / lab environment]\n    PT --> PV[Physical validation: safety + quality metrics]\n    PV -->|pass| SC[Scale‑up to full system]\n    PV -->|fail| IT2[Iterate: model, simulation, or hardware]\n    end\n    subgraph Deploy [Real‑world deployment phase]\n    SC --> DD[Device deployment: robot, vehicle, system]\n    DD --> CO[Commissioning + calibration]\n    CO --> MON[Monitoring: safety, drift, performance]\n    MON -->|within bounds| OP[Operational mode]\n    MON -->|violation| EM[Emergency mitigation / stop]\n    end\n    EM --> RF[Retire or redesign]\n    OP --> RET[Scheduled retirement / decommission]\n    RET --> CD[Component cleanup + data retention]\n```
+    subgraph Simulate [Simulation design & training phase]
+    SD[System definition: dynamics, actuators, sensors]
+    SD --> MT[Model training in simulation]
+    MT --> SV[Simulation validation]
+    SV -->|pass| QS[Quantify sim-to-real gap]
+    SV -->|fail| IT[Iterate: model or simulation]
+    MT --> REG[(Model registry)]
+    end
+    subgraph Validate [Physical validation phase]
+    QS --> PT[Physical test bed: reduced‑scale / lab environment]
+    PT --> PV[Physical validation: safety + quality metrics]
+    PV -->|pass| SC[Scale‑up to full system]
+    PV -->|fail| IT2[Iterate: model, simulation, or hardware]
+    end
+    subgraph Deploy [Real‑world deployment phase]
+    SC --> DD[Device deployment: robot, vehicle, system]
+    DD --> CO[Commissioning + calibration]
+    CO --> MON[Monitoring: safety, drift, performance]
+    MON -->|within bounds| OP[Operational mode]
+    MON -->|violation| EM[Emergency mitigation / stop]
+    end
+    EM --> RF[Retire or redesign]
+    OP --> RET[Scheduled retirement / decommission]
+    RET --> CD[Component cleanup + data retention]
+```
 
 **Human decision points:** sim-to-real gap acceptance; physical test‑bed clearance; emergency mitigation triggers; retirement scheduling.
 

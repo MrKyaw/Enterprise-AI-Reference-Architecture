@@ -1,6 +1,6 @@
 # Production Issues
 
-Real failure modes observed in production AI/ML systems — with symptom, root cause, impact, fix, prevention, and future work. Every entry maps back to a pattern, control, or lifecycle so the fix is structural, not tribal.
+A catalog of generalized AI/ML failure scenarios with symptoms, potential causes, impacts, mitigations, and prevention guidance. The six category files index 79 scenarios; selected entries have expanded treatments. These are design-review scenarios, not disclosed customer incidents or verified incident statistics.
 
 ## Why this exists
 
@@ -17,7 +17,7 @@ Most AI incidents are **not novel**. They are recurring, well-understood failure
 | **Medium** | Degraded quality, elevated cost, user-visible inconsistency | Planned fix in the next cycle |
 | **Low** | Friction, minor inaccuracy, cosmetic trust erosion | Backlog |
 
-## Cross-cutting causes (the "why" behind 80% of issues)
+## Recurring causes to investigate
 
 Across all catalogued issues, five causes recur:
 

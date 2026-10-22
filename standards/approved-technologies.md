@@ -2,7 +2,7 @@
 
 **Status:** Proposed · **Last reviewed:** 2026-10-17 · **Review cadence:** 6 months
 
-The authoritative list of technologies approved for AI/ML workloads. Entries marked _(fill)_ are placeholders to be populated during the first standards review cycle with the actual evaluated products.
+A proposed template for an adopting organization's AI/ML technology approval register. No product is approved by this public template. Entries marked _(fill)_ require evaluation evidence, named ownership, conditions, and a recorded approval decision.
 
 ## How to read this list
 

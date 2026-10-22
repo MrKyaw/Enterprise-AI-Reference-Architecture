@@ -2,6 +2,8 @@
 
 **Status:** Scaffolded · **Reference architecture:** [Data agent](../../reference-architectures/data-agent/README.md) · **Owner:** platform engineering · **Last reviewed:** 2026-10-21
 
+> **Implementation boundary:** architecture diagrams and pipeline steps describe intended behavior. The shipped pipeline is a stub; callers are not authenticated, request `tenant_id` is caller-supplied, and regex screening/redaction is illustrative. Implement identity, authorization, workload logic, evaluation, and operational controls before exposing the service. Use synthetic or explicitly authorized data. A copied `.env` file is not loaded automatically.
+
 ## What it is
 
 A natural-language analytics service grounded in a governed semantic layer: ambiguity detection, query synthesis against metric definitions, policy injection, and answers that always show the definition used.

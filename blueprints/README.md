@@ -2,7 +2,7 @@
 
 **Status:** 17 kits scaffolded · **Last reviewed:** 2026-10-21
 
-Runnable project templates that let a team start a compliant AI workload **without central involvement**. Each kit is a working skeleton — not a document — with the approved stack, guardrails, infrastructure baseline, evaluation hook, and production checklist pre-wired.
+Runnable project scaffolds for exploring AI workload designs. Each kit includes a service skeleton, placeholder pipeline, screening examples, infrastructure baseline, smoke tests, and a production checklist. They require implementation and review before real use; copying a kit does not establish compliance or approval.
 
 > **Principle: the compliant path must be the fast path.** Central architecture should review novel and high-risk designs, not re-review the same scaffold for the twentieth time.
 
@@ -21,7 +21,7 @@ Runnable project templates that let a team start a compliant AI workload **witho
 | **Production checklist** | `.github/PULL_REQUEST_TEMPLATE.md` covering security, evaluation, rollout, and ownership |
 | **Evidence links** | Each README maps to its reference architecture, lifecycles, patterns, and controls |
 
-Every generated service returns `status: "scaffold"` until the pipeline is implemented. That is deliberate: you cannot accidentally ship a stub as production behavior.
+Every generated service returns `status: "scaffold"` until its pipeline is implemented. Treat that status as a visible boundary, not a deployment safeguard. The skeletons do not authenticate callers; request `tenant_id` values are not trusted identity, and regex screening/redaction is not a complete security or privacy control.
 
 ---
 

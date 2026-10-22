@@ -11,6 +11,8 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ### Added
 
+- Repeatable tracked-Markdown and Mermaid validation with pinned Node dependencies, repaired documentation CI, and publication review guidance.
+
 - Practical architecture leadership guide with 16 Amazon principles mapped to working behaviors and evidence, ten complementary leadership approaches, eight customer stages, an illustrative retail integration, customer relationship habits, and authentic interview guidance.
 - Reusable architecture leadership engagement worksheet for baselines, decision rights, experiments, delivery readiness, and business outcome reviews; linked from governance, lifecycle, resource, and root navigation.
 
@@ -25,10 +27,15 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 
 ### Fixed
 
+- Replaced unsupported embedding benchmark/cost findings with explicitly unexecuted evaluation plans.
+- Corrected literal-newline and syntax defects in specialized lifecycle diagrams; removed placeholder reviewer teams and unsupported security response promises.
+
 - Broken internal links across use-case index, research briefs, blueprint catalog, starter kit, and new lifecycle references
 - Blueprint catalog now reflects what actually exists (previously claimed unbuilt kits as scaffolded)
 
 ### Changed
+
+- Reconciled README and About metadata with the actual catalog; clarified proposed standards, illustrative failure scenarios, public-data boundaries, and all 17 unauthenticated starter scaffolds.
 
 - README blueprint section now lists all 17 kits and their groups
 - Resources section in README expanded with counts and direct link to the hub

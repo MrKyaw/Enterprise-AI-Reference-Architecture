@@ -35,7 +35,33 @@ Embodied AI focuses on agents that live inside a body (robot, agent, organism) a
 
 ```mermaid
 flowchart TB
-    subgraph Design [Embodied agent design phase]\n    IA[Identify task + embodiment constraints]\n    IA --> SW[Select learning paradigm: RL, imitation, neuros‑ymbolic]\n    SW --> MM[Design sensorimotor module: perception → decision → action]\n    MM --> WW[Design world model + state representation]\n    WW --> REG[(Artifact registry: policy + model + config)]\n    end\n    subgraph Train [Training phase]\n    RL[Reinforcement learning / imitation]\n    RL --> EV[Evaluation in simulation]\n    EV -->|pass| PT[Physical test bed: reduced‑scale / safe environment]\n    EV -->|fail| IT[Iterate: reward, model, representation]\n    RL -->|real‑world| RW[Real‑world data collection (curriculum)]\n    RW --> RL\n    PT -->|pass| DEP[Deploy to full embodiment]\n    PT -->|fail| IT2[Iterate: perception, model, or safety]\n    end\n    subgraph Operate [Operational phase]\n    DEP --> MON[Monitoring: skill quality, safety, sample efficiency]\n    MON -->|drift/violation| RT[Retraining or skill retirement]\n    MON -->|stable| KEEP[Keep skill in repertoire]\n    end\n    RT --> REG\n    KEEP --> AUD[Audit log + skill version bump]\n    AUD --> RET[Retire skill; optionally preserve model]\n    RET --> CD[Component cleanup + data retention policy]\n```
+    subgraph Design [Embodied agent design phase]
+    IA[Identify task + embodiment constraints]
+    IA --> SW[Select learning paradigm: RL, imitation, neuros‑ymbolic]
+    SW --> MM[Design sensorimotor module: perception → decision → action]
+    MM --> WW[Design world model + state representation]
+    WW --> REG["(Artifact registry: policy + model + config)"]
+    end
+    subgraph Train [Training phase]
+    RL[Reinforcement learning / imitation]
+    RL --> EV[Evaluation in simulation]
+    EV -->|pass| PT[Physical test bed: reduced‑scale / safe environment]
+    EV -->|fail| IT[Iterate: reward, model, representation]
+    RL -->|real‑world| RW["Real‑world data collection (curriculum)"]
+    RW --> RL
+    PT -->|pass| DEP[Deploy to full embodiment]
+    PT -->|fail| IT2[Iterate: perception, model, or safety]
+    end
+    subgraph Operate [Operational phase]
+    DEP --> MON[Monitoring: skill quality, safety, sample efficiency]
+    MON -->|drift/violation| RT[Retraining or skill retirement]
+    MON -->|stable| KEEP[Keep skill in repertoire]
+    end
+    RT --> REG
+    KEEP --> AUD[Audit log + skill version bump]
+    AUD --> RET[Retire skill; optionally preserve model]
+    RET --> CD[Component cleanup + data retention policy]
+```
 
 **Human decision points:** learning paradigm selection; simulation‑to‑real gap acceptance; physical test‑bed clearance; skill retirement triggers.
 

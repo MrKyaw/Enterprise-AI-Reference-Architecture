@@ -19,3 +19,15 @@ venv/
 *.pem
 *.key
 credentials.json
+
+# Local overrides and generated infrastructure/dependency files
+.env.*
+!.env.example
+!.env.sample
+node_modules/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.pytest_cache/

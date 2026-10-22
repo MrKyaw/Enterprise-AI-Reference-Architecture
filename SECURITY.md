@@ -8,7 +8,7 @@ Use GitHub's **private vulnerability reporting** for this repository:
 
 `Security` tab → *Report a vulnerability* → describe the issue
 
-If private reporting is unavailable, contact the maintainers through a private channel listed in the repository's About section. Expect an acknowledgment within **3 working days** and a status update within **10 working days**.
+If private reporting is unavailable, use an explicitly offered private contact option on the maintainer's GitHub profile. If no private route is available, request a private contact method without posting vulnerability details or secrets in a public issue. No response-time SLA is promised.
 
 ### What to include
 
@@ -51,3 +51,7 @@ This repository is a living document set. Security-relevant content is supported
 ## Relationship to red-teaming
 
 Red-team findings from operational systems feed back through [security/red-team-integration.md](security/red-team-integration.md). Vulnerability reports against *this repository* feed the same loop: generalized findings become control or reference-architecture updates here.
+
+## Public examples and confidentiality
+
+This repository is public guidance and scaffolding. Never submit live credentials, customer transcripts, private topology, cloud state, or restricted benchmark data. Synthetic fixtures, regex redaction, and a passing secret scan do not establish that an artifact is safe to publish. Review the [publication checklist and evidence](docs/publication-review.md), including historical Git metadata and copies outside the repository. A suspected exposure requires credential rotation and an incident assessment; deleting the current file alone is insufficient.

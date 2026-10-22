@@ -35,7 +35,34 @@ Deploying AI models to resource-constrained edge devices (mobile, IoT, embedded 
 
 ```mermaid
 flowchart TB
-    subgraph Train [Cloud/On-prem training phase]\n    MT[Train model]\n    MT --> QC[Quality check]\n    QC -->|pass| CQ[Convert/quantize]\n    CQ --> VQ[Validate quality drop]\n    VQ -->|accept| DEP[Deploy pipeline]\n    VQ -->|reject| IT[Iterate training]\n    MT -->|baseline| REG[(Model registry)]\n    end\n    subgraph Convert [Edge conversion phase]\n    CQ --> QS[Quantization/stripping]\n    QS --> TS[Target SDK selection]\n    TS --> TR[Target device testing]\n    TR --> QA[Quality assurance]\n    QA --> PASS[Pass → Deploy]\n    QA --> FAIL[Fail → redesign]\n    end\n    subgraph Deploy [Edge deployment phase]\n    PASS --> DL[Device firmware update]\n    DL --> VI[Inference execution]\n    VI --> MTD[Monitoring + drift detection]\n    MTD --> CU[Canary update or rollback]\n    CU -->|update| DL\n    CU -->|rollback| RF[Revert to prior version]\n    end\n    MTD -->|retrain trigger| RT[Remote retraining / fleet learning]\n    RT --> REG\n```
+    subgraph Train [Cloud/On-prem training phase]
+    MT[Train model]
+    MT --> QC[Quality check]
+    QC -->|pass| CQ[Convert/quantize]
+    CQ --> VQ[Validate quality drop]
+    VQ -->|accept| DEP[Deploy pipeline]
+    VQ -->|reject| IT[Iterate training]
+    MT -->|baseline| REG[(Model registry)]
+    end
+    subgraph Convert [Edge conversion phase]
+    CQ --> QS[Quantization/stripping]
+    QS --> TS[Target SDK selection]
+    TS --> TR[Target device testing]
+    TR --> QA[Quality assurance]
+    QA --> PASS[Pass → Deploy]
+    QA --> FAIL[Fail → redesign]
+    end
+    subgraph Deploy [Edge deployment phase]
+    PASS --> DL[Device firmware update]
+    DL --> VI[Inference execution]
+    VI --> MTD[Monitoring + drift detection]
+    MTD --> CU[Canary update or rollback]
+    CU -->|update| DL
+    CU -->|rollback| RF[Revert to prior version]
+    end
+    MTD -->|retrain trigger| RT[Remote retraining / fleet learning]
+    RT --> REG
+```
 
 **Human decision points:** quantization level selection; canary deployment approval; rollback triggers.
 

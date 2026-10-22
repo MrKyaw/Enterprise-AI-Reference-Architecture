@@ -1,0 +1,17 @@
+{
+  "name": "enterprise-ai-reference-architecture-docs",
+  "private": true,
+  "description": "Validation tooling for the architecture documentation",
+  "scripts": {
+    "check:docs": "python3 .github/scripts/validate-docs.py",
+    "check:mermaid": "node .github/scripts/validate-mermaid.mjs",
+    "test": "npm run check:docs && npm run check:mermaid"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "mermaid": "12.2.0"
+  }
+}

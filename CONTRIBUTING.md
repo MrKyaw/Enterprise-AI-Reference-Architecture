@@ -11,6 +11,8 @@ Thanks for helping keep our AI architecture standards current and trustworthy.
 
 ## Change types and required reviewers
 
+For this public repository, the maintainer listed in `.github/CODEOWNERS` coordinates review. The architecture-team and cross-cutting roles below describe the review model for an adopting organization; they are not a claim that those teams or approvals exist in this repository.
+
 | Change type | Example | Required reviewers |
 |---|---|---|
 | Editorial | Typos, wording, broken links | 1 architecture team member |
@@ -40,3 +42,9 @@ Thanks for helping keep our AI architecture standards current and trustworthy.
 ## Deprecation
 
 Do not delete standards or architectures. Mark them `Status: Deprecated` with a pointer to the replacement and keep them for 12 months.
+
+## Documentation and publication checks
+
+With Node.js 22.12+ and Python 3.12, run `npm ci --ignore-scripts --no-audit --no-fund` and `npm test` from the repository root. This checks tracked Markdown links/fences, inventory, privacy exclusions, and Mermaid syntax. Install Gitleaks separately to run `gitleaks git --log-opts=--all --redact --no-banner .`. Review the actual diff and [publication checklist](docs/publication-review.md); scanners do not establish absolute confidentiality.
+
+Keep private customer data, credentials, environment overrides, Terraform state, and restricted evidence out of commits. Use a GitHub no-reply author email if you do not want a personal address in new public commit metadata. Do not rewrite shared history without a coordinated plan. Describe templates and examples as proposals, and publish measured results only when the supporting evidence and disclosure are authorized.

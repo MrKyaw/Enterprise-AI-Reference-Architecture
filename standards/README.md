@@ -1,6 +1,6 @@
 # Standards
 
-Binding technology standards for AI/ML. "Approved" means: proven in our environment, supported centrally, and secure by default. Anything else needs an evaluation.
+Proposed technology and integration standards for adaptation by an adopting organization. The entries below are not a public approval record. An adopting organization must evaluate technologies, identify support and control owners, and record formal approval before treating a standard as binding.
 
 ## Documents
 

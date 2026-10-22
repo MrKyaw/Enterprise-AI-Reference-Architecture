@@ -34,7 +34,35 @@ Investigating whether quantum computing can provide a computational advantage fo
 
 ```mermaid
 flowchart TB
-    subgraph Discover [Problem discovery phase]\n    ID[Identify candidate sub-problem]\n    ID --> FS[Feasibility screen: optimization/sampling/linear algebra]\n    FS -->|fit| HQ[Quantum suitability check]\n    HQ -->|yes| SQ[Select quantum algorithm]\n    HQ -->|no| Classical[Document as classical-only]\n    Classical --> REG[(Model registry)]\n    sq --> EXP[Experiment on quantum simulator]\n    end\n    subgraph Experiment [Quantum experimentation phase]\n    SQ --> AQ[Algorithm design / circuit construction]\n    AQ --> SV[Simulation: state‑vector / density‑matrix]\n    SV --> BP[Benchmark vs classical baseline]\n    BP -->|advantage| QI[Quantum integration]\n    BP -->|no advantage| Classical\n    end\n    subgraph Integrate [Hybrid integration phase]\n    QI --> CW[Classical‑quantum workflow]\n    CW --> CT[Classical preprocessing]\n    CT --> QC[Quantum call (oracle, QAOA, VQE)]\n    QC --> PT[Classical post‑processing]\n    PT --> Evaluate[Quality + cost evaluation]\n    Evaluate -->|pass| DEP[Production‑ready hybrid pipeline]\n    Evaluate -->|fail| IT[Iterate or sunset]\n    end\n    DEP --> MON[Monitor: latency, cost, quality]\n    MON -->|drift| RT[Retrial with new algorithm/hardware]\n    MON -.normal operation.--> OP[Operational pipeline]\n```
+    subgraph Discover [Problem discovery phase]
+    ID[Identify candidate sub-problem]
+    ID --> FS[Feasibility screen: optimization/sampling/linear algebra]
+    FS -->|fit| HQ[Quantum suitability check]
+    HQ -->|yes| SQ[Select quantum algorithm]
+    HQ -->|no| Classical[Document as classical-only]
+    Classical --> REG["(Model registry)"]
+    SQ --> EXP[Experiment on quantum simulator]
+    end
+    subgraph Experiment [Quantum experimentation phase]
+    SQ --> AQ[Algorithm design / circuit construction]
+    AQ --> SV[Simulation: state‑vector / density‑matrix]
+    SV --> BP[Benchmark vs classical baseline]
+    BP -->|advantage| QI[Quantum integration]
+    BP -->|no advantage| Classical
+    end
+    subgraph Integrate [Hybrid integration phase]
+    QI --> CW[Classical‑quantum workflow]
+    CW --> CT[Classical preprocessing]
+    CT --> QC["Quantum call (oracle, QAOA, VQE)"]
+    QC --> PT[Classical post‑processing]
+    PT --> Evaluate[Quality + cost evaluation]
+    Evaluate -->|pass| DEP[Production‑ready hybrid pipeline]
+    Evaluate -->|fail| IT[Iterate or sunset]
+    end
+    DEP --> MON[Monitor: latency, cost, quality]
+    MON -->|drift| RT[Retrial with new algorithm/hardware]
+    MON -.->|normal operation| OP[Operational pipeline]
+```
 
 **Human decision points:** problem selection for quantum suitability; simulator vs. real hardware; integration boundaries; cost‑benefit go/no-go.
 
@@ -83,7 +111,7 @@ flowchart TB
 
 ## Related artifacts
 
-[Inference reference architecture (quantum-accelerated subset)](../reference-architectures/inference/README.md) · [Quantum‑ready design patterns](../design-patterns/general-architecture.md) · [Classical‑quantum integration patterns](../standards/integration-patterns.md)
+["Inference reference architecture (quantum-accelerated subset)"](../reference-architectures/inference/README.md) · [Quantum‑ready design patterns](../design-patterns/general-architecture.md) · [Classical‑quantum integration patterns](../standards/integration-patterns.md)
 
 ## Quantum computing suitability screen
 

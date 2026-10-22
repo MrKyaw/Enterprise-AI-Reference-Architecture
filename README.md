@@ -1,353 +1,215 @@
 # Enterprise AI Reference Architecture
 
-![Banner](https://img.shields.io/badge/Enterprise%20AI%20Reference%20Architecture-Complete%20v2.0-blue)
-
+[![Documentation validation](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/actions/workflows/mermaid-lint.yml/badge.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/actions/workflows/mermaid-lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Docs Status](https://img.shields.io/badge/docs-all%20content-blue.svg)](docs/README.md)
-[![Standards](https://img.shields.io/badge/standards-proposed%20+%20maintained-orange.svg)](standards/README.md)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub Stars](https://img.shields.io/github/stars/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/forks)
+[![Status: proposed guidance](https://img.shields.io/badge/status-proposed%20guidance-blue)](docs/README.md)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
----
+A vendor-neutral collection of enterprise AI architecture guidance, customer-facing leadership practices, decision frameworks, and runnable starter scaffolds. Use it to connect business discovery, solution design, hands-on validation, security review, delivery, operations, and outcome measurement.
 
-## 📋 About this repository
+The content is a public reference for adaptation. Proposed standards are not evidence of organizational approval, regulatory compliance, customer deployment, or production certification. Starter kits expose working service skeletons with placeholder pipelines; implementing a real workload requires domain logic, authentication, integration, evaluation, and operational assurance.
 
-This repository is a **complete, vendor-neutral architecture knowledge base for enterprise AI/ML**. It exists to solve the scaling problem: instead of central architecture reviewing every AI initiative, we publish standards, checklists, and blueprints that engineering teams apply independently — while central architects focus on high-risk and novel designs.
+[Start here](#start-here) · [Leadership](#practical-architecture-leadership) · [Catalog](#content-catalog) · [Starter kits](#run-a-starter-kit) · [Validation](#validation-and-evidence) · [Privacy](#public-information-and-privacy) · [Contributing](CONTRIBUTING.md)
 
-### Purpose
-Provide canonical reference architectures, technology standards, design patterns, and governance processes for AI/ML workloads (training, inference, RAG, agentic, fine-tuning, and more).
+## Who this is for
 
-### Scope
-Covers the full software development lifecycle — from discovery and design through deployment, operation, and retirement — with nested lifecycles for ML projects, MLOps, GenAI systems, RAG, agents, data pipelines, and more.
+- **Enterprise architects:** align capabilities, standards, governance, investment, and lifecycle decisions.
+- **Solution architects:** discover customer constraints, compare options, define contracts, and coordinate delivery.
+- **AI and principal architects:** validate model/data assumptions, design controls, inspect implementations, and guide operations.
+- **Engineering and platform leads:** use patterns, starter scaffolds, review checklists, and failure scenarios to make delivery decisions.
 
-### Key deliverables (version 2.0)
-- **24 end-to-end lifecycles** with phase/artifact/exit-gate matrices
-- **13 pattern catalogs** across software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, domain & business, AI UX, distributed scaling, cost/FinOps
-- **8 end-to-end use cases** with problem statements, pain points, workflows, tech stacks, trade-offs, metrics, and failure modes
-- **79 real production failure modes** across 6 categories with fixes, prevention, and future work
-- **5 driven-development approaches** + testing strategy (TDD, BDD, DDD, data-, evaluation-, security-, contract-, outcome-driven)
-- **8 reference architectures** for core AI workload types
-- **17 production starter kits** — 8 reference-architecture kits, 5 specialized domains, 4 cross-cutting
-- **12 AI security controls** with secure SDLC and red-team integration loop
-- **Architecture Decision Records** (ADRs) for immutable governance
+This is a set of practices and examples to evaluate in your environment. Read the status and scope of each document before adopting it.
 
-### Governance model
-- Status-driven (`Proposed → Approved → Deprecated → Removed`)
-- Cross-cutting review required for standards changes
-- Deprecation retention of 12 months
-- Enablement through blueprints and starter kits
+## Start here
 
-### Related resources
-- [Documentation catalog](docs/README.md) — all governance processes
-- [Production issues library](production-issues/README.md) — failure modes with fixes
-- [Research briefs](research/README.md) — horizon scanning and validation prototypes
-- [Architecture Decision Records](adr/README.md) — immutable governance
+1. **Understand the problem.** Capture the business owner, affected workflow, baseline, constraints, and success/stop criteria in the [engagement worksheet](templates/architecture-leadership-engagement.md).
+2. **Select the relevant design.** Match a [use case](use-cases/README.md) to one of the [reference architectures](reference-architectures/README.md); document alternatives and assumptions.
+3. **Validate the risky parts.** Run a bounded prototype or integration experiment and record reproducible evidence. Use the [technology evaluation criteria](docs/technology-evaluation-criteria.md).
+4. **Agree the controls and decision.** Apply the [design review checklist](docs/design-review-checklist.md), [AI security controls](security/ai-security-controls.md), and your organization's decision rights.
+5. **Implement and operate.** Extend a [starter kit](blueprints/README.md), complete the [production gates](docs/poc-to-production.md), rehearse recovery, and agree receiving ownership.
+6. **Check the outcome.** Compare reliability, adoption, costs, and business results with the original [business case](docs/business-case-and-value.md) before expansion.
 
-### Recommended GitHub Topics
-To make this repository discoverable, add these via **Settings → Manage repository → Topics**:
-```
-ai-governance
-ai-architecture
-reference-architectures
-llm
-mlops
-rag
-agents
-ai-security
-code-of-conduct
-mit-license
-architecture-patterns
-enterprise-ai
-data-engineering
-devops
-```
+## Practical architecture leadership
 
----
+**Customer obsession · Technical credibility · Ownership · Trust · Delivery · Business impact**
 
-## 📦 Repository structure
+The [practical leadership guide](docs/practical-architecture-leadership.md) translates leadership principles into decisions and work products that an architect can demonstrate:
 
-```mermaid
-flowchart TB
-    subgraph Knowledge [Architecture Knowledge]
-        RA[reference-architectures/<br/>8 workload types]
-        LC[lifecycles/<br/>24 end-to-end lifecycles]
-        PAT[design-patterns/<br/>13 pattern catalogs]
-        APP[approaches/<br/>driven methods + testing]
-        UC[use-cases/<br/>8 scenarios]
-        STD[standards/<br/>approved tech · protocols · integration]
-        BP[blueprints/<br/>starter kits]
-    end
-    subgraph Assurance [Assurance]
-        SEC[security/<br/>controls · SSDLC · red team]
-        RES[research/<br/>briefs · prototypes]
-        PI[production-issues/<br/>79 failure modes]
-    end
+- All 16 Amazon Leadership Principles mapped to architect behaviors, evidence, and warning signals, with primary-source attribution.
+- Ten complementary leadership behaviors: consultative, servant, situational, transformational, technical, adaptive, collaborative, outcome-based, ethical, and coaching.
+- Eight customer stages from discovery to expansion, with artifacts, owners, and exit evidence.
+- An illustrative retail integration walkthrough covering source contracts, idempotency, delayed data, recovery, and decision trade-offs.
+- Customer relationship habits, a delivery cadence, and authentic interview stories grounded in work you can substantiate.
 
-    RA --> PAT --> STD
-    DOCS --> RA
-    DOCS -->|feeds| ADR
-    UC -->|instantiates| RA
-    PI -->|hardens| RA
-    PI -.lessons.-> STD
-    SEC -.controls.-> RA
-    RES -.updates.-> STD
-    BP -.embodies.-> RA
-```
+Use the [engagement worksheet](templates/architecture-leadership-engagement.md) to record the baseline, assumptions, options, experiments, decisions, readiness, and outcome review. The guide complements the [solution design lifecycle](docs/solution-design-lifecycle.md); it does not add another approval chain.
 
-```
-.
-├── reference-architectures/   # Canonical designs per workload type (8 RA)
-├── lifecycles/                # 24 nested lifecycles: SDLC, ML, MLOps, LLMOps...
-├── design-patterns/           # 13 pattern catalogs: software, data, ML, MLOps...
-├── approaches/                # Driven methods + delivery + testing strategy
-├── use-cases/                 # 8 end-to-end scenarios with full detail
-├── production-issues/         # 79+ production failure modes
-├── standards/                 # Approved technologies & binding standards
-├── blueprints/                # Starter kits for independent adoption
-├── security/                  # AI controls, secure SDLC, red-team loop
-├── research/                  # Briefs + time-boxed validation prototypes
-├── adr/                       # Architecture Decision Records (numbered)
-├── docs/                      # Processes: review, NFRs, value, lifecycle
-├── templates/                 # Review request & reusable templates
-└── .github/                   # PR/issue templates, CODEOWNERS, repo metadata
-```
+## Content catalog
 
----
+The following inventory reflects files in this repository, reviewed on **2026-10-22**. A file count measures the collection's scope, not the completeness or maturity of an implementation.
 
-## 🚀 Quick start
-
-1. **Pick your workload** — find your scenario in [`reference-architectures/`](reference-architectures/) (8: training, inference, RAG, agentic, fine-tuning, data agent, copilots, intelligent automation)
-2. **Conform or deviate** — full conformance = self-certify with the [design review checklist](docs/design-review-checklist.md); deviations = [ADR](adr/README.md) + [review](docs/architecture-review-process.md)
-3. **Choose approved tech** — anything not on [`standards/approved-technologies.md`](standards/approved-technologies.md) requires [evaluation](docs/technology-evaluation-criteria.md)
-4. **Ship safely** — gates from [prototype → production](docs/poc-to-production.md) with [security controls](security/ai-security-controls.md) at every phase
-
----
-
-## 🏗️ Core content catalogs
-
-| Collection | Items | Purpose |
+| Collection | Inventory | What you can use |
 |---|---|---|
-| [lifecycles/](lifecycles/README.md) | 24 end-to-end lifecycles | Phase/artifact/exit-gate matrices, nesting diagram |
-| [design-patterns/](design-patterns/README.md) | 13 pattern catalogs | Catalogs with intent/applicability/pitfalls + expanded treatments |
-| [approaches/](approaches/README.md) | 5 driven + 3 delivery + testing strategy | TDD/BDD/DDD/data/evaluation/security/contract/outcome/evidence |
-| [use-cases/](use-cases/README.md) | 8 scenarios | Problem statements, pain points, workflows, tech stacks, trade-offs, metrics, failure modes |
-| [production-issues/](production-issues/README.md) | 79+ failure modes | Symptom → root cause → impact → fix → prevention → future work |
-| [standards/](standards/README.md) | Approved tech + protocols | Technologies, model providers, agent protocols, integration patterns |
-| [blueprints/](blueprints/README.md) | Starter kits | Scaffolded projects with IaC, guardrails, PR checklists |
+| [Lifecycles](lifecycles/README.md) | **24 lifecycles** | Activities, artifacts, exit gates, and ownership through delivery and retirement |
+| [Reference architectures](reference-architectures/README.md) | **8 reference architectures** | Training, inference, RAG, agentic, fine-tuning, data agents, copilots, intelligent automation |
+| [Design patterns](design-patterns/README.md) | **13 catalogs + 5 expanded treatments** | Software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, UX, scaling, cost, domain patterns |
+| [Approaches](approaches/README.md) | **3 guidance documents** | Driven-development methods, delivery practices, and testing strategy |
+| [Use cases](use-cases/README.md) | **8 use cases** | Problem statements, workflows, options, trade-offs, candidate metrics, and failure modes |
+| [Production issues](production-issues/README.md) | **79 indexed scenarios in 6 categories** | Quality, retrieval, cost/latency, security, agents/tools, platform operations |
+| [Blueprints](blueprints/README.md) | **17 starter kits** | Service skeletons, pipeline stubs, smoke tests, Terraform baselines, and readiness checklists |
+| [Governance](docs/README.md) | Process guides | Discovery, diligence, review, NFRs, value, modernization, and leadership |
+| [Standards](standards/README.md) | Proposed templates | Technologies, model providers, integration, agent protocols, AI-assisted development |
+| [Security](security/README.md) | Controls and review guidance | Secure SDLC, AI controls, red-team feedback |
+| [Research](research/README.md) | Templates and an evaluation plan | Hypotheses, authorized experiments, reproducibility, and decision evidence |
+| [ADRs](adr/README.md) | Decision-record template | Context, alternatives, trade-offs, ownership, consequences |
+| [Architect resources](resources/README.md) | Role paths and curated references | Technical foundations, leadership, implementation skills, and learning plans |
 
----
+### Lifecycle map
 
-## 🛠️ Core workflows
-
-| I want to… | Do this |
+| Area | Included lifecycles |
 |---|---|
-| Understand how work progresses end to end | Start with [lifecycles/](lifecycles/) — 24 nested lifecycles with phase/artifact matrices |
-| Find a solution to a business problem | Browse [use-cases/](use-cases/) — problem statements, workflows, trade-offs |
-| Debug or harden a system | Check [production-issues/](production-issues/) before designing, and add to it after incidents |
-| Select a design pattern | Browse the catalogs in [design-patterns/](design-patterns/) |
-| Pick a development approach | See [driven development approaches](approaches/driven-development-approaches.md) and the [testing strategy](approaches/testing-strategy.md) |
-| Start a new AI initiative | Match a [reference architecture](reference-architectures/); self-certify or request [review](docs/architecture-review-process.md) |
-| Use a technology that isn't approved | Run an [evaluation](docs/technology-evaluation-criteria.md); add an ADR |
-| Make a build-vs-buy call | Follow the [framework](docs/build-vs-buy-framework.md); record the outcome as an ADR |
-| Take a prototype to production | Pass the five gates in [poc-to-production.md](docs/poc-to-production.md) |
-| Evaluate a new/emerging technology | [Research process](research/README.md) → brief → standards update |
-| Design a system of record integration | [Solution design lifecycle](docs/solution-design-lifecycle.md) + [legacy modernization](docs/legacy-modernization.md) |
-| Lead a customer-facing architecture engagement | [Practical leadership guide](docs/practical-architecture-leadership.md) + [engagement worksheet](templates/architecture-leadership-engagement.md) |
-| Quantify an initiative's value | [Business cases & value](docs/business-case-and-value.md) |
+| Software and product | Software development, product, technology, API, experimentation, documentation/knowledge, enablement/adoption |
+| Data and models | Data, ML project, MLOps, model risk, evaluation |
+| Generative AI | GenAI/LLMOps, RAG, prompts, agents, agent factory |
+| Operations and commercial | Operations/incidents, FinOps, vendors/third parties |
+| Specialized domains | Edge AI, quantum computing, physical AI, embodied AI |
 
----
+The cross-cutting [solution design lifecycle](docs/solution-design-lifecycle.md) lives in `docs/` and is separate from the 24 lifecycle files.
 
-## 📊 Lifecycle overview (24 total)
+### Patterns and approaches
 
-| # | Lifecycle | Focus |
-|---|---|---|
-| 1 | Software development lifecycle | SDLC with AI extensions |
-| 2 | ML project lifecycle | CRISP-ML(Q) style with quality gates |
-| 3 | MLOps lifecycle | CI/CD/CT pipelines, registry, monitoring |
-| 4 | GenAI/LLMOps lifecycle | Prompt-to-production with guardrails |
-| 5 | RAG lifecycle | Corpus → ingest → embed → retrieve → generate |
-| 6 | Agent lifecycle (AgentOps) | Capability → tool → memory → safety → operate |
-| 7 | Data lifecycle | Acquire → store → transform → serve → archive → delete |
-| 8 | Prompt lifecycle | Author → version → evaluate → deploy → retire |
-| 9 | Evaluation lifecycle | Define success → curate datasets → harness → gate → monitor |
-| 10 | Product lifecycle | Ideation → discovery → business case → delivery → value → sunset |
-| 11 | Model risk lifecycle | Risk tiered governance, assessment, approval |
-| 12 | Operations & incident lifecycle | Detect → triage → mitigate → resolve → postmortem |
-| 13 | Technology lifecycle | Horizon scan → trial → adopt → hold → deprecate → remove |
-| 14 | API lifecycle | Design → publish → version → observe → deprecate |
-| 15 | Experimentation lifecycle | Hypothesis → design → run → analyze → decide |
-| 16 | FinOps cost lifecycle | Forecast → attribute → optimize → govern |
-| 17 | Documentation-knowledge lifecycle | Author → review → publish → maintain → retire |
-| 18 | Vendor-third-party lifecycle | Assess → contract → integrate → manage → exit |
-| 19 | Enablement-adoption lifecycle | Assess → build → enable → sustain → refresh |
-| 20 | Edge AI lifecycle | Train → compress → convert → deploy → fleet monitor |
-| 21 | Quantum computing lifecycle | Screen → simulate → benchmark → hybrid integrate |
-| 22 | Agent factory lifecycle | Incubate → certify → deploy → monitor → retire |
-| 23 | Physical AI lifecycle | Simulate → validate → deploy → monitor → decommission |
-| 24 | Embodied AI lifecycle | Design → train → operate → monitor → retire |
+The pattern catalogs cover intent, applicability, trade-offs, and common mistakes. Expanded documents cover the [LLM gateway](design-patterns/llm-gateway.md), [human approval](design-patterns/human-in-the-loop-approval.md), [evaluation in CI](design-patterns/evaluation-in-ci.md), [architecture as code](design-patterns/architecture-as-code.md), and [semantic grounding](design-patterns/semantic-layer-grounding.md).
 
-> The [solution design lifecycle](docs/solution-design-lifecycle.md) spans discovery, solutioning, and delivery; it is maintained in `docs/` and is not counted among the 24 lifecycle files in `lifecycles/`.
+The [development approaches](approaches/driven-development-approaches.md) include test-, behavior-, acceptance-, domain-, data-, model-, evaluation-, prompt-, retrieval-, security-, contract-, documentation-, outcome-, and evidence-driven practices. Select methods according to the problem and risk; their names do not establish that a design is correct.
 
----
+## Run a starter kit
 
-## 📚 Core content deep dive
+Requires Python 3.12 for the documented example. Run each kit in its own environment because the skeletons use the same module names.
 
-### Lifecycles (24 detailed documents)
-Each lifecycle includes: phase-by-phase activities, required artifacts, exit gates, AI-specific considerations, anti-patterns, and a phase/artifact completeness matrix.
+```sh
+git clone https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture.git
+cd Enterprise-AI-Reference-Architecture/blueprints/inference-starter-kit
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+PYTHONPATH=src pytest -q
+PYTHONPATH=src uvicorn main:app --host 127.0.0.1 --port 8080
+```
 
-### Design patterns (13 catalogs)
-Each catalog includes: pattern intent, when to use it, watch-outs, and anti-patterns. Expanded treatments include llm-gateway, human-in-the-loop-approval, evaluation-in-ci, architecture-as-code, and semantic-layer-grounding.
+From another terminal:
 
-### Driven development approaches
-- **Test-driven development (TDD)** — red/green/refactor; AI adaptation: test deterministic code, evaluate non-deterministic
-- **Behavior-driven development (BDD)** — Given/When/Then scenarios; AI adaptation: business properties over exact strings
-- **Acceptance-Test-Driven Development (ATDD)** — collaborative acceptance criteria; AI adaptation: refusal behavior, citation presence, escalation
-- **Domain-Driven Design (DDD)** — bounded contexts, ubiquitous language; AI adaptation: AI in a bounded context with an owning team
-- **Data-Driven Development** — metrics and baselines before change; AI adaptation: applies to model choice, prompt changes, retrieval settings
-- **Evaluation-Driven Development (EDD)** — the AI analogue of TDD; no AI behavior change ships without evaluation gate
-- **Prompt-Driven Development** — iterate primarily through prompt/context design
-- **Retrieval-Driven Development** — for knowledge tasks, drive improvement through retrieval quality first
-- **Security-Driven Development / DevSecOps** — security embedded in every phase
-- **API-First / Contract-First / Spec-First Development** — define interface before implementing
-- **Documentation-Driven Development** — write docs as part of the change
-- **Outcome-Driven / Value-Driven Development** — optimize for business outcome, not deliverable
-- **Evidence-Driven Architecture** — major decisions justified by prototype results
+```sh
+curl http://127.0.0.1:8080/health
+curl -X POST http://127.0.0.1:8080/v1/run \
+  -H 'Content-Type: application/json' \
+  -d '{"input":"smoke test","tenant_id":"demo"}'
+```
 
-### Use cases (8 detailed scenarios)
-Each use case includes: problem statement, pain points, users & stakeholders, workflow (Mermaid), tech stack (layers), trade-offs table, success metrics, failure modes & mitigations, related artifacts, and future work.
+The expected pipeline status is `scaffold`. A `tenant_id` in a request is an input value, not authenticated tenant identity. The local input screening and regex redaction are examples, not comprehensive authorization, injection prevention, or privacy controls. Keep the skeleton local until the required controls are implemented.
 
-### Production issues (79+ cataloged)
-Each issue includes: symptom, root cause, impact, fix, prevention (structural control/pattern), and future work (honest open problems). Categories: quality & hallucination, retrieval & data, cost & latency, security & injection, agents & tools, platform operations & lifecycle.
+### Kit families
 
-### Standards (binding + evolving)
-- Approved technologies, model providers, agent protocols
-- Integration patterns, AI-assisted development guidelines
-- Model provider standards, security controls
-
-### Blueprints (17 starter kits)
-Runnable scaffolds — not just documents. Each kit ships:
-- Working FastAPI skeleton with `/health`, `/v1/run`, typed models, input screening, and PII redaction
-- Pipeline stub with the exact steps to implement for that workload
-- Smoke tests wired for CI (`PYTHONPATH=src pytest -q`)
-- Terraform baseline: encrypted, versioned artifact bucket, KMS key, log group (`terraform validate` passes)
-- Non-root container image and `.env.example` configuration contract
-- Pre-filled production checklist in `.github/PULL_REQUEST_TEMPLATE.md`
-
-| Group | Kits |
+| Family | Kits |
 |---|---|
-| **Reference architectures (8)** | inference · rag · agent · data-agent · copilot · fine-tuning · training · intelligent-automation |
-| **Specialized domains (5)** | edge-ai · physical-ai · embodied-ai · quantum · agent-factory |
-| **Cross-cutting (4)** | evaluation · observability · ai-security · integration |
+| Core workload designs | inference, rag, agent, data-agent, copilot, fine-tuning, training, intelligent-automation |
+| Specialized domains | edge-ai, physical-ai, embodied-ai, quantum, agent-factory |
+| Cross-cutting | evaluation, observability, ai-security, integration |
 
-See the [blueprints catalog](blueprints/README.md) for the full matrix, quality gates, and quickstart.
+Each kit contains a FastAPI skeleton, typed models, placeholder pipeline steps, input-screening examples, smoke tests, a non-root Dockerfile, and a Terraform baseline. Infrastructure files are starting points that need environment-specific review; they are not deployed infrastructure or evidence of a successful cloud validation.
 
----
+Read the [blueprint catalog](blueprints/README.md) and the selected kit's README before implementation. Copying `.env.example` does not load it into the Python process automatically; export required settings explicitly.
 
-## 📊 Metrics & outcomes framework
+## Architecture work and decisions
 
-Every AI initiative should measure against this framework:
+| Goal | Start with |
+|---|---|
+| Lead discovery and earn customer confidence | [Leadership guide](docs/practical-architecture-leadership.md) and [worksheet](templates/architecture-leadership-engagement.md) |
+| Design an integration or modernization | [Solution lifecycle](docs/solution-design-lifecycle.md), [integration patterns](standards/integration-patterns.md), [legacy modernization](docs/legacy-modernization.md) |
+| Compare technologies or build vs buy | [Evaluation criteria](docs/technology-evaluation-criteria.md), [build-vs-buy framework](docs/build-vs-buy-framework.md), [ADR template](adr/0000-template.md) |
+| Define acceptance criteria | [NFRs](docs/non-functional-requirements.md), [testing strategy](approaches/testing-strategy.md), [evaluation lifecycle](lifecycles/evaluation-lifecycle.md) |
+| Review a design | [Review process](docs/architecture-review-process.md), [checklist](docs/design-review-checklist.md), [review request](templates/design-review-request.md) |
+| Prepare production operation | [POC-to-production gates](docs/poc-to-production.md), [operations lifecycle](lifecycles/operations-incident-lifecycle.md), [failure scenarios](production-issues/README.md) |
+| Grow team capability | [Architect resource hub](resources/README.md), [enablement lifecycle](lifecycles/enablement-adoption-lifecycle.md) |
 
-| Outcome area | Metric | Baseline | Target | Source |
-|---|---|---|---|---|
-| Quality | Faithfulness, citation correctness | — | ≥ 0.85 human-verified | Evaluation lifecycle |
-| Speed | Time-to-answer | — | ≤ 3s | Use cases |
-| Cost | Cost per outcome | — | Within envelope | FinOps lifecycle |
-| Adoption | Weekly active usage | — | ↑ | Use cases |
-| Trust | User trust score | — | ↑ | Surveys/feedback |
-| Security | Guardrail blocks | — | → 0 incidents | Security controls |
-| Drift | Quality decay over time | — | Detected < 30 days | MLOps lifecycle |
+### Governance status
 
----
+Documents marked `Proposed` describe practices to review and adapt. A reference to “approved” technology describes the approval process an adopting organization must establish; the public list is a template with unfilled entries. This repository does not grant internal approval or verify a deployment's compliance.
 
-## 📬 Contributing
+Changes follow the [contribution and review process](CONTRIBUTING.md). Standards and reference-architecture changes need the reviewers and control evidence specified there. Identify real decision-makers in your organization rather than copying placeholder roles as if a review had occurred.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) — it defines change types, required reviewers, naming conventions, and the deprecation rule. Standards and reference architecture changes require cross-cutting review before adoption. Please also read our [Code of Conduct](CODE_OF_CONDUCT.md).
+## Validation and evidence
 
----
+Documentation validation checks tracked Markdown links, code fences, collection counts, excluded private-file types, named customer references, and Mermaid syntax. It does not certify architectural correctness, external website availability, legal compliance, or freedom from all sensitive information.
 
-## 📄 License
+Requires Node.js 22.12+ and Python 3.12 for the CI tooling:
 
-MIT — see [LICENSE](LICENSE).
+```sh
+npm ci --ignore-scripts --no-audit --no-fund
+npm test
+```
 
----
+To scan secrets locally with Gitleaks installed:
 
-## 📈 Version history
+```sh
+gitleaks git --log-opts=--all --redact --no-banner .
+```
 
-| Version | Date | Changes |
+The local review passed checks for **147 Markdown files**, **41 Mermaid diagrams**, and **68 smoke tests across 17 starter kits**. The locked documentation tooling had **0 npm audit findings** at review time. The kit tests emit an upstream dependency deprecation warning, recorded in the review.
+
+See the [publication and validation review](docs/publication-review.md) for the scope, results, limitations, and public metadata considerations. Blueprint smoke checks exercise the skeletons; provider integrations, model quality, cloud deployments, and workload performance require separate validation.
+
+### Measure business outcomes honestly
+
+| Area | Useful measure | Agreement required |
 |---|---|---|
-| 0.1.0 | 2026-10-17 | Initial structure: 5 reference architectures |
-| 0.2.0 | 2026-10-17 | Added lifecycles, standards, governance |
-| 0.3.0 | 2026-10-17 | Expanded patterns, approaches, testing |
-| 0.4.0 | 2026-10-19 | +79 production issues, 8 use cases, full audit |
+| Quality | Correctness, grounded answers, harmful-output rates, task success | Representative evaluation data, slice coverage, acceptance threshold |
+| Reliability | Availability, error rate, recovery time, freshness | SLO, measurement window, operational owner |
+| Latency | End-to-end p50/p95/p99 under the intended workload | Workload, concurrency, error accounting, target |
+| Cost | Build/run/support cost per completed task | Attribution model, review effort, budget envelope |
+| Adoption and trust | Active usage, abandonment, authorized customer feedback | Baseline, observation period, privacy controls |
+| Business impact | Cycle time, error reduction, realized capacity, revenue protection | Business owner, baseline, attribution limits |
 
----
-*This repository is maintained by the Enterprise AI Architecture team. For questions, open a discussion or contact the architecture team.*
+Targets in examples are illustrative until agreed for a specific engagement. Do not claim performance improvements, customer outcomes, or cost savings without reproducible evidence and permission to share it.
 
----
+## Public information and privacy
 
+Publish only generic architecture practices, authorized public references, synthetic fixtures, and appropriately reviewed examples. Keep customer identities, employer-confidential details, live transcripts, internal topology, credentials, cloud state, and restricted benchmark data outside this public repository.
 
+The [leadership guide](docs/practical-architecture-leadership.md) uses a company-neutral illustrative scenario. The [embedding research documents](research/briefs/2026-10-embedding-evaluation.md) are an evaluation plan, not published experimental findings or customer evidence.
 
-## 📚 Domain coverage (22 / 22)
+Secret scans can find supported credential patterns; they cannot prove that every document is non-confidential. Historical Git commits retain author metadata, including an email address. Updating files does not remove information from old commits, forks, caches, or previously downloaded copies. See [publication guidance](docs/publication-review.md) and [SECURITY.md](SECURITY.md) before publishing sensitive material.
 
-This repository now covers all 22 critical AI/ML architecture domains:
+## Repository map
 
-| Domain | Status | Primary references |
-|---|---|---|
-| Software | ✅ Covered | SDLC lifecycle · [inference kit](blueprints/inference-starter-kit/README.md) · [evaluation kit](blueprints/evaluation-starter-kit/README.md) |
-| Algorithms | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · ML engineering patterns |
-| Integration | ✅ Covered | [Integration kit](blueprints/integration-starter-kit/README.md) · API lifecycle |
-| Statistics | ✅ Covered | [Evaluation kit](blueprints/evaluation-starter-kit/README.md) · ML project lifecycle |
-| Machine Learning | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · ML project lifecycle · MLOps |
-| DevOps | ✅ Covered | CI/CD in every kit · [observability kit](blueprints/observability-starter-kit/README.md) |
-| Data Engineering | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [data-agent kit](blueprints/data-agent-starter-kit/README.md) · Data lifecycle |
-| Data Science | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · [fine-tuning kit](blueprints/fine-tuning-starter-kit/README.md) |
-| ML Operations | ✅ Covered | [Training kit](blueprints/training-starter-kit/README.md) · MLOps lifecycle |
-| LLM | ✅ Covered | [Inference kit](blueprints/inference-starter-kit/README.md) · Inference RA |
-| GenAI | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [copilot kit](blueprints/copilot-starter-kit/README.md) · GenAI/LLMOps lifecycle |
-| LLMOps | ✅ Covered | [RAG kit](blueprints/rag-starter-kit/README.md) · [evaluation kit](blueprints/evaluation-starter-kit/README.md) |
-| Agentic AI/Multi-Agents | ✅ Covered | [Agent kit](blueprints/agent-starter-kit/README.md) · [intelligent automation kit](blueprints/intelligent-automation-starter-kit/README.md) |
-| Observability | ✅ Covered | [Observability kit](blueprints/observability-starter-kit/README.md) · operations lifecycle |
-| Evals | ✅ Covered | [Evaluation kit](blueprints/evaluation-starter-kit/README.md) · evaluation lifecycle |
-| Edge AI | ✅ Covered | [Edge AI kit](blueprints/edge-ai-starter-kit/README.md) · [Edge AI lifecycle](lifecycles/edge-ai-lifecycle.md) |
-| Quantum Computing | ✅ Covered | [Quantum kit](blueprints/quantum-starter-kit/README.md) · [Quantum lifecycle](lifecycles/quantum-computing-lifecycle.md) |
-| Cyber Security | ✅ Covered | [AI security kit](blueprints/ai-security-starter-kit/README.md) · security controls · secure SDLC |
-| LLM Inference | ✅ Covered | [Inference kit](blueprints/inference-starter-kit/README.md) · Inference RA |
-| Agent Factory | ✅ Covered | [Agent factory kit](blueprints/agent-factory-starter-kit/README.md) · [factory lifecycle](lifecycles/agent-factory-lifecycle.md) |
-| Physical AI | ✅ Covered | [Physical AI kit](blueprints/physical-ai-starter-kit/README.md) · [Physical AI lifecycle](lifecycles/physical-ai-lifecycle.md) |
-| Embodied AI | ✅ Covered | [Embodied AI kit](blueprints/embodied-ai-starter-kit/README.md) · [Embodied AI lifecycle](lifecycles/embodied-ai-lifecycle.md) |
+```text
+reference-architectures/   Proposed workload designs
+lifecycles/               Delivery, model, data, operations, and retirement phases
+design-patterns/          Pattern catalogs and expanded treatments
+approaches/               Development methods, delivery practices, testing
+use-cases/                Business scenarios and design trade-offs
+production-issues/        Failure scenarios and prevention guidance
+blueprints/               17 runnable starter scaffolds
+standards/                Proposed technology and integration templates
+security/                 Security controls and review practices
+research/                 Research templates and an evaluation plan
+docs/                     Governance, leadership, and publication review
+templates/                Review request and engagement worksheet
+resources/                Architect competencies and learning references
+adr/                      Architecture decision records
+.github/                  Validation scripts, workflow, issue forms, ownership
+```
 
-*Last updated: 2026-10-21 · Generated from `main` branch.*
+## Contributing
 
----
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Open focused pull requests with the problem, resulting behavior, and validation evidence. Use the [changelog](CHANGELOG.md) for content history; unreleased additions are not a published version or approval record.
 
-## 📚 Architect Career Competency Framework & Resources
+Before publication, review the complete diff for customer information, credentials, claims, source attribution, broken links, and ownership assumptions. Add new documents to their directory index and link them to the lifecycle or decision they support.
 
-A single, link-rich hub for architects at every level — the full competency framework **plus** every resource needed to close each gap.
+## License
 
-👉 **[View the Complete Resource Hub →](resources/README.md)**
-
-**Framework**
-- 🎯 **12 architect roles** with essential knowledge & hands-on skills
-- 🧠 **6 core knowledge domains** — system design, software engineering, cloud/ops, data/integration, security, business/leadership
-- 💻 **11 hands-on capabilities** with expected evidence and a practice lab for each
-- 🤖 **12 AI specialization domains** — classical ML, deep learning, foundation models, self-supervised, multimodal, RAG, agentic AI, evaluation, security, MLOps/LLMOps, economics, governance
-- 📋 **7 architecture artifacts** with templates and tooling (ADR, C4, sequence, threat model, NFR, benchmark, roadmap)
-- 📈 **6 seniority levels** from Senior Engineer to Chief/Distinguished Architect
-
-**Resources (all in one place)**
-- 📚 **40+ books**, 25+ YouTube channels, 15+ course platforms
-- 🎓 **Certifications** mapped per role (AWS, Azure, GCP, CKA, CISSP, TOGAF, Databricks…)
-- 📄 **Official docs & standards** (CNCF, OWASP, NIST AI RMF, ISO 42001, TOGAF, C4, arc42)
-- 📑 **14 foundational papers** (Transformers, LoRA/QLoRA, RAG, ReAct, DPO, CLIP, JEPA, MCP)
-- 🎙️ **Newsletters, podcasts, communities**
-- 🧰 **60+ tools** by domain (IaC, observability, vector DBs, model serving, evals, AI gateways)
-- 🧪 **14 hands-on labs**, plus **12 role-based learning paths** and a **90-day plan**
-
-*Last updated: 2026-10-21 · Generated from `main` branch.*
+[MIT](LICENSE). Original copyright notices are preserved. Linked third-party resources retain their own terms and licenses.
 
 ---
 
 ⭐ Star this repo if you find it useful!
 
-Report Bug · Request Feature · Ask Question
+[Report Bug](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/issues/new?template=bug_report.yml) · [Request Feature](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/issues/new?template=feature_request.yml) · [Ask Question](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/issues/new?template=question.yml)

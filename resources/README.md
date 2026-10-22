@@ -1,8 +1,8 @@
-# Architect Career Competency Framework — Complete Resource Hub
+# Architect Career Competency Framework and Resource Hub
 
-**Last updated:** 2026-10-21 · **Status:** Maintained
+**Last updated:** 2026-10-22 · **Status:** Maintained
 
-One page containing the full architect competency framework **plus every learning resource that matters** — books, YouTube channels, courses, certifications, official documentation, papers, newsletters, podcasts, communities, hands-on labs, and tools — organised so you can go from "gap identified" to "link to learn it" in one click.
+A curated competency framework and learning index covering books, channels, courses, certification catalogs, official documentation, papers, communities, hands-on labs, and tools. Use it to identify a gap and choose an appropriate practice activity. This is not an exhaustive list or a guarantee of current course, product, or certification availability. Verify changing requirements, fees, retirement dates, and eligibility with the linked provider before committing time or money.
 
 > Part of the [Enterprise AI Reference Architecture](../README.md). Pair this with the repository's [lifecycles](../lifecycles/README.md), [design patterns](../design-patterns/README.md), and [production issues](../production-issues/README.md) for applied practice.
 
