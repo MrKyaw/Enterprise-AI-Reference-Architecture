@@ -7,7 +7,7 @@
 [![Standards](https://img.shields.io/badge/standards-proposed%20+%20maintained-orange.svg)](standards/README.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![GitHub Stars](https://img.shields.io/github/stars/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/stargazers)
-[![GitHub Forwards](https://img.shields.io/github/forwarders/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/dependabot)
+[![GitHub Forks](https://img.shields.io/github/forks/MrKyaw/Enterprise-AI-Reference-Architecture.svg)](https://github.com/MrKyaw/Enterprise-AI-Reference-Architecture/forks)
 
 ---
 
