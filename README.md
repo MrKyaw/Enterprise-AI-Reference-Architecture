@@ -50,12 +50,12 @@ The following inventory reflects files in this repository, reviewed on **2026-10
 | Collection | Inventory | What you can use |
 |---|---|---|
 | [Lifecycles](lifecycles/README.md) | **24 lifecycles** | Activities, artifacts, exit gates, and ownership through delivery and retirement |
-| [Reference architectures](reference-architectures/README.md) | **8 reference architectures** | Training, inference, RAG, agentic, fine-tuning, data agents, copilots, intelligent automation |
+| [Reference architectures](reference-architectures/README.md) | **9 reference architectures** | 8 workload architectures plus the enterprise-first family (secure agentic enterprise and 19 first-principle blueprints) |
 | [Design patterns](design-patterns/README.md) | **13 catalogs + 5 expanded treatments** | Software, data, ML, MLOps, GenAI, RAG, agents, reliability, security, UX, scaling, cost, domain patterns |
 | [Approaches](approaches/README.md) | **3 guidance documents** | Driven-development methods, delivery practices, and testing strategy |
 | [Use cases](use-cases/README.md) | **8 use cases** | Problem statements, workflows, options, trade-offs, candidate metrics, and failure modes |
 | [Production issues](production-issues/README.md) | **79 indexed scenarios in 6 categories** | Quality, retrieval, cost/latency, security, agents/tools, platform operations |
-| [Blueprints](blueprints/README.md) | **17 starter kits** | Service skeletons, pipeline stubs, smoke tests, Terraform baselines, and readiness checklists |
+| [Blueprints](blueprints/README.md) | **17 starter kits + 20 enterprise-first blueprints** | Service skeletons, pipeline stubs, smoke tests, Terraform baselines, readiness checklists, and enterprise architecture blueprints |
 | [Governance](docs/README.md) | Process guides | Discovery, diligence, review, NFRs, value, modernization, and leadership |
 | [Standards](standards/README.md) | Proposed templates | Technologies, model providers, integration, agent protocols, AI-assisted development |
 | [Security](security/README.md) | Controls and review guidance | Secure SDLC, AI controls, red-team feedback |
@@ -80,6 +80,14 @@ The cross-cutting [solution design lifecycle](docs/solution-design-lifecycle.md)
 The pattern catalogs cover intent, applicability, trade-offs, and common mistakes. Expanded documents cover the [LLM gateway](design-patterns/llm-gateway.md), [human approval](design-patterns/human-in-the-loop-approval.md), [evaluation in CI](design-patterns/evaluation-in-ci.md), [architecture as code](design-patterns/architecture-as-code.md), and [semantic grounding](design-patterns/semantic-layer-grounding.md).
 
 The [development approaches](approaches/driven-development-approaches.md) include test-, behavior-, acceptance-, domain-, data-, model-, evaluation-, prompt-, retrieval-, security-, contract-, documentation-, outcome-, and evidence-driven practices. Select methods according to the problem and risk; their names do not establish that a design is correct.
+
+## Enterprise-first architecture blueprints
+
+Architecture blueprints where one concern is the primary optimization target. They are design documents, not runnable starter kits.
+
+| Blueprint family | Documents | Use when |
+|---|---|---|
+| [Enterprise-first](reference-architectures/enterprise-first/README.md) | 20 blueprints: secure agentic enterprise plus production-first, AI-first, compliance-first, quality-first, security-first, data-first, user-first, cost-first, resilience-first, governance-first, privacy-first, observability-first, evaluation-first, ethics-first, explainability-first, accessibility-first, sustainability-first, safety-first, and interoperability-first | A single concern must be the tie-breaker in an enterprise AI design |
 
 ## Run a starter kit
 
@@ -153,7 +161,7 @@ To scan secrets locally with Gitleaks installed:
 gitleaks git --log-opts=--all --redact --no-banner .
 ```
 
-The local review passed checks for **147 Markdown files**, **41 Mermaid diagrams**, and **68 smoke tests across 17 starter kits**. The locked documentation tooling had **0 npm audit findings** at review time. The kit tests emit an upstream dependency deprecation warning, recorded in the review.
+The local review passed checks for **168 Markdown files**, **61 Mermaid diagrams**, and **68 smoke tests across 17 starter kits**. The locked documentation tooling had **0 npm audit findings** at review time. The kit tests emit an upstream dependency deprecation warning, recorded in the review.
 
 See the [publication and validation review](docs/publication-review.md) for the scope, results, limitations, and public metadata considerations. Blueprint smoke checks exercise the skeletons; provider integrations, model quality, cloud deployments, and workload performance require separate validation.
 

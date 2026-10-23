@@ -16,6 +16,7 @@ for content releases (`MAJOR` = breaking changes to standards or reference archi
 - Practical architecture leadership guide with 16 Amazon principles mapped to working behaviors and evidence, ten complementary leadership approaches, eight customer stages, an illustrative retail integration, customer relationship habits, and authentic interview guidance.
 - Reusable architecture leadership engagement worksheet for baselines, decision rights, experiments, delivery readiness, and business outcome reviews; linked from governance, lifecycle, resource, and root navigation.
 
+- **Enterprise-first architecture blueprints** (`reference-architectures/enterprise-first/`) — 20 blueprints: secure agentic enterprise plus production-first, AI-first, compliance-first, quality-first, security-first, data-first, user-first, cost-first, resilience-first, governance-first, privacy-first, observability-first, evaluation-first, ethics-first, explainability-first, accessibility-first, sustainability-first, safety-first, and interoperability-first
 - **Architect resource hub** (`resources/README.md`) — full competency framework with embedded diagrams, 12 role paths, 40+ books, 25+ YouTube channels, certifications, official docs/standards, 14 foundational papers, newsletters/podcasts/communities, 60+ tools, 14 labs, and 90-day plans
 - **16 new starter kits**, bringing the total to 17:
   - Reference architectures: `rag`, `agent`, `data-agent`, `copilot`, `fine-tuning`, `training`, `intelligent-automation`

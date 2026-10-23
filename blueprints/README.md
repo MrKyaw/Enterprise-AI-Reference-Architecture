@@ -59,6 +59,38 @@ Every generated service returns `status: "scaffold"` until its pipeline is imple
 | [`ai-security-starter-kit`](ai-security-starter-kit/README.md) | ✅ Scaffolded | [Model risk](../lifecycles/model-risk-lifecycle.md) | Gateway, guardrails, egress allowlist, red team | Fail-closed, tenant scoping, adversarial suite |
 | [`integration-starter-kit`](integration-starter-kit/README.md) | ✅ Scaffolded | [API](../lifecycles/api-lifecycle.md) | Contracts, schema registry, DLQ, replay | OpenAPI/AsyncAPI, idempotency, trace propagation |
 
+
+---
+
+## Enterprise-first architecture blueprints (design documents)
+
+These are architecture blueprints, not runnable starter kits. Each makes one concern the primary optimization target.
+
+| Blueprint | Primary concern | Closest starter kit |
+|---|---|---|
+| [Secure Agentic Enterprise](enterprise-first/README.md) | End-to-end secure agent platform | `agent-starter-kit` + `ai-security-starter-kit` |
+| [Production-First](../reference-architectures/enterprise-first/production-first.md) | Reliable operation | `inference-starter-kit` |
+| [AI-First](../reference-architectures/enterprise-first/ai-first.md) | AI as primary interaction layer | `agent-starter-kit` |
+| [Compliance-First](../reference-architectures/enterprise-first/compliance-first.md) | Regulatory and policy obligations | `ai-security-starter-kit` |
+| [Quality-First](../reference-architectures/enterprise-first/quality-first.md) | Correctness and usefulness | `evaluation-starter-kit` |
+| [Security-First](../reference-architectures/enterprise-first/security-first.md) | Threat modeling and controls | `ai-security-starter-kit` |
+| [Data-First](../reference-architectures/enterprise-first/data-first.md) | Governed data foundations | `data-agent-starter-kit` |
+| [User-First](../reference-architectures/enterprise-first/user-first.md) | Human outcomes and control | `copilot-starter-kit` |
+| [Cost-First](../reference-architectures/enterprise-first/cost-first.md) | Unit economics | `observability-starter-kit` |
+| [Resilience-First](../reference-architectures/enterprise-first/resilience-first.md) | Graceful degradation and recovery | `intelligent-automation-starter-kit` |
+| [Governance-First](../reference-architectures/enterprise-first/governance-first.md) | Ownership and decision rights | `agent-factory-starter-kit` |
+| [Privacy-First](../reference-architectures/enterprise-first/privacy-first.md) | Data minimization and deletion | `rag-starter-kit` |
+| [Observability-First](../reference-architectures/enterprise-first/observability-first.md) | Traceability and debuggability | `observability-starter-kit` |
+| [Evaluation-First](../reference-architectures/enterprise-first/evaluation-first.md) | Measured quality gates | `evaluation-starter-kit` |
+| [Ethics-First](../reference-architectures/enterprise-first/ethics-first.md) | Fairness and societal impact | `evaluation-starter-kit` |
+| [Explainability-First](../reference-architectures/enterprise-first/explainability-first.md) | Inspectable decisions | `rag-starter-kit` |
+| [Accessibility-First](../reference-architectures/enterprise-first/accessibility-first.md) | Inclusive design | `copilot-starter-kit` |
+| [Sustainability-First](../reference-architectures/enterprise-first/sustainability-first.md) | Energy and carbon constraints | `training-starter-kit` |
+| [Safety-First](../reference-architectures/enterprise-first/safety-first.md) | Harm prevention | `physical-ai-starter-kit` |
+| [Interoperability-First](../reference-architectures/enterprise-first/interoperability-first.md) | Open standards and portability | `integration-starter-kit` |
+
+See [enterprise-first/README.md](enterprise-first/README.md) for the full catalog and adoption steps.
+
 ---
 
 ## Coverage by area

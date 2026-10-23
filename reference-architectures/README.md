@@ -15,6 +15,14 @@ Proposed end-to-end reference designs for eight AI/ML workload types. They descr
 | Enterprise copilots & embedded AI | [copilots/README.md](copilots/README.md) | Proposed |
 | Intelligent automation (workflow + RPA + AI) | [intelligent-automation/README.md](intelligent-automation/README.md) | Proposed |
 
+## Enterprise-first architecture blueprints
+
+Architecture blueprints that make one concern the primary optimization target. They are design documents, not runnable starter kits.
+
+| Blueprint family | Documents | Use when |
+|---|---|---|
+| [Enterprise-first](enterprise-first/README.md) | 20 blueprints: secure agentic enterprise plus production-first, AI-first, compliance-first, quality-first, security-first, data-first, user-first, cost-first, resilience-first, governance-first, privacy-first, observability-first, evaluation-first, ethics-first, explainability-first, accessibility-first, sustainability-first, safety-first, interoperability-first | A single concern must be the tie-breaker in an enterprise AI design |
+
 ## When central review is required
 
 A design needs direct architecture review when **any** of the following is true (otherwise, conforming designs are self-certified via the checklist):
