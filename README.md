@@ -161,7 +161,7 @@ To scan secrets locally with Gitleaks installed:
 gitleaks git --log-opts=--all --redact --no-banner .
 ```
 
-The local review passed checks for **168 Markdown files**, **61 Mermaid diagrams**, and **68 smoke tests across 17 starter kits**. The locked documentation tooling had **0 npm audit findings** at review time. The kit tests emit an upstream dependency deprecation warning, recorded in the review.
+The local review passed checks for **169 Markdown files**, **61 Mermaid diagrams**, and **68 smoke tests across 17 starter kits**. The locked documentation tooling had **0 npm audit findings** at review time. The kit tests emit an upstream dependency deprecation warning, recorded in the review.
 
 See the [publication and validation review](docs/publication-review.md) for the scope, results, limitations, and public metadata considerations. Blueprint smoke checks exercise the skeletons; provider integrations, model quality, cloud deployments, and workload performance require separate validation.
 
