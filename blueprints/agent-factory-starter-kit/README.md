@@ -2,8 +2,6 @@
 
 **Status:** Scaffolded · **Reference architecture:** [Agentic (factory profile)](../../reference-architectures/agentic/README.md) · **Owner:** platform engineering · **Last reviewed:** 2026-10-21
 
-> **Implementation boundary:** architecture diagrams and pipeline steps describe intended behavior. The shipped pipeline is a stub; callers are not authenticated, request `tenant_id` is caller-supplied, and regex screening/redaction is illustrative. Implement identity, authorization, workload logic, evaluation, and operational controls before exposing the service. Use synthetic or explicitly authorized data. A copied `.env` file is not loaded automatically.
-
 ## What it is
 
 A factory template for producing governed agents at speed: standardized scaffold, evaluation harness, certification gate, registry entry, and retirement record.

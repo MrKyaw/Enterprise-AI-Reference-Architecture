@@ -55,7 +55,7 @@ The following inventory reflects files in this repository, reviewed on **2026-10
 | [Approaches](approaches/README.md) | **3 guidance documents** | Driven-development methods, delivery practices, and testing strategy |
 | [Use cases](use-cases/README.md) | **8 use cases** | Problem statements, workflows, options, trade-offs, candidate metrics, and failure modes |
 | [Production issues](production-issues/README.md) | **79 indexed scenarios in 6 categories** | Quality, retrieval, cost/latency, security, agents/tools, platform operations |
-| [Blueprints](blueprints/README.md) | **17 starter kits + 20 enterprise-first blueprints** | Service skeletons, pipeline stubs, smoke tests, Terraform baselines, readiness checklists, and enterprise architecture blueprints |
+| [Blueprints](blueprints/README.md) | **18 starter kits + 20 enterprise-first blueprints** | Service skeletons, pipeline stubs, smoke tests, Terraform baselines, readiness checklists, and enterprise architecture blueprints |
 | [Governance](docs/README.md) | Process guides | Discovery, diligence, review, NFRs, value, modernization, and leadership |
 | [Standards](standards/README.md) | Proposed templates | Technologies, model providers, integration, agent protocols, AI-assisted development |
 | [Security](security/README.md) | Controls and review guidance | Secure SDLC, AI controls, red-team feedback |
@@ -121,6 +121,7 @@ The expected pipeline status is `scaffold`. A `tenant_id` in a request is an inp
 | Core workload designs | inference, rag, agent, data-agent, copilot, fine-tuning, training, intelligent-automation |
 | Specialized domains | edge-ai, physical-ai, embodied-ai, quantum, agent-factory |
 | Cross-cutting | evaluation, observability, ai-security, integration |
+| Integrated enterprise | secure-agentic-enterprise |
 
 Each kit contains a FastAPI skeleton, typed models, placeholder pipeline steps, input-screening examples, smoke tests, a non-root Dockerfile, and a Terraform baseline. Infrastructure files are starting points that need environment-specific review; they are not deployed infrastructure or evidence of a successful cloud validation.
 

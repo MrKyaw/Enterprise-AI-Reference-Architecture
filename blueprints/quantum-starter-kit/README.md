@@ -2,8 +2,6 @@
 
 **Status:** Scaffolded · **Reference architecture:** [Inference (quantum-accelerated profile)](../../reference-architectures/inference/README.md) · **Owner:** platform engineering · **Last reviewed:** 2026-10-21
 
-> **Implementation boundary:** architecture diagrams and pipeline steps describe intended behavior. The shipped pipeline is a stub; callers are not authenticated, request `tenant_id` is caller-supplied, and regex screening/redaction is illustrative. Implement identity, authorization, workload logic, evaluation, and operational controls before exposing the service. Use synthetic or explicitly authorized data. A copied `.env` file is not loaded automatically.
-
 ## What it is
 
 A hybrid classical-quantum scaffold: suitability screening, circuit construction, simulation, hardware execution, and a strict classical-baseline comparison.

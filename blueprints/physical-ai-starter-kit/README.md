@@ -2,8 +2,6 @@
 
 **Status:** Scaffolded · **Reference architecture:** [Intelligent automation (physical profile)](../../reference-architectures/intelligent-automation/README.md) · **Owner:** platform engineering · **Last reviewed:** 2026-10-21
 
-> **Implementation boundary:** architecture diagrams and pipeline steps describe intended behavior. The shipped pipeline is a stub; callers are not authenticated, request `tenant_id` is caller-supplied, and regex screening/redaction is illustrative. Implement identity, authorization, workload logic, evaluation, and operational controls before exposing the service. Use synthetic or explicitly authorized data. A copied `.env` file is not loaded automatically.
-
 ## What it is
 
 A simulation-to-real scaffold for physical systems: model training with randomized dynamics, quantified sim-to-real gap, test-bed validation, a hard safety envelope, and commissioning.

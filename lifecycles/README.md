@@ -45,6 +45,38 @@ End-to-end lifecycles that govern how AI/ML work is conceived, built, deployed, 
 
 Lifecycles without a dedicated kit are instantiated through the closest core kit — for example, the [evaluation kit](../blueprints/evaluation-starter-kit/README.md), [observability kit](../blueprints/observability-starter-kit/README.md), and [AI security kit](../blueprints/ai-security-starter-kit/README.md) are cross-cutting and apply to every workload.
 
+### Blueprint coverage by lifecycle
+
+| Lifecycle | Closest starter kit | Coverage note |
+|---|---|---|
+| [software-development-lifecycle.md](software-development-lifecycle.md) | [inference-starter-kit](../blueprints/inference-starter-kit/README.md) | Service delivery and release mechanics |
+| [ml-project-lifecycle.md](ml-project-lifecycle.md) | [training-starter-kit](../blueprints/training-starter-kit/README.md) | Problem framing, data, modeling, evaluation |
+| [mlops-lifecycle.md](mlops-lifecycle.md) | [training-starter-kit](../blueprints/training-starter-kit/README.md) | CI/CD/CT, registry, monitoring |
+| [genai-llmops-lifecycle.md](genai-llmops-lifecycle.md) | [rag-starter-kit](../blueprints/rag-starter-kit/README.md) | Prompt-to-production for LLM apps |
+| [rag-lifecycle.md](rag-lifecycle.md) | [rag-starter-kit](../blueprints/rag-starter-kit/README.md) | Corpus, retrieval, generation, evaluation |
+| [agent-lifecycle.md](agent-lifecycle.md) | [agent-starter-kit](../blueprints/agent-starter-kit/README.md) | Tools, memory, safety, operations |
+| [data-lifecycle.md](data-lifecycle.md) | [data-agent-starter-kit](../blueprints/data-agent-starter-kit/README.md) | Acquisition, governance, serving |
+| [prompt-lifecycle.md](prompt-lifecycle.md) | [rag-starter-kit](../blueprints/rag-starter-kit/README.md) | Authoring, versioning, evaluation |
+| [evaluation-lifecycle.md](evaluation-lifecycle.md) | [evaluation-starter-kit](../blueprints/evaluation-starter-kit/README.md) | Datasets, metrics, gates, monitoring |
+| [product-lifecycle.md](product-lifecycle.md) | [copilot-starter-kit](../blueprints/copilot-starter-kit/README.md) | Discovery, delivery, value, sunset |
+| [model-risk-lifecycle.md](model-risk-lifecycle.md) | [ai-security-starter-kit](../blueprints/ai-security-starter-kit/README.md) | Risk tiering, assessment, approval |
+| [operations-incident-lifecycle.md](operations-incident-lifecycle.md) | [observability-starter-kit](../blueprints/observability-starter-kit/README.md) | Detection, triage, mitigation, postmortem |
+| [technology-lifecycle.md](technology-lifecycle.md) | [inference-starter-kit](../blueprints/inference-starter-kit/README.md) | Horizon scan, trial, adopt, retire |
+| [api-lifecycle.md](api-lifecycle.md) | [integration-starter-kit](../blueprints/integration-starter-kit/README.md) | Design, publish, version, deprecate |
+| [experimentation-lifecycle.md](experimentation-lifecycle.md) | [evaluation-starter-kit](../blueprints/evaluation-starter-kit/README.md) | Hypothesis, run, analyze, decide |
+| [finops-cost-lifecycle.md](finops-cost-lifecycle.md) | [observability-starter-kit](../blueprints/observability-starter-kit/README.md) | Forecast, attribute, optimize, govern |
+| [documentation-knowledge-lifecycle.md](documentation-knowledge-lifecycle.md) | [evaluation-starter-kit](../blueprints/evaluation-starter-kit/README.md) | Author, review, publish, maintain, retire |
+| [vendor-third-party-lifecycle.md](vendor-third-party-lifecycle.md) | [integration-starter-kit](../blueprints/integration-starter-kit/README.md) | Assess, contract, integrate, exit |
+| [enablement-adoption-lifecycle.md](enablement-adoption-lifecycle.md) | [copilot-starter-kit](../blueprints/copilot-starter-kit/README.md) | Assess, build, enable, sustain |
+| [edge-ai-lifecycle.md](edge-ai-lifecycle.md) | [edge-ai-starter-kit](../blueprints/edge-ai-starter-kit/README.md) | Train, compress, deploy, monitor |
+| [quantum-computing-lifecycle.md](quantum-computing-lifecycle.md) | [quantum-starter-kit](../blueprints/quantum-starter-kit/README.md) | Screen, simulate, benchmark, integrate |
+| [agent-factory-lifecycle.md](agent-factory-lifecycle.md) | [agent-factory-starter-kit](../blueprints/agent-factory-starter-kit/README.md) | Incubate, certify, deploy, retire |
+| [physical-ai-lifecycle.md](physical-ai-lifecycle.md) | [physical-ai-starter-kit](../blueprints/physical-ai-starter-kit/README.md) | Simulate, validate, deploy, decommission |
+| [embodied-ai-lifecycle.md](embodied-ai-lifecycle.md) | [embodied-ai-starter-kit](../blueprints/embodied-ai-starter-kit/README.md) | Design, train, operate, retire |
+
+Lifecycles without a dedicated kit are implemented through the closest workload or cross-cutting kit; the [secure agentic enterprise starter kit](../blueprints/secure-agentic-enterprise-starter-kit/README.md) combines agent, security, evaluation, and observability patterns for integrated platforms.
+
+
 ## How they relate
 
 ```mermaid

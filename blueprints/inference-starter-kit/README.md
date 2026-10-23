@@ -2,8 +2,6 @@
 
 **Status:** Scaffolded · **Reference architecture:** [Inference](../../reference-architectures/inference/README.md) · **Owner:** platform engineering · **Last reviewed:** 2026-10-21
 
-> **Implementation boundary:** architecture diagrams and pipeline steps describe intended behavior. The shipped pipeline is a stub; callers are not authenticated, request `tenant_id` is caller-supplied, and regex screening/redaction is illustrative. Implement identity, authorization, workload logic, evaluation, and operational controls before exposing the service. Use synthetic or explicitly authorized data. A copied `.env` file is not loaded automatically.
-
 ## What it is
 
 A gateway-mediated model serving service: one egress path for model traffic, input and output guardrails, routing with provider fallback, per-request cost attribution, and a quality sampling hook.

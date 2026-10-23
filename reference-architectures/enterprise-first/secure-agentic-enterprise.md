@@ -88,3 +88,4 @@ Open an ADR referencing this document, tag `deviation`, and route via [architect
 - [AI security controls](../../security/ai-security-controls.md)
 - [Evaluation lifecycle](../../lifecycles/evaluation-lifecycle.md)
 - [Operations & incident lifecycle](../../lifecycles/operations-incident-lifecycle.md)
+- [Secure agentic enterprise starter kit](../../blueprints/secure-agentic-enterprise-starter-kit/README.md)

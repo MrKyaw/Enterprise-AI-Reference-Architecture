@@ -91,6 +91,14 @@ These are architecture blueprints, not runnable starter kits. Each makes one con
 
 See [enterprise-first/README.md](enterprise-first/README.md) for the full catalog and adoption steps.
 
+
+### Integrated enterprise (1)
+
+| Kit | Status | Reference architecture | Focus | Stack highlights |
+|---|---|---|---|---|
+| [`secure-agentic-enterprise-starter-kit`](secure-agentic-enterprise-starter-kit/README.md) | ✅ Scaffolded | [Secure Agentic Enterprise](../reference-architectures/enterprise-first/secure-agentic-enterprise.md) | Secure multi-agent platform | Gateway, tool sandbox, approvals, audit, eval |
+
+
 ---
 
 ## Coverage by area
@@ -105,7 +113,7 @@ See [enterprise-first/README.md](enterprise-first/README.md) for the full catalo
 | MLOps / LLMOps | `training`, `fine-tuning`, `evaluation`, `observability` |
 | LLM / LLM inference | `inference`, `rag` |
 | GenAI / RAG | `rag`, `agent`, `copilot` |
-| Agentic AI / multi-agent | `agent`, `agent-factory`, `intelligent-automation` |
+| Agentic AI / multi-agent | `agent`, `agent-factory`, `intelligent-automation`, `secure-agentic-enterprise` |
 | Observability | `observability` (plus baseline in every kit) |
 | Evals | `evaluation` (plus gate in every kit) |
 | Edge AI | `edge-ai` |
