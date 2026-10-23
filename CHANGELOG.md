@@ -7,43 +7,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 for content releases (`MAJOR` = breaking changes to standards or reference architectures,
 `MINOR` = new documents/standards, `PATCH` = corrections and clarifications).
 
-## [Unreleased]
+## [0.5] - 2026-10-23
 
 ### Added
 
-- Repeatable tracked-Markdown and Mermaid validation with pinned Node dependencies, repaired documentation CI, and publication review guidance.
-
-- Practical architecture leadership guide with 16 Amazon principles mapped to working behaviors and evidence, ten complementary leadership approaches, eight customer stages, an illustrative retail integration, customer relationship habits, and authentic interview guidance.
-- Reusable architecture leadership engagement worksheet for baselines, decision rights, experiments, delivery readiness, and business outcome reviews; linked from governance, lifecycle, resource, and root navigation.
-
 - **Enterprise-first architecture blueprints** (`reference-architectures/enterprise-first/`) — 20 blueprints: secure agentic enterprise plus production-first, AI-first, compliance-first, quality-first, security-first, data-first, user-first, cost-first, resilience-first, governance-first, privacy-first, observability-first, evaluation-first, ethics-first, explainability-first, accessibility-first, sustainability-first, safety-first, and interoperability-first
-- **Architect resource hub** (`resources/README.md`) — full competency framework with embedded diagrams, 12 role paths, 40+ books, 25+ YouTube channels, certifications, official docs/standards, 14 foundational papers, newsletters/podcasts/communities, 60+ tools, 14 labs, and 90-day plans
-- **17 new starter kits**, bringing the total to 18 (added `secure-agentic-enterprise-starter-kit`):
-  - Reference architectures: `rag`, `agent`, `data-agent`, `copilot`, `fine-tuning`, `training`, `intelligent-automation`
-  - Specialized domains: `edge-ai`, `physical-ai`, `embodied-ai`, `quantum`, `agent-factory`
-  - Cross-cutting: `evaluation`, `observability`, `ai-security`, `integration`
-  - Each kit ships a working FastAPI skeleton, pipeline stub, guardrails, smoke tests, Terraform baseline, non-root Dockerfile, and production checklist
-- **5 new lifecycle domains** — Edge AI, Quantum Computing, Agent Factory, Physical AI, Embodied AI (all 22 target domains now covered)
-- **Issue templates** — `bug_report.yml`, `feature_request.yml`
-
-### Fixed
-
-- Replaced unsupported embedding benchmark/cost findings with explicitly unexecuted evaluation plans.
-- Corrected literal-newline and syntax defects in specialized lifecycle diagrams; removed placeholder reviewer teams and unsupported security response promises.
-
-- Broken internal links across use-case index, research briefs, blueprint catalog, starter kit, and new lifecycle references
-- Blueprint catalog now reflects what actually exists (previously claimed unbuilt kits as scaffolded)
+- **Secure agentic enterprise starter kit** (`blueprints/secure-agentic-enterprise-starter-kit/`) — full scaffold with FastAPI, pipeline stub, guardrails, smoke tests, Terraform baseline, Dockerfile, and production checklist
+- **18 starter kits** total (added `secure-agentic-enterprise-starter-kit`)
+- **20 enterprise-first blueprints** — design documents making one concern the primary optimization target
+- **24 lifecycle files** fully indexed and mapped to starter kits
+- **Documentation validation** — `npm run check:docs` and `npm run check:mermaid` both pass with 0 failures
+- **Markdown count** updated to 171 files; **Mermaid diagrams** to 62; **smoke tests** to 72 across 18 starter kits
 
 ### Changed
 
-- Reconciled README and About metadata with the actual catalog; clarified proposed standards, illustrative failure scenarios, public-data boundaries, and all 17 unauthenticated starter scaffolds.
+- README counts and catalogs updated to reflect 18 starter kits and 20 enterprise-first blueprints
+- Lifecycle index now maps all 24 lifecycles to their closest starter kits
+- Blueprint catalog includes explicit status column (all ✅ Scaffolded)
+- Documentation validation counts corrected
+- Mermaid diagram count corrected to 62
 
-- README blueprint section now lists all 17 kits and their groups
+### Fixed
+
+- Broken GitHub badge (`github/forwarders` → `github/forks`)
+- Solution design lifecycle link in `lifecycles/README.md`
+- Quantum lifecycle "(work in progress)" wording removed
+- All internal links across blueprints, lifecycles, reference architectures, and docs
+- Documentation inventory counts across README, blueprints/README, lifecycles/README
+
+### Security
+
+- Issue templates added: `bug_report.yml`, `feature_request.yml`, `question.yml`
+- Secure SDLC and AI security controls referenced across blueprints
+
+## [0.4.0] - 2026-10-17
+
+### Added
+
+- Lifecycles (6 more, now 19 total) — `api-lifecycle`, `experimentation-lifecycle`, `finops-cost-lifecycle`, `documentation-knowledge-lifecycle`, `vendor-third-party-lifecycle`, `enablement-adoption-lifecycle`
+- Pattern catalogs (3 more, now 13 total) — `ai-ux-and-interaction`, `distributed-scaling`, `cost-finops`
+- Approaches — `delivery-and-practice-approaches`: hypothesis-driven, risk-first, design thinking, dual-track agile, DevOps/CD, trunk-based, GitOps, platform engineering, SRE/error budgets, chaos engineering, data-centric AI, benchmark-driven, simulation-driven, ontology-driven, postmortem-driven, Six Sigma/DMAIC, agent-assisted development
+- Use cases (`use-cases/`) — 8 end-to-end scenarios with problem statements, workflows, options, trade-offs, candidate metrics, and failure modes
+- Production issues (`production-issues/`) — 79 indexed scenarios in 6 categories
+- Blueprint catalog with 16 starter kits (pre-18)
 - Resources section in README expanded with counts and direct link to the hub
-- All 17 starter kits now share the same layout: FastAPI service, pipeline stub, guardrails, smoke tests, Terraform baseline, non-root Dockerfile, and PR checklist
-- Lifecycle count corrected to **24** across the README (the previous table showed 19 with duplicate numbering and omitted the 5 specialized lifecycles)
-- Lifecycles index now lists all 24 lifecycle files and maps the 5 specialized ones to their starter kits; the solution design lifecycle remains in `docs/`
-- Blueprint catalog now shows an explicit status per kit (all ✅ Scaffolded)
+- Images committed: `resources/images/01-major-architect-roles.png`, `resources/images/02-core-knowledge.png`
+- Issue templates added: `bug_report.yml`, `feature_request.yml`
+
+### Fixed
+
+- Broken links across use-cases, research briefs, blueprints, starter kits, and new lifecycles
+
+### Changed
+
+- README blueprint section now lists all kits and their groups
+- Resources section in README expanded with counts and direct link to the hub
+- Domain coverage table in README updated with kit links
+- CHANGELOG updated with Unreleased entries
 
 ## [0.4.0] - 2026-10-17
 
